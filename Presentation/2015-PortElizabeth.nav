@@ -1,0 +1,138 @@
+\beamer@endinputifotherversion {3.24pt}
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\sectionentry {1}{Introduction and Notations}{3}{Introduction and Notations}{0}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Motivation}}\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\slideentry {1}{1}{1}{3/4}{Motivation}{0}}
+\headcommand {\beamer@framepages {3}{4}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{5}{Trajectories, a certain aspect of the movement}}\headcommand {\beamer@subsectionpages {3}{4}}
+\headcommand {\slideentry {1}{2}{1}{5/10}{Trajectories, a certain aspect of the movement}{0}}
+\headcommand {\beamer@framepages {5}{10}}
+\headcommand {\slideentry {1}{2}{2}{11/12}{Trajectories, a certain aspect of the movement}{0}}
+\headcommand {\beamer@framepages {11}{12}}
+\headcommand {\slideentry {1}{2}{3}{13/15}{Trajectories, a certain aspect of the movement}{0}}
+\headcommand {\beamer@framepages {13}{15}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{16}{Convention}}\headcommand {\beamer@subsectionpages {5}{15}}
+\headcommand {\slideentry {1}{3}{1}{16/19}{Convention}{0}}
+\headcommand {\beamer@framepages {16}{19}}
+\headcommand {\sectionentry {2}{Change point model}{20}{Change point model}{0}}
+\headcommand {\beamer@sectionpages {3}{19}}
+\headcommand {\beamer@subsectionpages {16}{19}}
+\headcommand {\slideentry {2}{0}{2}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{21}{Goal and Model}}\headcommand {\beamer@subsectionpages {20}{20}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{21}{Goal}}\headcommand {\beamer@subsectionpages {21}{20}}
+\headcommand {\slideentry {2}{2}{1}{21/22}{Goal}{0}}
+\headcommand {\beamer@framepages {21}{22}}
+\headcommand {\slideentry {2}{2}{2}{23/23}{Goal}{0}}
+\headcommand {\beamer@framepages {23}{23}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{24}{Model}}\headcommand {\beamer@subsectionpages {21}{23}}
+\headcommand {\slideentry {2}{3}{1}{24/25}{Model}{0}}
+\headcommand {\beamer@framepages {24}{25}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{26}{Estimation}}\headcommand {\beamer@subsectionpages {24}{25}}
+\headcommand {\slideentry {2}{4}{1}{26/29}{Estimation}{0}}
+\headcommand {\beamer@framepages {26}{29}}
+\headcommand {\slideentry {2}{4}{2}{30/30}{Estimation}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\slideentry {2}{4}{3}{31/35}{Estimation}{0}}
+\headcommand {\beamer@framepages {31}{35}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{36}{Example}}\headcommand {\beamer@subsectionpages {26}{35}}
+\headcommand {\beamer@subsectionentry {0}{2}{6}{36}{ Toy Example}}\headcommand {\beamer@subsectionpages {36}{35}}
+\headcommand {\slideentry {2}{6}{1}{36/36}{ Toy Example}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\beamer@subsectionentry {0}{2}{7}{37}{Practical Example}}\headcommand {\beamer@subsectionpages {36}{36}}
+\headcommand {\slideentry {2}{7}{1}{37/37}{Practical Example}{0}}
+\headcommand {\beamer@framepages {37}{37}}
+\headcommand {\slideentry {2}{7}{2}{38/38}{Practical Example}{0}}
+\headcommand {\beamer@framepages {38}{38}}
+\headcommand {\beamer@subsectionentry {0}{2}{8}{39}{ClusteringSegmentation}}\headcommand {\beamer@subsectionpages {37}{38}}
+\headcommand {\slideentry {2}{8}{1}{39/39}{ClusteringSegmentation}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {2}{8}{2}{40/40}{ClusteringSegmentation}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {2}{8}{3}{41/42}{ClusteringSegmentation}{0}}
+\headcommand {\beamer@framepages {41}{42}}
+\headcommand {\beamer@subsectionentry {0}{2}{9}{43}{Example}}\headcommand {\beamer@subsectionpages {39}{42}}
+\headcommand {\beamer@subsectionentry {0}{2}{10}{43}{Toy Example}}\headcommand {\beamer@subsectionpages {43}{42}}
+\headcommand {\slideentry {2}{10}{1}{43/43}{Toy Example}{0}}
+\headcommand {\beamer@framepages {43}{43}}
+\headcommand {\beamer@subsectionentry {0}{2}{11}{44}{Practical Example}}\headcommand {\beamer@subsectionpages {43}{43}}
+\headcommand {\slideentry {2}{11}{1}{44/44}{Practical Example}{0}}
+\headcommand {\beamer@framepages {44}{44}}
+\headcommand {\sectionentry {3}{Mixture Model}{45}{Mixture Model}{0}}
+\headcommand {\beamer@sectionpages {20}{44}}
+\headcommand {\beamer@subsectionpages {44}{44}}
+\headcommand {\slideentry {3}{0}{2}{45/45}{}{0}}
+\headcommand {\beamer@framepages {45}{45}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{46}{Model}}\headcommand {\beamer@subsectionpages {45}{45}}
+\headcommand {\slideentry {3}{1}{1}{46/51}{Model}{0}}
+\headcommand {\beamer@framepages {46}{51}}
+\headcommand {\slideentry {3}{1}{2}{52/54}{Model}{0}}
+\headcommand {\beamer@framepages {52}{54}}
+\headcommand {\slideentry {3}{1}{3}{55/58}{Model}{0}}
+\headcommand {\beamer@framepages {55}{58}}
+\headcommand {\slideentry {3}{1}{4}{59/59}{Model}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{60}{Parameter estimation}}\headcommand {\beamer@subsectionpages {46}{59}}
+\headcommand {\slideentry {3}{2}{1}{60/60}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {3}{2}{2}{61/63}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {61}{63}}
+\headcommand {\slideentry {3}{2}{3}{64/64}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {3}{2}{4}{65/65}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\slideentry {3}{2}{5}{66/66}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {66}{66}}
+\headcommand {\slideentry {3}{2}{6}{67/68}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {67}{68}}
+\headcommand {\slideentry {3}{2}{7}{69/69}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\slideentry {3}{2}{8}{70/70}{Parameter estimation}{0}}
+\headcommand {\beamer@framepages {70}{70}}
+\headcommand {\beamer@subsubsectionentry {0}{3}{2}{1}{71}{Assumptions}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{71}{Example}}\headcommand {\beamer@subsectionpages {60}{70}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{71}{Theoretical aspects}}\headcommand {\beamer@subsectionpages {71}{70}}
+\headcommand {\sectionentry {4}{Hidden Markov Model}{71}{Hidden Markov Model}{0}}
+\headcommand {\beamer@sectionpages {45}{70}}
+\headcommand {\beamer@subsectionpages {71}{70}}
+\headcommand {\slideentry {4}{0}{1}{71/71}{}{0}}
+\headcommand {\beamer@framepages {71}{71}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{72}{Model}}\headcommand {\beamer@subsectionpages {71}{71}}
+\headcommand {\slideentry {4}{1}{1}{72/72}{Model}{0}}
+\headcommand {\beamer@framepages {72}{72}}
+\headcommand {\slideentry {4}{1}{2}{73/73}{Model}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\slideentry {4}{1}{3}{74/74}{Model}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{75}{Example}}\headcommand {\beamer@subsectionpages {72}{74}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{75}{Theoretical aspects}}\headcommand {\beamer@subsectionpages {75}{74}}
+\headcommand {\sectionentry {5}{Etat J'erre Study}{75}{Etat J'erre Study}{0}}
+\headcommand {\beamer@sectionpages {71}{74}}
+\headcommand {\beamer@subsectionpages {75}{74}}
+\headcommand {\slideentry {5}{0}{1}{75/75}{}{0}}
+\headcommand {\beamer@framepages {75}{75}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{76}{What is Etat J'erre Group}}\headcommand {\beamer@subsectionpages {75}{75}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{76}{Data and methods}}\headcommand {\beamer@subsectionpages {76}{75}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{76}{Conclusion}}\headcommand {\beamer@subsectionpages {76}{75}}
+\headcommand {\partentry {\translate {Appendix}}{1}}
+\headcommand {\beamer@partpages {1}{75}}
+\headcommand {\beamer@sectionpages {75}{75}}
+\headcommand {\beamer@subsectionpages {76}{75}}
+\headcommand {\beamer@appendixpages {76}}
+\headcommand {\sectionentry {6}{Probability Distribution for angles}{76}{Probability Distribution for angles}{1}}
+\headcommand {\beamer@sectionpages {76}{75}}
+\headcommand {\beamer@subsectionpages {76}{75}}
+\headcommand {\slideentry {6}{0}{1}{76/76}{}{1}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\slideentry {6}{0}{2}{77/77}{}{1}}
+\headcommand {\beamer@framepages {77}{77}}
+\headcommand {\beamer@partpages {76}{77}}
+\headcommand {\beamer@subsectionpages {76}{77}}
+\headcommand {\beamer@sectionpages {76}{77}}
+\headcommand {\beamer@documentpages {77}}
+\headcommand {\def \inserttotalframenumber {42}}

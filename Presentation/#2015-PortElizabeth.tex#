@@ -1,0 +1,987 @@
+\documentclass{beamer}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[utf8]{inputenc}
+
+
+
+\usepackage{url}
+\ifx\hypersetup\undefined
+  \AtBeginDocument{%
+    \hypersetup{unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false}
+  }
+\else
+  \hypersetup{unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false}
+\fi
+
+% Beamer style
+%\usetheme[secheader]{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme[rgb={0.65,0.15,0.25}]{structure}
+%\usefonttheme[onlymath]{serif}
+\beamertemplatenavigationsymbolsempty
+
+
+% Packages
+\usepackage{dsfont, stmaryrd}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{rotating}
+\usepackage{epsfig}
+\usepackage{astats}
+%\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+
+% Commands
+\definecolor{darkgreen}{cmyk}{0.5, 0, 0.5, 0.5}
+\definecolor{greenB}{rgb}{0.3, 0.87, 0.}
+\definecolor{darkred}{rgb}{0.65,0.15,0.25}
+\definecolor{darkblue}{rgb}{0.08,0.11,0.81}
+%\definecolor{orange}{rgb}{0.60,0.2,0.2}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\emphase}[1]{\textcolor{darkred}{#1}}
+\newcommand{\emphaseBis}[1]{\textcolor{darkblue}{#1}}
+\newcommand{\paragraph}[1]{\emphase{#1}}
+\newcommand{\refer}[1]{\textcolor{blue}{\sl \cite{#1}}}
+\newcommand{\Refer}[1]{\textcolor{blue}{\sl #1}}
+
+
+%thm prop and co
+\newtheorem{prop}{Proposition}
+
+% Symbols
+\def\d{\text{ d}} % Element differentiel
+\newcommand{\Abf}{{\bf A}}
+\newcommand{\Beta}{\text{B}}
+\newcommand{\betabf}{\mbox{\mathversion{bold}{$\beta$}}}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\BIC}{\text{BIC}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\Cbf}{{\bf C}}
+\newcommand{\dbf}{{\bf d}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Esp}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Ebf}{{\bf E}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\Gam}{\mathcal{G}\mbox{am}}
+\newcommand{\Ibb}{\mathbb{I}}
+\newcommand{\Ibf}{{\bf I}}
+\newcommand{\ICL}{\text{ICL}}
+\newcommand{\Cov}{\mathbb{C}\text{ov}}
+\newcommand{\Corr}{\mathbb{C}\text{orr}}
+\newcommand{\Var}{\mathbb{V}}
+\newcommand{\Vsf}{\mathsf{V}}
+\newcommand{\pen}{\text{pen}}
+\newcommand{\Fcal}{\mathcal{F}}
+\newcommand{\Hbf}{{\bf H}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\Jcal}{\mathcal{J}}
+\newcommand{\Kbf}{{\bf K}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\mbf}{{\bf m}}
+\newcommand{\mum}{\mu(\mbf)}
+\newcommand{\Ncal}{\mathcal{N}}
+\newcommand{\Nbf}{{\bf N}}
+\newcommand{\Nm}{N(\mbf)}
+\newcommand{\Ocal}{\mathcal{O}}
+\newcommand{\Obf}{{\bf 0}}
+\newcommand{\Omegas}{\underset{s}{\Omega}}
+\newcommand{\Pbf}{{\bf P}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Qcal}{\mathcal{Q}}
+\newcommand{\Rbb}{\mathbb{R}}
+\newcommand{\Rbf}{{\bf R}}
+\newcommand{\Rcal}{\mathcal{R}}
+\newcommand{\sbf}{{\bf s}}
+\newcommand{\Sbf}{{\bf S}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\Ucal}{\mathcal{U}}
+\newcommand{\Vcal}{\mathcal{V}}
+\newcommand{\Tbf}{{\bf T}}
+\newcommand{\ubf}{{\bf u}}
+\newcommand{\Ubf}{{\bf U}}
+\newcommand{\Wbf}{{\bf W}}
+\newcommand{\xbf}{{\bf x}}
+\newcommand{\Xbf}{{\bf X}}  
+\newcommand{\Ybf}{{\bf Y}}
+\newcommand{\Zbf}{{\bf Z}}
+\newcommand{\pibf}{\mbox{\mathversion{bold}{$\pi$}}}
+\newcommand{\Sigmabf}{\mbox{\mathversion{bold}{$\Sigma$}}}
+\newcommand{\gammabf}{\mbox{\mathversion{bold}{$\gamma$}}}
+\newcommand{\mubf}{\mbox{\mathversion{bold}{$\mu$}}}
+\newcommand{\nubf}{\mbox{\mathversion{bold}{$\nu$}}}
+\newcommand{\Thetabf}{\mbox{\boldsymbol{\Theta}}}
+\newcommand{\thetabf}{\mbox{\mathversion{bold}{$\theta$}}}
+\newcommand{\BP}{\text{BP}}
+\newcommand{\EM}{\text{EM}}
+\newcommand{\VEM}{\text{VEM}}
+\newcommand{\VBEM}{\text{VB}}
+\newcommand{\cst}{\text{cst}}
+\newcommand{\obs}{\text{obs}}
+\newcommand{\ra}{\emphase{\mathversion{bold}{$\rightarrow$}~}}
+\newcommand{\QZ}{Q_{\Zbf}}
+\newcommand{\Qt}{Q_{\thetabf}}
+\def\argmax{\mathop{\mathrm{argmax}}}
+
+
+% Directory
+\newcommand{\FigSim}{}
+%{/RECHERCHE/RUPTURES/MinRegionCont/Res}
+\graphicspath{{figure/}{..//figure/}}
+%--------------------------------------------------------------------
+
+\title{Identifying patterns in trajectories}
+
+\author[MP Etienne]{Marie-Pierre Etienne }
+
+ \institute[AgroParisTech / INRA]{  AgroParisTech / INRA \\
+   \bigskip
+   \begin{tabular}{cccc}
+    \includegraphics[ height=1cm]{logagrotech_ABL_RVB}& 
+    \hspace{.5cm} &
+     \includegraphics[height=1cm]{logotype-INRA-RVB} & 
+   \end{tabular} \\ 
+   \bigskip
+   }
+
+\date[Movement Ecology]{Movement Ecology Workshop 2015 - Port Elizabeth}
+
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+ \frame{\titlepage
+   }
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\frame{
+\tableofcontents[subsectionstyle=hide]  }
+
+
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Introduction and Notations}
+
+
+\subsection{Motivation}
+\begin{frame}[fragile]{Detection of homogenous region in trajectories}
+
+  \paragraph{Why ?}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{itemize}
+\item Different behaviour
+\item Link with different activities
+\item Link with different environmental condition
+\end{itemize}
+
+\end{column}
+\begin{column}{0.6\textwidth}
+
+
+
+  
+  \only<1>{\includegraphics[scale=0.4]{pathPractical2-1.pdf}}
+\only<2>{\includegraphics[scale=0.4]{pathPractical3-1.pdf}}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+
+\subsection{Trajectories, a certain aspect of the movement}
+\begin{frame}[fragile]{Effect of sampling step}
+
+  \only<1>{\includegraphics[scale=0.4]{pathPractical4-1.pdf}}
+\only<2>{\includegraphics[scale=0.4]{pathPractical4-3.pdf}}
+\only<3>{\includegraphics[scale=0.4]{pathPractical4-6.pdf}}
+\only<4>{\includegraphics[scale=0.4]{pathPractical4-10.pdf}}
+\only<5>{\includegraphics[scale=0.4]{pathPractical4-15.pdf}}
+
+  \only<6>{\includegraphics[scale=0.4]{pathPractical5-1.pdf}} 
+\end{frame}
+
+
+\begin{frame}{Summarising trajectories}
+$(t_1, \ldots, t_N)$ denotes the time acquisition and $( (x_1,y_1),  \ldots, (x_N,y_N))$ the position at those times.
+
+\only<1>{
+  \paragraph{Trajetories as Turning angle and Speed}
+  \begin{columns}
+  \begin{column}{0.4\textwidth}
+  
+  $$\boldsymbol{\Phi}=(\phi_{2}, \ldots,\phi_{N})$$
+    $$\boldsymbol{S}=(S_{2}, \ldots,\S_{N}),$$
+    with $S_i=dist_i/(t_i-t_{i-1})$
+    \end{column}
+  \begin{column}{0.6\textwidth}
+  \includegraphics[scale=0.3]{Speed1.pdf}
+  \end{column}
+  \end{columns}
+  $$ $$
+}
+\only<2>{
+  \paragraph{Trajetories as Persistent and Normal Velocity}
+  \begin{columns}
+  \begin{column}{0.4\textwidth}
+  
+  $$\boldsymbol{V}^P=(V^P_{2}, \ldots,V^P_{N})$$
+    $$\boldsymbol{V}^N=(V^N_{2}, \ldots,V^N_{N})$$
+    with 
+  \begin{align*}
+  V^P_i&=S_i \, cos(\phi_i)\\
+  V^N_i&=S_i \, sin(\phi_i)
+  \end{align*}
+  \end{column}
+  \begin{column}{0.6\textwidth}
+  \includegraphics[scale=0.3]{Speed2.pdf}
+  \end{column}
+  \end{columns}
+}
+\end{frame}
+
+
+\begin{frame}{Trajectories data}
+\paragraph{How trajectories data migh be considered?}
+\begin{itemize}
+\item A sequence of (time, position)
+\item Turning angle and speed sequences
+\item Persistent and Normal Velocity sequences
+\end{itemize}
+\pause
+\paragraph{What is affected by sampling?}
+\begin{itemize}
+\item A sequence of (time, position)
+\item Turning angle and speed sequences
+\item Persistent and Normal Velocity sequences
+\end{itemize}
+\pause
+\paragraph{Model approach:}
+\begin{itemize}
+\item Most methods don't consider the two phenomena : movement and sampling process.
+  \item Results will be closely dependent of the sampling step.
+  \end{itemize}
+\end{frame}
+
+\subsection*{Convention}
+
+
+\begin{frame}{Convention}
+\paragraph{Notation:}
+{\small
+\begin{itemize}
+\item $\Ybf = (Y_1, \ldots, Y_n) = $ observed data (typically Speed)
+ \item $\Zbf $ unobserved data (typically State, for mixture  and Hidden Markov model)
+ \item \thetabf = the unknown parameters of $\Ybf$ and $\Zbf$.
+\end{itemize}
+}
+\pause
+\paragraph{Graphical Representation (DAG):}  \medskip
+\begin{columns}
+\begin{column}{0.3\textwidth}
+\centering{Change point}\\ \smallskip
+\includegraphics[scale=0.4]{Dag1.pdf}
+\end{column}
+\pause
+
+\begin{column}{0.3\textwidth}
+\centering{Mixture}\\ \smallskip
+\includegraphics[scale=0.4]{Dag2.pdf}
+\end{column}
+\pause
+\begin{column}{0.3\textwidth}
+\centering{HMM}\\ \smallskip
+\includegraphics[scale=0.4]{Dag3.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+%#show plan at the beginning of each secion except the first one
+\AtBeginSection[]
+{
+ \begin{frame}<beamer>
+ \frametitle{Plan}
+ \tableofcontents[currentsection]
+ \end{frame}
+}
+
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Change point model}
+
+\subsection{Goal and Model}
+\subsection*{Goal}
+  \frame{\frametitle{Change point detection context}
+    \begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
+    \begin{tabular}{p{\textwidth}}
+        \includegraphics<1>[height=.6\textheight]{rawSignal}
+        \includegraphics<2>[height=.6\textheight]{segmentedSignal}
+      \end{tabular}
+    &  
+      \begin{tabular}{p{0.4\textwidth}}
+        \onslide<1>{ \emph{Goal : } Identifying homogenous region and abrupt changes in the signal.\\}
+        \onslide<2>{ These \textcolor{red}{regions} may be interpreted afterwards.\\}
+    \end{tabular}
+  \end{tabular}
+  }
+
+  \frame{\frametitle{Change point detection context}
+
+  Two possible statistical point of view : 
+  \begin{itemize}
+  \item Bayesian approach : the output is the posterior probability for each point to be a change point.
+  \item \emph{Frequentist} approach : the output is the best segmentation (according to a given critrion)
+  \end{itemize}
+  }
+
+\subsection*{Model}
+\frame{\frametitle{Underlying model}
+  \only<1>{ General framework~:}
+  \only<2>{\textcolor{red}{Change point detection in the trend~:} }
+  \begin{itemize}
+  \item Data $Y_1,\ldots,Y_n$ are drawn from a given pdf, driven by unknown parameter $\theta$
+    \begin{equation*}
+      Y_t \sim f_{\theta}(.)  \ \ 
+    \end{equation*}
+  \item
+    $\theta$ values change at  $K-1$ unknow instants, the change point~:
+    $t_1,\ldots,t_{K-1}$ :
+    \only<1>{
+      \begin{equation*}
+        Y_t \sim f(\theta_k) \ \ \mbox{if $t$ in region $I_k=[t_{k-1}+1,t_{k}]$}
+      \end{equation*}}
+    \only<2>{
+      \textcolor{red}{
+        \begin{equation*}
+          Y_t=\mu_k + E_t \quad \{E_t\} \mbox{i.i.d.} \sim \Ncal(0,\sigma^2) \mbox{ if $t$ in portion $I_k$,}
+        \end{equation*}
+        for  $k=1,\ldots,K$.
+      } }
+ \par
+ \medskip
+\noindent Remark : $K-1$ change points  $\Leftrightarrow$ $K$ regions.
+\end{itemize}
+ } 
+
+ 
+ \subsection*{Estimation}
+ \frame{\frametitle{Estimation procedure}
+   \begin{itemize}
+   \item Unknown parameters : $\mu_1, \ldots, \mu_K$, $\sigma$, and $T_1, \ldots, T_K$,\\
+     but  also \textcolor{red}{K} itself.
+\pause
+   \item Estimation Procedure
+     \begin{itemize}
+       \item for a given $K$,  $\mu_1, \ldots, \mu_K$, $\sigma_1, \ldots,\sigma_K$, and $T_1, \ldots, T_K$ are estimated using maximum likelihood (and dynanic programming)
+       \item K is chosen using penalized likelihood approach
+       \end{itemize}
+     \end{itemize} 
+         \pause
+         \begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
+           \begin{tabular}{p{0.4\textwidth}}
+             Likelihood increases with the number of segment, but
+           \end{tabular}
+           &  \pause
+           \begin{tabular}{p{0.4\textwidth}}
+             \includegraphics[scale=0.3]{LikelihoodProfile}
+           \end{tabular}
+         \end{tabular}
+   }
+
+
+\frame{\frametitle{Estimation procedure}
+
+\paragraph{Likelihood}
+{\small
+\begin{eqnarray*}
+2 log(P_K (T, \theta)) & = & 2 \sum_{k=1}^K \log f(\{Y_t\}_{t \in
+I_k};
+\theta_k) = 2 \sum_{k=1}^K \sum_{t \in I_k}\log f(Y_t; \theta_k) \\
+& = & -n \log \sigma^2 - \frac1{\sigma^2} \sum_{k=1}^K \sum_{t \in
+  I_k} (Y_t - \mu_k)^2 + \mbox{cst}.
+\end{eqnarray*}
+}
+
+\paragraph{Estimations}
+\begin{equation*}
+ (\hat{T},\hat{\theta})=
+  \argmax_{(T,\theta)} log(P_K (T, \theta))
+\end{equation*}
+
+\paragraph{If the change points are known}
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\begin{equation*}
+\widehat{\mu}_k = \frac1{n_k} \sum_{t \in I_k} Y_t
+\end{equation*}
+\end{column}
+\begin{column}{0.5\textwidth}
+  $$
+  \widehat{\sigma}^2 =  \frac1{n} \sum_{k=1}^K \sum_{t \in I_k} (Y_t -  \widehat{\mu}_k)^2
+  $$
+\end{column}
+\end{columns}
+}
+
+\begin{frame}[fragile]{Finding the K-1 change points}
+\only<1-3>{
+\paragraph{Considering all possible segmentations, } the best segmentation minimizes 
+$$
+J_k(1, n) = \sum_{k=1}^K \sum_{t \in I_k} (Y_t - \widehat{\mu}_k)^2.
+$$
+\pause
+\paragraph{But, } $$\left( \begin{array}{c} n-1 \\ K-1 \end{array}\right)$$ possible choices for the $K-1$ positions
+:\\
+  \centerline{$\Rightarrow$ Practically impossible even for small $K$ and $n$}
+  \medskip 
+  \pause
+  
+  $K=10$, $n=200$,  $\left( \begin{array}{c} K-1 \\ n-1 \end{array}\right)\approx 2. 10^{16}$
+}
+
+\paragraph{Dynamic programming,} with complexity ($\mathcal{O}(n^2)$).
+
+
+%possible only because the quantity of interest is the sum over all segments 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\only<4>{\centerline{\sl Sub-paths of the optimal path are themselves
+optimal,} 
+Bellmann optimality 
+
+\vspace{3.8cm}
+$$ $$ }
+\only<5>{
+\begin{description}
+
+\item[Initialisation:] Compute for $0 \leq i < j \leq n$, cost of portion $I_{ij}$~:
+ $$
+ J_1(i, j) = \sum_{t=i+1}^j (Y_t - \widehat{\mu})^2
+ $$
+\item[Etape $k$:] Compute for $2 \leq k \leq K$, $J_k(i, j)$ the cost of the best segmentation in $k$ segments between $i$ and $j$.
+  $$
+  J_k(i, j) = \min_{i < h <j} \left[J_{k-1}(i, h) + J_1(h+1,  j)\right].
+  $$
+\end{description}
+}
+\end{frame}
+
+
+\subsection{Example}
+\subsection*{ Toy Example}
+   \begin{frame}[fragile]{How to perform this segmentation approach ?}
+
+ 
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{load}\hlstd{(}\hlstr{"../Data/dataSegmentation.Rd"}\hlstd{)}
+\hlkwd{summary}\hlstd{(Profil.seg)}
+\end{alltt}
+\begin{verbatim}
+   Min. 1st Qu. 
+ 0.8904  4.8720 
+ Median    Mean 
+ 5.6990  5.3660 
+3rd Qu.    Max. 
+ 6.3070  8.9400 
+\end{verbatim}
+\begin{alltt}
+\hlkwd{plot}\hlstd{(Profil.seg)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[scale=0.35]{segCode2-1.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection*{Practical Example}
+   \begin{frame}[fragile]{How to perform this segmentation approach ?}
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{library}\hlstd{(}\hlstr{'cghseg'}\hlstd{)}
+\hlcom{## format data into CGHdata}
+\hlstd{signalCGH}    \hlkwb{<-} \hlkwd{new}\hlstd{(}\hlstr{"CGHdata"}\hlstd{,}\hlkwc{Y}\hlstd{=Profil.seg)}
+\hlstd{CGHo}         \hlkwb{<-} \hlkwd{new}\hlstd{(}\hlstr{"CGHoptions"}\hlstd{)}
+\hlkwd{calling}\hlstd{(CGHo)}\hlkwb{<-} \hlnum{FALSE} \hlcom{## no classification }
+\hlstd{segSignal}   \hlkwb{<-} \hlkwd{uniseg}\hlstd{(}\hlkwc{.Object}\hlstd{=signalCGH,}\hlkwc{CGHo}\hlstd{=CGHo)}
+\hlstd{segSignalProf} \hlkwb{<-} \hlkwd{getsegprofiles}\hlstd{(segSignal)}
+\hlkwd{plot}\hlstd{(Profil.seg)}
+\hlkwd{lines}\hlstd{(}\hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(segSignalProf),}
+      \hlstd{segSignalProf,} \hlkwc{type}\hlstd{=}\hlstr{"s"}\hlstd{,} \hlkwc{col}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{lwd}\hlstd{=}\hlnum{2}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[scale=0.35]{segCode3-1.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+% 
+
+ 
+ \begin{frame}[fragile]{Do it yourself}
+
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{load}\hlstd{(}\hlkwc{file}\hlstd{=}\hlstr{"../Data/trajEx.Rd"}\hlstd{)}
+\hlkwd{plot}\hlstd{(traj.ex,} \hlkwc{addpoints} \hlstd{= F)}
+\hlkwd{legend}\hlstd{(}\hlstr{"bottomleft"}\hlstd{,}\hlkwc{pch}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,} \hlnum{0}\hlstd{),} \hlkwc{col}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{4}\hlstd{,}\hlnum{2}\hlstd{),}
+       \hlkwc{legend}\hlstd{=}\hlkwd{c}\hlstd{(}\hlstr{"Start"}\hlstd{,} \hlstr{"End"}\hlstd{),} \hlkwc{bty} \hlstd{=} \hlstr{"n"}\hlstd{,}
+       \hlkwc{pt.lwd} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{1.5}\hlstd{,}\hlnum{1.5}\hlstd{),} \hlkwc{pt.cex} \hlstd{=} \hlkwd{c}\hlstd{(}\hlnum{1.5}\hlstd{,}\hlnum{1.5}\hlstd{))}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[scale=0.35]{Practical1-1.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{ClusteringSegmentation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{When Segmentation is not sufficient}
+$$
+\begin{tabular}{cc}
+  Pure segmentation & Segmentation + classification \\
+  \includegraphics[scale=0.3]{FigSegClas-1.pdf} &
+  \includegraphics[scale=0.3]{FigSegClas-2.pdf} 
+  \end{tabular}
+$$
+\end{frame}
+\begin{frame}{Segmentation-Clustering}
+ \begin{itemize}
+ \item Assuming a \textcolor{blue}{secondary underlying
+     structure} of the segments into $P$ groups with weights
+   $\pi_1,...,\pi_P (\sum_p \pi_p=1)$.
+ \item Let's define \emphase{hidden variables $Z_{kp}$}, indicators of the
+   \emphase{group to which segment $k$ belongs}.
+ \item $\pi_p$ denotes the \emphase{proportion} of group $p$.
+ \item The \emphase{distribution of the signal} given the group of the
+     segment is
+  \begin{align*}
+   t \in I_k, k \in p &\qquad \Rightarrow \qquad Y_t \sim
+   \Ncal(m_{\emphase{p}}, \sigma^2)\\
+   Y^k|Z_{kp}=1 &\sim \Ncal( m_p, \sigma^2 ).
+   \end{align*}
+ %\item It is a model of \textblue{segmentation/clustering}.
+ \item The \emphase{parameters of this model} are
+   \begin{eqnarray*}
+   \mbox{the breakpoint positions:} \quad T&=&(t_1, ..., t_{K-1}),\\
+     \mbox{the mixture characteristics:} \quad \Theta&=&(\pi_1,\hdots,\pi_P;\mu_1,\hdots,\mu_P,\sigma).
+   \end{eqnarray*}
+\end{itemize}
+\end{frame} 
+
+
+\begin{frame}{Hybrid algorithm}
+\only<1>{
+\paragraph{2 levels of statistical units} 
+ \begin{itemize}
+ \item  The inference of the \emphase{breakpoints $T$}
+   is made at the \emphase{position level $t$};
+ \item  The inference of the \emphase{groups (status)
+     ($\Theta, \tau_{kp}$)} is made at the \emphase{segment level $k$}.
+ \end{itemize}
+} 
+\only<2>{
+ \paragraph{Alternate parameters estimation with $K$ and $P$ known}
+ \begin{enumerate}
+ \item  When $T$ is fixed, the
+   \textcolor{blue}{Expectation-Maximisation (EM)} algorithm estimates
+   $\Theta$;
+   $$
+   \hat{\Theta}^{(h+1)}=\underset{\Theta}{\arg\max} \left\{\log
+     \Lcal_{KP}\left(\Theta,T^{(h)}\right) \right\}. 
+  $$
+   $$
+   \log \Lcal_{KP}( \hat{\Theta}^{(h+1)}; \hat{T}^{(h)})
+   \geq \log \Lcal_{KP}(\hat{\Theta}^{(h)};
+  \hat{T}^{(h)})
+  $$
+ \item  When $\Theta$ is fixed, \textcolor{blue}{dynamic
+     programming} estimates $T$;
+    $$
+   \hat{T}^{(h+1)}=\underset{T}{\arg\max} \left\{\log
+     \Lcal_{KP}\left(\hat{\Theta}^{(h+1)},T\right) \right\}. 
+  $$
+   $$
+   \log \Lcal_{KP}(\hat{\Theta}^{(h+1)}; \hat{T}^{(h+1)})
+   \geq \log \Lcal_{KP}(\hat{\Theta}^{(h+1)};
+   \hat{T}^{(h)})
+   $$
+   \end{enumerate} 
+}
+\end{frame}
+ 
+
+\subsection{Example}
+\subsection*{Toy Example}
+   \begin{frame}[fragile]{How to perform this segmentation/clustering approach ?}
+ 
+\begin{columns}
+\begin{column}{0.4\textwidth}
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{## format data into CGHdata}
+\hlkwd{calling}\hlstd{(CGHo)}\hlkwb{<-} \hlnum{TRUE} \hlcom{## no classification }
+\hlstd{CGHo}\hlopt{@}\hlkwc{nblevels}\hlkwb{=}\hlnum{2}
+\hlstd{segSignal}   \hlkwb{<-} \hlkwd{uniseg}\hlstd{(}\hlkwc{.Object}\hlstd{=signalCGH,}\hlkwc{CGHo}\hlstd{=CGHo)}
+\hlstd{segSignalProf} \hlkwb{<-} \hlkwd{getsegprofiles}\hlstd{(segSignal)}
+\hlkwd{plot}\hlstd{(Profil.seg)}
+\hlkwd{lines}\hlstd{(}\hlnum{1}\hlopt{:}\hlkwd{length}\hlstd{(segSignalProf),}
+      \hlstd{segSignalProf,} \hlkwc{type}\hlstd{=}\hlstr{"s"}\hlstd{,} \hlkwc{col}\hlstd{=}\hlnum{2}\hlstd{,} \hlkwc{lwd}\hlstd{=}\hlnum{2}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[scale=0.35]{segCode4-1.pdf}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection*{Practical Example}
+\begin{frame}[fragile]{Do it yourself}
+\end{frame}
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Mixture Model}
+
+\subsection{Model}
+
+\begin{frame}[fragile]{Problem presentation}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\only<2>{\includegraphics[scale=0.3]{mixCode1-5.pdf}}
+\only<3->{\paragraph{Basic idea :}\\
+ "Expert" threshold $s$ \\  
+ $$ State_i=1 \quad \mbox{if} Y_i<s$$
+ $$ State_i=2 \quad \mbox{if} Y_i\geq  s $$
+}
+\only<5->{\paragraph{Improvement:}\\
+ \textcolor{blue}{Estimating} the threshold s and  reconstruction of the hidden state (colour)\\
+ Compute the \textcolor{blue}{probability to belong} to State 1 or 2.\\
+}
+ \only<6->{
+ \bigskip
+   \centering{$\Longrightarrow$ \textcolor{red}{Mixture Model}}
+ }
+ \end{column}
+ \begin{column}{0.4\textwidth}
+
+ \only<1>{\includegraphics[scale=0.3]{mixCode1-1.pdf}}
+ \only<2>{\includegraphics[scale=0.3]{mixCode1-2.pdf}}
+ \only<3>{\includegraphics[scale=0.3]{mixCode1-3.pdf}}
+ \only<4->{\includegraphics[scale=0.3]{mixCode1-4.pdf}}
+\end{column}
+\end{columns}
+\end{frame}
+
+%%-----------------------------------------------------------------%%
+%%-----------------------------------------------------------------%%
+
+\begin{frame}[fragile]{Proposed model}
+\paragraph{Model}
+For a given number of states $K$, 
+\begin{itemize}
+\item
+ \blue{Modelling $Z$}: $\pi_k=\P(Z_i=k), \quad k=1,\ldots, K, \quad \sum_k \pi_k=1$\par
+ $Z_i \overset{i.i.d}{\sim} \Mcal(1, \pibf), \quad P(Z_{ik}=1)=\pi_k$
+ \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\theta_k}().$
+\end{itemize}
+ \onslide<2->{\centering{\blue{Model parameters are $\pibf$ and $\thetabf$}}\par}
+ \onslide<3->{\centering{\includegraphics[scale=0.4]{Dag2.pdf}}}
+\end{frame}
+
+\begin{frame}[fragile]{Proposed model}
+\paragraph{Model}
+For a given number of states $K$, 
+\begin{itemize}
+\item
+ \blue{Modelling $Z$}: $\pi_k=\P(Z_i=k), \quad k=1,\ldots, K, \quad \sum_k \pi_k=1$\par
+ $Z_i \overset{i.i.d}{\sim} \Mcal(1, \pibf)$
+ \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\theta_k}().$
+\end{itemize}
+\begin{columns}
+  \begin{column}{0.45\textwidth}
+\begin{knitrout}\tiny
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{K} \hlkwb{<-} \hlnum{2}\hlstd{; N} \hlkwb{<-} \hlnum{200}\hlstd{; mu} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{3}\hlstd{,} \hlnum{6}\hlstd{); sigma} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{1.5}\hlstd{)}
+\hlstd{Z} \hlkwb{<-} \hlkwd{sample}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{2}\hlstd{,} \hlkwc{size} \hlstd{= N,} \hlkwc{replace}\hlstd{=T,} \hlkwc{prob}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0.3}\hlstd{,} \hlnum{0.7}\hlstd{))}
+\hlkwd{plot}\hlstd{(Z,} \hlkwc{col}\hlstd{=Z}\hlopt{+}\hlnum{1}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{15}\hlstd{)}
+\hlstd{Y.mixture} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(N,} \hlkwc{mean}\hlstd{=mu[Z],} \hlkwc{sd}\hlstd{=sigma[Z])}
+\hlkwd{plot}\hlstd{(Y.mixture,} \hlkwc{col}\hlstd{=Z}\hlopt{+}\hlnum{1}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+ \end{column}
+  \begin{column}{0.45\textwidth}
+    \only<3>{\includegraphics[height=3cm, width=6cm]{mixCode2-1.pdf}}
+    \only<4->{\includegraphics[scale=0.25]{mixCode2-2.pdf}}
+  \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}[fragile]{Model Properties}
+\begin{itemize}
+\item Couples $\{(Y_i, Z_i)\}$ are i.i.d.
+\item \blue{Label switching}:\\ the model is invariant for any permutation of the labels $\{1,
+  \dots, K\}$ $\Rightarrow$ the mixture model has \emphase{$K!$
+    equivalent definitions}.
+\item\blue{Distribution of a $Y_i$:}\\
+$$P(Y_i)=\sum_{k=1}^K P(Y_i, Z_i=k)=\textcolor{blue}{P(Z_i=k)} \textcolor{magenta}{P(Y_i | Z_i=k)} $$
+\item\blue{Distribution of $\Ybf$:}\\
+{\small
+\begin{eqnarray*}
+P(\Ybf ; \thetabf, \pibf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k)  
+&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{P(Z_i=k)} \textcolor{magenta}{P(Y_i | Z_i=k)} \\ 
+&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{\pi_k} \textcolor{magenta}{f_{\theta_k}(Y_i)} 
+\end{eqnarray*}
+}
+\end{itemize}
+\end{frame}
+
+\subsection{Parameter estimation}
+%%-----------------------------------------------------------------%%
+%%-----------------------------------------------------------------%%
+
+
+\begin{frame}{Statistical inference of incomplete data models} 
+ \paragraph{Maximum likelihood estimate:} We are looking for
+  $$
+  (\widehat{\thetabf},\widehat{\pibf}) = \arg\max_{\thetabf, \pibf} \log P(\Ybf; \thetabf, \pibf)
+  $$
+  \begin{itemize}
+  \item Likelihood of the observed data (or observed likelihood):
+    $$
+    \log P(\Ybf; \thetabf, \pibf)=
+    \sum_{i=1}^n \log \left[\sum_{k=1}^K \pi_k f_{ \theta_k}(Y_i)\right]
+    $$
+  \item No analytical estimators. 
+  \item  It is not always possible since this sum typically involves $K^n$ terms : $2^{100}\approx10^{30}$, the computation will take $10^{10}$ years on a 2014 computer. 
+  \item Brute force algorithm is not the way
+  \end{itemize}
+\end{frame}
+%%-----------------------------------------------------------------%%
+%%-----------------------------------------------------------------%%
+
+
+\begin{frame}{And what if $\Zbf$ were observed  ?}
+The complete likelihood is 
+\begin{align*}
+    \log P(\Ybf, \Zbf; \thetabf, \pibf) &=\log P(\Zbf; \pibf) + \log P(\Ybf\vert \Zbf; \thetabf)\\
+      & =  \sum_i \sum_k Z_{ik} \log \pi_k + \sum_i \sum_k Z_{ik} \log
+    f_{\theta_k}(Y_i) \\
+    & =  \sum_i \sum_k Z_{ik} [\log \pi_k + \log
+      f_{\theta_k}(Y_i)].
+\end{align*}
+  
+Now, the sum contains $nK$ ($200$ if $n=100$ and $K=2$) terms.  It is much easier.
+\pause
+
+\centering{\textcolor{red}{Unfortunately $\Zbf$ are unknown.} }
+\pause
+
+\bigskip
+
+\textcolor{red}{Idea:} Replace $Z_i$, by our best guess, that is~:
+$$
+\tau_{ik}:=\Esp(Z_i = k | Y_i)=P(Z_i = k | Y_i)
+$$  
+\end{frame}
+
+\begin{frame}{More generally - EM algorithm}
+\begin{columns}
+\begin{column}{0.2\textwidth}
+\includegraphics[scale=0.5]{ModHier.pdf}
+\end{column}
+\begin{column}{0.8\textwidth}
+\paragraph{Bayes Formula}
+{\small
+\begin{align*}
+P(\Ybf, \Zbf;\thetabf) & = P(\Ybf\vert \Zbf; \thetabf) P(\Zbf; \thetabf),\\
+& = \textcolor{orange}{P(\Zbf\vert \Ybf; \thetabf) P(\Ybf; \thetabf).}
+\end{align*}
+Therefore,
+\begin{align*}
+\log P(\Ybf; \thetabf) & = \log \left \lbrace P(\Ybf, \Zbf;\thetabf) / P(\Zbf\vert \Ybf; \thetabf) \right\rbrace\\
+& = \log P(\Ybf, \Zbf;\thetabf) - \log P(\Zbf\vert \Ybf; \thetabf) \\
+\end{align*}
+For a given $\thetabf_0$, we may compute $P_{\thetabf_0}=P(\Zbf\vert \thetabf_0, \Ybf)$ and
+\begin{align*}
+\log P(\Ybf; \thetabf) &= \Esp_{\thetabf_0}(\log P(\Ybf, \Zbf;\thetabf)) - \Esp_{\thetabf_0}(\log P(\Zbf\vert \Ybf; \thetabf))\\
+  & = Q(\thetabf, \thetabf_0) - H(\thetabf, \thetabf_0)
+  \end{align*}}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{More generally - EM algorithm}
+\begin{columns}
+\begin{column}{0.2\textwidth}
+\includegraphics[scale=0.5]{ModHier.pdf}
+\end{column}
+\begin{column}{0.8\textwidth}
+{\small
+Since 
+$$\log P(\Ybf; \thetabf)  = Q(\thetabf, \thetabf_0) - H(\thetabf, \thetabf_0),$$
+and $H(\thetabf, \thetabf_0)$ achieves its maximum in $\thetabf_0$,
+\begin{align*}
+\log P(\Ybf; \thetabf)- \log P(\Ybf; \thetabf_0)  = & \textcolor{orange}{(Q(\thetabf, \thetabf_0) - Q(\thetabf, \thetabf_0))} +\\
+&\textcolor{green}{(H(\thetabf_0, \thetabf_0)-H(\thetabf, \thetabf_0))}.
+\end{align*}
+}
+
+\paragraph{Expectation - Maximization algorithm}
+\begin{enumerate}
+\item Phase E : \\
+Calculate  $Q(\thetabf,\thetabf^{k})$ for every $\thetabf$.
+\item Phase M :\\ Define  
+$\thetabf^{k+1}=argmax\, Q(\thetabf,\thetabf^{k})$
+\end{enumerate}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{EM algorithm for mixture model}
+\begin{align*}
+  Q(\thetabf,\thetabf^{(\ell)}) & = \Esp_{\thetabf^{(\ell)}}(\log P(\Ybf, \Zbf;\thetabf))\\
+  &= \Esp_{\thetabf^{(\ell)}} \left\{\sum_i \sum_k Z_{ik} [\log \pi_k + \log
+       f_{\theta_k^{(\ell)}}(Y_i)] \right\}\\
+  &= \sum_i \sum_k \Esp_{\thetabf^{(\ell)}} (Z_i = k | Y_i) \log\left[\pi_k f_{\theta_k^{(\ell)}}(Y_i)\right]
+  \end{align*}
+   Recall that $\tau_{ik}^{(\ell)}:=P_{\thetabf^{(\ell)}}(Z_i = k | Y_i )$
+   \begin{align*}
+     Q(\thetabf;\thetabf^{(\ell)})
+     &=\sum_i \sum_k \tau_{ik}^{(\ell)} \log \pi_k +  \sum_i \sum_k \tau_{ik}^{(\ell)}\log f_{\theta_k^{(\ell)}}(Y_i)\\
+   \end{align*}
+  $\rightarrow$ Need to estimate $\tau_{ik}^{(\ell)}$
+ \end{align*}
+\end{frame}
+
+
+\subsubsection*{Assumptions}
+\subsection{Example}
+\subsection{Theoretical aspects}
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Hidden Markov Model}
+
+\subsection{Model}
+\subsection{Example}
+\subsection{Theoretical aspects}
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Etat J'erre Study}
+
+\subsection{What is Etat J'erre Group}
+\subsection{Data and methods}
+\subsection{Conclusion}
+
+\appendix
+\section{Probability Distribution for angles}
+
+\frame{\frametitle{Circular Distribution}
+If $Z\sim WC(\mu,\gamma)$, $$f_{WC}(\theta;\mu,\gamma)=\sum_{n=-\infty}^\infty \frac{\gamma}{\pi(\gamma^2+(\theta-\mu+2\pi n)^2)}$$
+}
+
+\end{document}
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+
+% %--------------------------------------------------------------------
+% \frame{\frametitle{}
+%   }
+
+
+%   \vspace{-0.5cm}
+%   \begin{tabular}{cc}
+%     \hspace{-0.5cm}
+%     \begin{tabular}{p{.5\textwidth}}
+%     \end{tabular}
+%     &
+%     \hspace{-1cm}
+%     \begin{tabular}{p{.5\textwidth}}
+%     \end{tabular}
+%   \end{tabular}

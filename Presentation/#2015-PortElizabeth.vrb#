@@ -1,0 +1,26 @@
+\frametitle{Problem presentation}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\only<2>{\includegraphics[scale=0.3]{mixCode1-5.pdf}}
+\only<3->{\paragraph{Basic idea :}\\
+ "Expert" threshold $s$ \\
+ $$ State_i=1 \quad \mbox{if} Y_i<s$$
+ $$ State_i=2 \quad \mbox{if} Y_i\geq  s $$
+}
+\only<5->{\paragraph{Improvement:}\\
+ \textcolor{blue}{Estimating} the threshold s and  reconstruction of the hidden state (colour)\\
+ Compute the \textcolor{blue}{probability to belong} to State 1 or 2.\\
+}
+ \only<6->{
+ \bigskip
+   \centering{$\rihtarrow$ \textcolor{red}{Mixture Model}}
+ }
+ \end{column}
+ \begin{column}{0.4\textwidth}
+ \only<1>{\includegraphics[scale=0.3]{mixCode1-1.pdf}}
+ \only<2>{\includegraphics[scale=0.3]{mixCode1-2.pdf}}
+ \only<3>{\includegraphics[scale=0.3]{mixCode1-3.pdf}}
+ \only<4->{\includegraphics[scale=0.3]{mixCode1-4.pdf}}
+\end{column}
+\end{columns}

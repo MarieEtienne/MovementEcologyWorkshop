@@ -1,0 +1,48 @@
+\subsection{Model}
+\begin{frame}{Markov chain model}
+\paragraph{Modelling dependence between time step :}
+If an animal is feeding at time $i$, he has more chance to be feeding at time $i+1$ than if he was travelling at time $i$.
+$$P(Z_{i+1}=1 \vert Z_{i}=1) \ne P(Z_{i+1}=1 \vert Z_{i}=2)$$
+
+\paragraph{Markov Chain definition}
+$\Zbf$ is a Markov chain if 
+$$P(Z_{i+1} \vert Z_{1:i}) =  P(Z_{i+1} \vert Z_{i})$$
+
+
+$\Zbf$ is completely defined by the distribution $\mu_1=P(Z_1)$ and the transition matrix
+$$\Pi =\left[\begin{matrix}
+\pi_{11} & 1-\pi_{11}\\
+1-\pi_{22} & 1-\pi_{22}
+\end{matrix}\right]$$
+\end{frame}
+
+\begin{frame}[fragile]{Markov chain simulation}
+<<echo=FALSE, results='hide'>>=
+read_chunk("../RCode/LectureHMM-RIllustration.R")
+@
+<<hmmCode1, results='hide', fig.show='hide'>>=
+@
+\end{frame}
+
+\begin{frame}[fragile]{Hidden Markov Chain model}
+\paragraph{Model}
+For a given number of states $K$, 
+\begin{itemize}
+\item
+ \blue{Hidden State $\Zbf$ Modelling}: $\Zbf$ is assumed to follow a Markov Chain model with unknown initial distribution $\mubf$ and transition matrix  $\Pibf$.
+ \item \blue{Modelling observations $\Ybf$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\theta_k}().$
+\end{itemize}
+ \onslide<2->{\centering{\blue{Model parameters are $\mubf$, $\Pibf$ and $\thetabf$}}\par}
+ \onslide<3->{\centering{\includegraphics[scale=0.4]{Dag3.pdf}}}
+\end{frame}
+
+\begin{frame}[fragile]{Hidden Markov Chain simulation}
+<<echo=FALSE, results='hide'>>=
+read_chunk("../RCode/LectureHMM-RIllustration.R")
+@
+<<hmmCode1, results='hide', fig.show='hide'>>=
+@
+\end{frame}
+
+\subsection{Example}
+\subsection{Theoretical aspects}

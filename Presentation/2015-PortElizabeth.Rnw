@@ -1,0 +1,235 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+
+
+\usepackage{url}
+\ifx\hypersetup\undefined
+  \AtBeginDocument{%
+    \hypersetup{unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false}
+  }
+\else
+  \hypersetup{unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false}
+\fi
+
+% Beamer style
+%\usetheme[secheader]{Madrid}
+\usetheme{CambridgeUS}
+\usecolortheme[rgb={0.65,0.15,0.25}]{structure}
+%\usefonttheme[onlymath]{serif}
+\beamertemplatenavigationsymbolsempty
+
+
+% Packages
+\usepackage{dsfont, stmaryrd}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{rotating}
+\usepackage{epsfig}
+\usepackage{astats}
+%\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{algorithm2e}
+
+% Commands
+\definecolor{darkgreen}{cmyk}{0.5, 0, 0.5, 0.5}
+\definecolor{greenB}{rgb}{0.3, 0.87, 0.}
+\definecolor{darkred}{rgb}{0.65,0.15,0.25}
+\definecolor{darkblue}{rgb}{0.08,0.11,0.81}
+%\definecolor{orange}{rgb}{0.60,0.2,0.2}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\emphase}[1]{\textcolor{darkred}{#1}}
+\newcommand{\emphaseBis}[1]{\textcolor{darkblue}{#1}}
+\newcommand{\paragraph}[1]{\emphase{#1}}
+\newcommand{\refer}[1]{\textcolor{blue}{\sl \cite{#1}}}
+\newcommand{\Refer}[1]{\textcolor{blue}{\sl #1}}
+
+
+%thm prop and co
+\newtheorem{prop}{Proposition}
+
+% Symbols
+\def\d{\text{ d}} % Element differentiel
+\newcommand{\Abf}{{\bf A}}
+\newcommand{\Beta}{\text{B}}
+\newcommand{\betabf}{\mbox{\mathversion{bold}{$\beta$}}}
+\newcommand{\Bcal}{\mathcal{B}}
+\newcommand{\BIC}{\text{BIC}}
+\newcommand{\dd}{\text{d}}
+\newcommand{\Cbf}{{\bf C}}
+\newcommand{\dbf}{{\bf d}}
+\newcommand{\Dcal}{\mathcal{D}}
+\newcommand{\Esp}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Ebf}{{\bf E}}
+\newcommand{\Ecal}{\mathcal{E}}
+\newcommand{\Gcal}{\mathcal{G}}
+\newcommand{\Gam}{\mathcal{G}\mbox{am}}
+\newcommand{\Ibb}{\mathbb{I}}
+\newcommand{\Ibf}{{\bf I}}
+\newcommand{\ICL}{\text{ICL}}
+\newcommand{\Cov}{\mathbb{C}\text{ov}}
+\newcommand{\Corr}{\mathbb{C}\text{orr}}
+\newcommand{\Var}{\mathbb{V}}
+\newcommand{\Vsf}{\mathsf{V}}
+\newcommand{\pen}{\text{pen}}
+\newcommand{\Fcal}{\mathcal{F}}
+\newcommand{\Hbf}{{\bf H}}
+\newcommand{\Hcal}{\mathcal{H}}
+\newcommand{\Jcal}{\mathcal{J}}
+\newcommand{\Kbf}{{\bf K}}
+\newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\Mcal}{\mathcal{M}}
+\newcommand{\mbf}{{\bf m}}
+\newcommand{\mum}{\mu(\mbf)}
+\newcommand{\Ncal}{\mathcal{N}}
+\newcommand{\Nbf}{{\bf N}}
+\newcommand{\Nm}{N(\mbf)}
+\newcommand{\Ocal}{\mathcal{O}}
+\newcommand{\Obf}{{\bf 0}}
+\newcommand{\Omegas}{\underset{s}{\Omega}}
+\newcommand{\Pbf}{{\bf P}}
+\newcommand{\Pcal}{\mathcal{P}}
+\newcommand{\Qcal}{\mathcal{Q}}
+\newcommand{\Rbb}{\mathbb{R}}
+\newcommand{\Rbf}{{\bf R}}
+\newcommand{\Rcal}{\mathcal{R}}
+\newcommand{\sbf}{{\bf s}}
+\newcommand{\Sbf}{{\bf S}}
+\newcommand{\Scal}{\mathcal{S}}
+\newcommand{\Ucal}{\mathcal{U}}
+\newcommand{\Vcal}{\mathcal{V}}
+\newcommand{\Tbf}{{\bf T}}
+\newcommand{\ubf}{{\bf u}}
+\newcommand{\Ubf}{{\bf U}}
+\newcommand{\Wbf}{{\bf W}}
+\newcommand{\xbf}{{\bf x}}
+\newcommand{\Xbf}{{\bf X}}  
+\newcommand{\Ybf}{{\bf Y}}
+\newcommand{\Zbf}{{\bf Z}}
+\newcommand{\pibf}{\mbox{\mathversion{bold}{$\pi$}}}
+\newcommand{\Pibf}{\mbox{\mathversion{bold}{$\Pi$}}}
+\newcommand{\Sigmabf}{\mbox{\mathversion{bold}{$\Sigma$}}}
+\newcommand{\gammabf}{\mbox{\mathversion{bold}{$\gamma$}}}
+\newcommand{\mubf}{\mbox{\mathversion{bold}{$\mu$}}}
+\newcommand{\nubf}{\mbox{\mathversion{bold}{$\nu$}}}
+\newcommand{\Thetabf}{\mbox{\boldsymbol{\Theta}}}
+\newcommand{\thetabf}{\mbox{\mathversion{bold}{$\theta$}}}
+\newcommand{\BP}{\text{BP}}
+\newcommand{\EM}{\text{EM}}
+\newcommand{\VEM}{\text{VEM}}
+\newcommand{\VBEM}{\text{VB}}
+\newcommand{\cst}{\text{cst}}
+\newcommand{\obs}{\text{obs}}
+\newcommand{\ra}{\emphase{\mathversion{bold}{$\rightarrow$}~}}
+\newcommand{\QZ}{Q_{\Zbf}}
+\newcommand{\Qt}{Q_{\thetabf}}
+\def\argmax{\mathop{\mathrm{argmax}}}
+
+
+% Directory
+\newcommand{\FigSim}{}
+%{/RECHERCHE/RUPTURES/MinRegionCont/Res}
+\graphicspath{{figure/}{..//figure/}}
+%--------------------------------------------------------------------
+
+\title{Identifying patterns in trajectories}
+
+\author[MP Etienne]{Marie-Pierre Etienne }
+
+ \institute[AgroParisTech / INRA]{  AgroParisTech / INRA \\
+   \bigskip
+   \begin{tabular}{cccc}
+    \includegraphics[ height=1cm]{logagrotech_ABL_RVB}& 
+    \hspace{.5cm} &
+     \includegraphics[height=1cm]{logotype-INRA-RVB} & 
+   \end{tabular} \\ 
+   \bigskip
+   }
+
+\date[Movement Ecology]{Movement Ecology Workshop 2015 - Port Elizabeth}
+
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+\begin{document}
+
+<<include=FALSE>>=
+library(knitr)
+opts_chunk$set(comment = "", warning = FALSE, message = FALSE, echo = TRUE, tidy = FALSE, size="tiny")
+options( width=20)
+library('CircStats')
+library('adehabitatLT') ## dealing with ltraj object
+library('cghseg') ## segemntation and classification
+@
+
+%--------------------------------------------------------------------
+%--------------------------------------------------------------------
+
+%--------------------------------------------------------------------
+ \frame{\titlepage
+   }
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\frame{
+\tableofcontents[subsectionstyle=hide]  }
+
+
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Introduction and Notations}
+<<childIntro, child='Intro.Rnw'>>=
+@
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Change point model}
+<<childChange, child='ChangePoint.Rnw'>>=
+@
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Mixture Model}
+<<childMixture, child='Mixture.Rnw'>>=
+@
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Hidden Markov Model}
+<<childHMM, child='HMM.Rnw'>>=
+@
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+\section{Etat J'erre Study}
+
+\subsection{What is Etat J'erre Group}
+\subsection{Data and methods}
+\subsection{Conclusion}
+
+\appendix
+\section{Probability Distribution for angles}
+
+\frame{\frametitle{Circular Distribution}
+If $Z\sim WC(\mu,\gamma)$, $$f_{WC}(\theta;\mu,\gamma)=\sum_{n=-\infty}^\infty \frac{\gamma}{\pi(\gamma^2+(\theta-\mu+2\pi n)^2)}$$
+}
+
+\end{document}
+% %--------------------------------------------------------------------
+% %--------------------------------------------------------------------
+
+% %--------------------------------------------------------------------
+% \frame{\frametitle{}
+%   }
+
+
+%   \vspace{-0.5cm}
+%   \begin{tabular}{cc}
+%     \hspace{-0.5cm}
+%     \begin{tabular}{p{.5\textwidth}}
+%     \end{tabular}
+%     &
+%     \hspace{-1cm}
+%     \begin{tabular}{p{.5\textwidth}}
+%     \end{tabular}
+%   \end{tabular}

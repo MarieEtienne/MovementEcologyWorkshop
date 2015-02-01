@@ -1,0 +1,5 @@
+\frametitle{Hidden Markov Chain model}
+\paragraph{Hidden State Modelling:}
+$\Zbf$ is assumed to follow a Markov Chain model with unknown initial distribution $\mubf$ and transition matrix  $\Pibf$.
+
+
