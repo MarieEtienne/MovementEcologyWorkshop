@@ -1,23 +1,6 @@
 \beamer@endinputifotherversion {3.24pt}
 \beamer@sectionintoc {1}{Introduction and Notations}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Motivation}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Trajectories, a certain aspect of the movement}{5}{0}{1}
-\beamer@sectionintoc {2}{Change point model}{20}{0}{2}
-\beamer@subsectionintoc {2}{1}{Goal and Model}{21}{0}{2}
-\beamer@subsectionintoc {2}{5}{Example}{36}{0}{2}
-\beamer@subsectionintoc {2}{8}{ClusteringSegmentation}{39}{0}{2}
-\beamer@subsectionintoc {2}{9}{Example}{43}{0}{2}
-\beamer@sectionintoc {3}{Mixture Model}{45}{0}{3}
-\beamer@subsectionintoc {3}{1}{Model}{46}{0}{3}
-\beamer@subsectionintoc {3}{2}{Parameter estimation}{60}{0}{3}
-\beamer@subsectionintoc {3}{3}{Example}{71}{0}{3}
-\beamer@subsectionintoc {3}{4}{Theoretical aspects}{71}{0}{3}
-\beamer@sectionintoc {4}{Hidden Markov Model}{71}{0}{4}
-\beamer@subsectionintoc {4}{1}{Model}{72}{0}{4}
-\beamer@subsectionintoc {4}{2}{Example}{75}{0}{4}
-\beamer@subsectionintoc {4}{3}{Theoretical aspects}{75}{0}{4}
-\beamer@sectionintoc {5}{Etat J'erre Study}{75}{0}{5}
-\beamer@subsectionintoc {5}{1}{What is Etat J'erre Group}{76}{0}{5}
-\beamer@subsectionintoc {5}{2}{Data and methods}{76}{0}{5}
-\beamer@subsectionintoc {5}{3}{Conclusion}{76}{0}{5}
-\beamer@sectionintoc {6}{Probability Distribution for angles}{76}{1}{6}
+\beamer@sectionintoc {2}{Change point model}{33}{0}{2}
+\beamer@sectionintoc {3}{Mixture Model}{43}{0}{3}
+\beamer@sectionintoc {4}{Hidden Markov Model}{77}{0}{4}
+\beamer@sectionintoc {5}{Late thoughts}{106}{0}{5}

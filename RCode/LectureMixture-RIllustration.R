@@ -3,7 +3,7 @@
 ## ---- mixCode1
 #
 set.seed(6)
-N <- 400
+N <- 200
 Z <- sample(1:2, size = N, replace=T, prob=c(0.3, 0.7))
 mu <- c(3, 7)
 sigma <- c(1,1.5)
@@ -25,9 +25,9 @@ hist(Y.mixture[Z==2],, col=3, xlim=range(Y.mixture), add=TRUE, freq=F, breaks = 
 save("Y.mixture", file="../Data/dataMixture.Rd")
 
 ## ---- mixCode2
-K <- 2; N <- 400; mu <- c(3, 7); sigma <- c(1,1.5)
+K <- 2; N <- 100; mu <- c(3, 7); sigma <- c(1,1.5)
 Z <- sample(1:2, size = N, replace=T, prob=c(0.3, 0.7))
-plot(Z, col=Z+1, pch=15)
+plot(Z, col=Z+1, pch=15, cex=0.8)
 
 Y.mixture <- rnorm(N, mean=mu[Z], sd=sigma[Z])
 plot(Y.mixture, col=Z+1, pch=19)

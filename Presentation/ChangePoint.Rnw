@@ -1,4 +1,3 @@
-\subsection{Goal and Model}
 \subsection*{Goal}
   \frame{\frametitle{Change point detection context}
     \begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
@@ -14,233 +13,226 @@
   \end{tabular}
   }
 
-  \frame{\frametitle{Change point detection context}
-
-  Two possible statistical point of view : 
-  \begin{itemize}
-  \item Bayesian approach : the output is the posterior probability for each point to be a change point.
-  \item \emph{Frequentist} approach : the output is the best segmentation (according to a given critrion)
-  \end{itemize}
-  }
 
 \subsection*{Model}
-\frame{\frametitle{Underlying model}
-  \only<1>{ General framework~:}
-  \only<2>{\textcolor{red}{Change point detection in the trend~:} }
-  \begin{itemize}
-  \item Data $Y_1,\ldots,Y_n$ are drawn from a given pdf, driven by unknown parameter $\theta$
-    \begin{equation*}
-      Y_t \sim f_{\theta}(.)  \ \ 
-    \end{equation*}
-  \item
-    $\theta$ values change at  $K-1$ unknow instants, the change point~:
-    $t_1,\ldots,t_{K-1}$ :
-    \only<1>{
-      \begin{equation*}
-        Y_t \sim f(\theta_k) \ \ \mbox{if $t$ in region $I_k=[t_{k-1}+1,t_{k}]$}
-      \end{equation*}}
-    \only<2>{
-      \textcolor{red}{
-        \begin{equation*}
-          Y_t=\mu_k + E_t \quad \{E_t\} \mbox{i.i.d.} \sim \Ncal(0,\sigma^2) \mbox{ if $t$ in portion $I_k$,}
-        \end{equation*}
-        for  $k=1,\ldots,K$.
-      } }
- \par
- \medskip
-\noindent Remark : $K-1$ change points  $\Leftrightarrow$ $K$ regions.
-\end{itemize}
- } 
-
- 
- \subsection*{Estimation}
- \frame{\frametitle{Estimation procedure}
-   \begin{itemize}
-   \item Unknown parameters : $\mu_1, \ldots, \mu_K$, $\sigma$, and $T_1, \ldots, T_K$,\\
-     but  also \textcolor{red}{K} itself.
-\pause
-   \item Estimation Procedure
-     \begin{itemize}
-       \item for a given $K$,  $\mu_1, \ldots, \mu_K$, $\sigma_1, \ldots,\sigma_K$, and $T_1, \ldots, T_K$ are estimated using maximum likelihood (and dynanic programming)
-       \item K is chosen using penalized likelihood approach
-       \end{itemize}
-     \end{itemize} 
-         \pause
-         \begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
-           \begin{tabular}{p{0.4\textwidth}}
-             Likelihood increases with the number of segment, but
-           \end{tabular}
-           &  \pause
-           \begin{tabular}{p{0.4\textwidth}}
-             \includegraphics[scale=0.3]{LikelihoodProfile}
-           \end{tabular}
-         \end{tabular}
-   }
-
-
-\frame{\frametitle{Estimation procedure}
-
-\paragraph{Likelihood}
-{\small
-\begin{eqnarray*}
-2 log(P_K (T, \theta)) & = & 2 \sum_{k=1}^K \log f(\{Y_t\}_{t \in
-I_k};
-\theta_k) = 2 \sum_{k=1}^K \sum_{t \in I_k}\log f(Y_t; \theta_k) \\
-& = & -n \log \sigma^2 - \frac1{\sigma^2} \sum_{k=1}^K \sum_{t \in
-  I_k} (Y_t - \mu_k)^2 + \mbox{cst}.
-\end{eqnarray*}
-}
-
-\paragraph{Estimations}
-\begin{equation*}
- (\hat{T},\hat{\theta})=
-  \argmax_{(T,\theta)} log(P_K (T, \theta))
-\end{equation*}
-
-\paragraph{If the change points are known}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\begin{equation*}
-\widehat{\mu}_k = \frac1{n_k} \sum_{t \in I_k} Y_t
-\end{equation*}
-\end{column}
-\begin{column}{0.5\textwidth}
-  $$
-  \widehat{\sigma}^2 =  \frac1{n} \sum_{k=1}^K \sum_{t \in I_k} (Y_t -  \widehat{\mu}_k)^2
-  $$
-\end{column}
-\end{columns}
-}
-
-\begin{frame}[fragile]{Finding the K-1 change points}
-\only<1-3>{
-\paragraph{Considering all possible segmentations, } the best segmentation minimizes 
-$$
-J_k(1, n) = \sum_{k=1}^K \sum_{t \in I_k} (Y_t - \widehat{\mu}_k)^2.
-$$
-\pause
-\paragraph{But, } $$\left( \begin{array}{c} n-1 \\ K-1 \end{array}\right)$$ possible choices for the $K-1$ positions
-:\\
-  \centerline{$\Rightarrow$ Practically impossible even for small $K$ and $n$}
-  \medskip 
-  \pause
-  
-  $K=10$, $n=200$,  $\left( \begin{array}{c} K-1 \\ n-1 \end{array}\right)\approx 2. 10^{16}$
-}
-
-\paragraph{Dynamic programming,} with complexity ($\mathcal{O}(n^2)$).
-
-
-%possible only because the quantity of interest is the sum over all segments 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\only<4>{\centerline{\sl Sub-paths of the optimal path are themselves
-optimal,} 
-Bellmann optimality 
-
-\vspace{3.8cm}
-$$ $$ }
-\only<5>{
-\begin{description}
-
-\item[Initialisation:] Compute for $0 \leq i < j \leq n$, cost of portion $I_{ij}$~:
- $$
- J_1(i, j) = \sum_{t=i+1}^j (Y_t - \widehat{\mu})^2
- $$
-\item[Etape $k$:] Compute for $2 \leq k \leq K$, $J_k(i, j)$ the cost of the best segmentation in $k$ segments between $i$ and $j$.
-  $$
-  J_k(i, j) = \min_{i < h <j} \left[J_{k-1}(i, h) + J_1(h+1,  j)\right].
-  $$
-\end{description}
-}
-\end{frame}
-
-
-\subsection{Example}
-\subsection*{ Toy Example}
-   \begin{frame}[fragile]{How to perform this segmentation approach ?}
+\begin{frame}{Underlying model}
 <<echo=FALSE, cache=FALSE>>=
 read_chunk("../RCode/LectureSegmentation-RIllustration.R")
 @
- 
-\begin{columns}
-\begin{column}{0.4\textwidth}
-<<segCode2, fig.show='hide'>>=
-@
-\end{column}
-\begin{column}{0.5\textwidth}
-\includegraphics[scale=0.35]{segCode2-1.pdf}
-\end{column}
-\end{columns}
+
+\only<1>{ Modelling~:}
+\only<2>{\textcolor{red}{Change point detection in the trend (and/or in variance)~:} }
+    \begin{itemize}
+    \item Data $Y_1,\ldots,Y_n$ are drawn from a given pdf, driven by unknown parameter $\theta$
+      \begin{equation*}
+        Y_i \overset{i.i.d}{\sim} f_{\theta}(.)  \ \ 
+      \end{equation*}
+     $\theta$ values change at  $K-1$ unknow instants, the change point~:
+     $t_1,\ldots,t_{K-1}$ :
+     \only<1>{\begin{equation*}
+         Y_t \sim f(\theta_k) \ \ \mbox{if $t$ in region $I_k=[t_{k-1}+1,t_{k}]$}
+        \end{equation*}}
+       \only<2->{ \textcolor{red}{
+           \begin{equation*}
+             Y_t\overset{ind}{\sim} \Ncal(\mu_k,\sigma^2) 
+             \mbox{ if $t$ in portion $I_k$,  for  $k=1,\ldots,K$. }
+           \end{equation*}
+       } }
+       \end{itemize}
+
+  
+ <<segCode1, fig.show='hide', echo=FALSE, results='hide', fig.width=10, fig.height=4>>=
+ @
+ \onslide<3->{
+  \begin{columns}
+  \begin{column}{0.7\textwidth}
+   \includegraphics[scale=0.3]{segCode1-1.pdf}
+   \end{column}
+   \begin{column}{0.3\textwidth}
+  \noindent Remark : $K-1$ change points  $\Leftrightarrow$ $K$ regions.
+   \end{column}
+   \end{columns}
+  }
 \end{frame}
 
-\subsection*{Practical Example}
-   \begin{frame}[fragile]{How to perform this segmentation approach ?}
-\begin{columns}
-\begin{column}{0.4\textwidth}
-<<segCode3, fig.show='hide', results='hide'>>=
-@
-\end{column}
-\begin{column}{0.5\textwidth}
-\includegraphics[scale=0.35]{segCode3-1.pdf}
-\end{column}
-\end{columns}
-\end{frame}
+ 
+%  \subsection*{Estimation}
+%  \frame{\frametitle{Estimation procedure}
+%    \begin{itemize}
+%    \item Unknown parameters : $\mubf=(\mu_1, \ldots, \mu_{\textcolor{red}{K}})$, $\sigma$, and $\Tbf=(T_1, \ldots, T_{\textcolor{red}{K}})$,\\
+%      but  also \textcolor{red}{K} itself.
+%    \onslide<3->{
+%    \item Estimation Procedure
+%    \only<3->{
+%     \begin{itemize}}
+%     \only<3>{
+%        \item For  given $K$ and $\Tbf$,   $\thetabf$ is estimated using maximum likelihood.}
+%        \only<4>{\item For  given $K$, compute the maximum likelihood for any possible position for $\Tbf$, 
+%        \textcolor{red}{But, } $$\left( \begin{array}{c} n-1 \\ K-1 \end{array}\right)$$ possible choices for the $K-1$ positions, that is $10^{30}$ for $K=10$, $n=200$,  ( $\approx 10^{11}$ years on a 2014 computer).
+%        \pause
+%   \centerline{$\Rightarrow$ Practically impossible even for small $K$ and $n$}
+%   \centerline{\textcolor{red}{Dynamic programming}}
+%        }
+%   \only<5>{
+%   \item Estimating $K$. 
+%      Likelihood increases with the number of segment $K$, use a penalized likelihood criterion and
+%     \includegraphics[scale=0.3]{LikelihoodProfile}
+%   }
+%   \only<3->{\end{itemize}}
+%    }
+% \end{itemize} 
+% }
 % 
-
- 
- \begin{frame}[fragile]{Do it yourself}
- <<echo=FALSE, cache=FALSE>>=
-read_chunk("../RCode/SegmentationExample.R")
- @ 
-\begin{columns}
-\begin{column}{0.4\textwidth}
-<<Practical1, fig.show='hide', results='hide'>>=
-option(width=50)
-@
-\end{column}
-\begin{column}{0.5\textwidth}
-\includegraphics[scale=0.35]{Practical1-1.pdf}
-\end{column}
-\end{columns}
-\end{frame}
-
-\subsection{ClusteringSegmentation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{When Segmentation is not sufficient}
-$$
-\begin{tabular}{cc}
-  Pure segmentation & Segmentation + classification \\
-  \includegraphics[scale=0.3]{FigSegClas-1.pdf} &
-  \includegraphics[scale=0.3]{FigSegClas-2.pdf} 
-  \end{tabular}
-$$
-\end{frame}
-\begin{frame}{Segmentation-Clustering}
- \begin{itemize}
- \item Assuming a \textcolor{blue}{secondary underlying
-     structure} of the segments into $P$ groups with weights
-   $\pi_1,...,\pi_P (\sum_p \pi_p=1)$.
- \item Let's define \emphase{hidden variables $Z_{kp}$}, indicators of the
-   \emphase{group to which segment $k$ belongs}.
- \item $\pi_p$ denotes the \emphase{proportion} of group $p$.
- \item The \emphase{distribution of the signal} given the group of the
-     segment is
-  \begin{align*}
-   t \in I_k, k \in p &\qquad \Rightarrow \qquad Y_t \sim
-   \Ncal(m_{\emphase{p}}, \sigma^2)\\
-   Y^k|Z_{kp}=1 &\sim \Ncal( m_p, \sigma^2 ).
-   \end{align*}
- %\item It is a model of \textblue{segmentation/clustering}.
- \item The \emphase{parameters of this model} are
-   \begin{eqnarray*}
-   \mbox{the breakpoint positions:} \quad T&=&(t_1, ..., t_{K-1}),\\
-     \mbox{the mixture characteristics:} \quad \Theta&=&(\pi_1,\hdots,\pi_P;\mu_1,\hdots,\mu_P,\sigma).
-   \end{eqnarray*}
-\end{itemize}
-\end{frame} 
-
+% 
+% \frame{\frametitle{Estimation procedure}
+% 
+% \paragraph{Likelihood}
+% {\small
+% \begin{eqnarray*}
+% 2 log(P_K (\Ybf, \Tbf, \thetabf)) & = & 2 \sum_{k=1}^K \log f(\{Y_t\}_{t \in
+% I_k};
+% \theta_k) = 2 \sum_{k=1}^K \sum_{t \in I_k}\log f(Y_t; \theta_k) \\
+% & = & -n \log \sigma^2 - \frac1{\sigma^2} \sum_{k=1}^K \sum_{t \in
+%   I_k} (Y_t - \mu_k)^2 + \mbox{cst}.
+% \end{eqnarray*}
+% }
+% 
+% \paragraph{Estimations}
+% \begin{equation*}
+%  (\hat{\Tbf},\hat{\thetabf})=
+%   \argmax_{(\Tbf,\thetabf)} log(P_K (\Ybf, \Tbf, \thetabf))
+% \end{equation*}
+% 
+% \paragraph{If the change points are known}
+% \begin{columns}
+% \begin{column}{0.5\textwidth}
+% \begin{equation*}
+% \widehat{\mu}_k = \frac1{n_k} \sum_{t \in I_k} Y_t
+% \end{equation*}
+% \end{column}
+% \begin{column}{0.5\textwidth}
+%   $$
+%   \widehat{\sigma}^2 =  \frac1{n} \sum_{k=1}^K \sum_{t \in I_k} (Y_t -  \widehat{\mu}_k)^2
+%   $$
+% \end{column}
+% \end{columns}
+% }
+% 
+% \begin{frame}[fragile]{Finding the K-1 change points}
+%  \only<1-3>{
+%  \paragraph{Considering all possible segmentations, } the best segmentation minimizes 
+%  $$
+%  J_k(1, n) = \sum_{k=1}^K \sum_{t \in I_k} (Y_t - \widehat{\mu}_k)^2.
+%  $$
+%  \pause
+%  \paragraph{Dynamic programming,} with complexity ($\mathcal{O}(n^2)$).
+%  } 
+%  
+% % %possible only because the quantity of interest is the sum over all segments 
+% % 
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  \only<4>{\centerline{\sl Sub-paths of the optimal path are themselves
+%  optimal,} 
+%  Bellmann optimality 
+%  $$ $$
+%  \begin{description}
+% % 
+%  \item[Initialisation:] Compute for $0 \leq i < j \leq n$, cost of portion $I_{ij}$~:
+%   $$
+%   J_1(i, j) = \sum_{t=i+1}^j (Y_t - \widehat{\mu})^2
+%   $$
+%  \item[Etape $k$:] Compute for $2 \leq k \leq K$, $J_k(i, j)$ the cost of the best segmentation in $k$ segments between $i$ and $j$.
+%    $$
+%    J_k(i, j) = \min_{i < h <j} \left[J_{k-1}(i, h) + J_1(h+1,  j)\right].
+%    $$
+%  \end{description}
+%  }
+% \end{frame}
+% 
+% 
+% \subsection*{Example}
+% \subsection*{ Toy Example}
+%    \begin{frame}[fragile]{How to perform this segmentation approach ?}
+%  
+% \begin{columns}
+% \begin{column}{0.4\textwidth}
+% <<segCode2, fig.show='hide'>>=
+% @
+% \end{column}
+% \begin{column}{0.5\textwidth}
+% \includegraphics[scale=0.35]{segCode2-1.pdf}
+% \end{column}
+% \end{columns}
+% \end{frame}
+% 
+% \subsection*{Practical Example}
+%    \begin{frame}[fragile]{How to perform this segmentation approach ?}
+% \begin{columns}
+% \begin{column}{0.4\textwidth}
+% <<segCode3, fig.show='hide', results='hide'>>=
+% @
+% \end{column}
+% \begin{column}{0.5\textwidth}
+% \includegraphics[scale=0.35]{segCode3-1.pdf}
+% \end{column}
+% \end{columns}
+% \end{frame}
+% % 
+% 
+%  
+%  \begin{frame}[fragile]{Do it yourself}
+%  <<echo=FALSE, cache=FALSE>>=
+% read_chunk("../RCode/SegmentationExample.R")
+%  @ 
+% \begin{columns}
+% \begin{column}{0.4\textwidth}
+% <<Practical1, fig.show='hide', results='hide'>>=
+% option(width=50)
+% @
+% \end{column}
+% \begin{column}{0.5\textwidth}
+% \includegraphics[scale=0.35]{Practical1-1.pdf}
+% \end{column}
+% \end{columns}
+% \end{frame}
+% 
+% \subsection*{Clustering Segmentation}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{When Segmentation is not sufficient - clustering segmentation model}
+% $$
+% \begin{tabular}{cc}
+%   Pure segmentation & Segmentation + classification \\
+%   \includegraphics[scale=0.3]{FigSegClas-1.pdf} &
+%   \includegraphics[scale=0.3]{FigSegClas-2.pdf} 
+%   \end{tabular}
+% $$
+% \end{frame}
+% \begin{frame}{Segmentation-Clustering}
+%  \begin{itemize}
+%  \item Assuming a \textcolor{blue}{secondary underlying
+%      structure} of the segments into $P$ groups with weights
+%    $\pi_1,...,\pi_P (\sum_p \pi_p=1)$.
+%    \pause
+%  \item Let's define \emphase{hidden variables $Z_{kp}$}, indicators of the
+%    \emphase{group to which segment $k$ belongs}.
+%    \pause
+%  \item $\pi_p$ denotes the \emphase{proportion} of group $p$.
+%  \pause
+%  \item The \emphase{distribution of the signal} given the group of the
+%      segment is
+%   \begin{align*}
+%    t \in I_k, k \in p &\qquad \Rightarrow \qquad Y_t \sim
+%    \Ncal(m_{\emphase{p}}, \sigma^2)\\
+%    Y^k|Z_{kp}=1 &\sim \Ncal( m_p, \sigma^2 ).
+%    \end{align*}
+%  %\item It is a model of \textblue{segmentation/clustering}.
+%  \pause
+%  \item \centering{\blue{Model parameters $\thetabf =(\pibf, \gammabf)$}and 
+%  {the breakpoint positions:} \quad \Tbf=(t_1, ..., t_{K-1})}\\
+% \end{itemize}
+% \end{frame} 
+% 
 
 \begin{frame}{Hybrid algorithm}
 \only<1>{
@@ -253,37 +245,38 @@ $$
  \end{itemize}
 } 
 \only<2>{
- \paragraph{Alternate parameters estimation with $K$ and $P$ known}
+  \paragraph{Alternate parameters estimation with $K$ and $P$ known}
  \begin{enumerate}
- \item  When $T$ is fixed, the
+ \item  When $\Tbf$ is fixed, the
    \textcolor{blue}{Expectation-Maximisation (EM)} algorithm estimates
-   $\Theta$;
+   $\thetabf$;
    $$
-   \hat{\Theta}^{(h+1)}=\underset{\Theta}{\arg\max} \left\{\log
-     \Lcal_{KP}\left(\Theta,T^{(h)}\right) \right\}. 
-  $$
+    \hat{\thetabf}^{(h+1)}=\underset{\thetabf}{\arg\max} \left\{\log
+      \Lcal_{KP}\left(\thetabf,T^{(h)}\right) \right\}. 
    $$
-   \log \Lcal_{KP}( \hat{\Theta}^{(h+1)}; \hat{T}^{(h)})
-   \geq \log \Lcal_{KP}(\hat{\Theta}^{(h)};
-  \hat{T}^{(h)})
-  $$
- \item  When $\Theta$ is fixed, \textcolor{blue}{dynamic
-     programming} estimates $T$;
     $$
-   \hat{T}^{(h+1)}=\underset{T}{\arg\max} \left\{\log
-     \Lcal_{KP}\left(\hat{\Theta}^{(h+1)},T\right) \right\}. 
-  $$
+    \log \Lcal_{KP}( \hat{\thetabf}^{(h+1)}; \hat{\Tbf}^{(h)})
+    \geq \log \Lcal_{KP}(\hat{\thetabf}^{(h)};
+   \hat{\Tbf}^{(h)})
    $$
-   \log \Lcal_{KP}(\hat{\Theta}^{(h+1)}; \hat{T}^{(h+1)})
-   \geq \log \Lcal_{KP}(\hat{\Theta}^{(h+1)};
-   \hat{T}^{(h)})
+  \item  When $\thetabf$ is fixed, \textcolor{blue}{dynamic
+      programming} estimates $\Tbf$;
+     $$
+    \hat{\Tbf}^{(h+1)}=\underset{\Tbf}{\argmax}
+    \left\lbrace\log
+      \Lcal_{KP}\left(\hat{\thetabf}^{(h+1)},\Tbf\right) \right\rbrace. 
    $$
-   \end{enumerate} 
+   $$
+   \log \Lcal_{KP}(\hat{\thetabf}^{(h+1)}; \hat{\Tbf}^{(h+1)})
+   \geq \log \Lcal_{KP}(\hat{\thetabf}^{(h+1)};
+   \hat{\Tbf}^{(h)})
+   $$
+    \end{enumerate} 
 }
 \end{frame}
  
 
-\subsection{Example}
+\subsection*{Example}
 \subsection*{Toy Example}
    \begin{frame}[fragile]{How to perform this segmentation/clustering approach ?}
  

@@ -26,9 +26,7 @@ V <- exp(rnorm(N, mean=mu.ln[State]-sigma.ln[State]^2/2, sigma.ln[State]))
 hist(V)
 plot(phi,V, col=State)
 
-phi.cum <- cumsum(phi)%%(2*pi)
-x <- cumsum(c(0,cos(phi.cum)*V))
-y <- cumsum(c(0,sin(phi.cum)*V))
+
 
 ## ---- pathPractical2
 # Plot section ------------------------------------------------------------

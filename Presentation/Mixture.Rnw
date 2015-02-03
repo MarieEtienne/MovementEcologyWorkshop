@@ -1,4 +1,4 @@
-\subsection{Model}
+\subsection*{Model}
 
 \begin{frame}[fragile]{Problem presentation}
  <<echo=FALSE, cache=FALSE>>=
@@ -38,13 +38,15 @@
 \begin{frame}[fragile]{Proposed model}
 \paragraph{Model}
 For a given number of states $K$, 
+
 \begin{itemize}
 \item
- \blue{Modelling $Z$}: $\pi_k=\P(Z_i=k), \quad k=1,\ldots, K, \quad \sum_k \pi_k=1$\par
- $Z_i \overset{i.i.d}{\sim} \Mcal(1, \pibf), \quad P(Z_{ik}=1)=\pi_k$
- \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\theta_k}().$
+%  \blue{Modelling $Z$}: $\pi_k=\P(Z_i=k), \quad k=1,\ldots, K, \quad \sum_k \pi_k=1$\par
+%  $Z_i \overset{i.i.d}{\sim} \Mcal(1, \pibf), \quad P(Z_{ik}=1)=\pi_k$
+%  \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\gamma_k}().$
 \end{itemize}
- \onslide<2->{\centering{\blue{Model parameters are $\pibf$ and $\thetabf$}}\par}
+
+ \onslide<2->{\centering{\blue{Model parameters $\thetabf =(\pibf, \gammabf)$}}\par}
  \onslide<3->{\centering{\includegraphics[scale=0.4]{Dag2.pdf}}}
 \end{frame}
 
@@ -55,7 +57,7 @@ For a given number of states $K$,
 \item
  \blue{Modelling $Z$}: $\pi_k=\P(Z_i=k), \quad k=1,\ldots, K, \quad \sum_k \pi_k=1$\par
  $Z_i \overset{i.i.d}{\sim} \Mcal(1, \pibf)$
- \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\theta_k}().$
+ \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\gamma_k}().$
 \end{itemize}
 \begin{columns}
   \begin{column}{0.45\textwidth}
@@ -82,13 +84,13 @@ $$P(Y_i)=\sum_{k=1}^K P(Y_i, Z_i=k)=\textcolor{blue}{P(Z_i=k)} \textcolor{magent
 \begin{eqnarray*}
 P(\Ybf ; \thetabf, \pibf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k)  
 &=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{P(Z_i=k)} \textcolor{magenta}{P(Y_i | Z_i=k)} \\ 
-&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{\pi_k} \textcolor{magenta}{f_{\theta_k}(Y_i)} 
+&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{\pi_k} \textcolor{magenta}{f_{\gamma_k}(Y_i)} 
 \end{eqnarray*}
 }
 \end{itemize}
 \end{frame}
 
-\subsection{Parameter estimation}
+\subsection*{Parameter estimation}
 %%-----------------------------------------------------------------%%
 %%-----------------------------------------------------------------%%
 
@@ -102,10 +104,10 @@ P(\Ybf ; \thetabf, \pibf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k)
   \item Likelihood of the observed data (or observed likelihood):
     $$
     \log P(\Ybf; \thetabf, \pibf)=
-    \sum_{i=1}^n \log \left[\sum_{k=1}^K \pi_k f_{ \theta_k}(Y_i)\right]
+    \sum_{i=1}^n \log \left[\sum_{k=1}^K \pi_k f_{ \gamma_k}(Y_i)\right]
     $$
   \item No analytical estimators. 
-  \item  It is not always possible since this sum typically involves $K^n$ terms : $2^{100}\approx10^{30}$, the computation will take $10^{10}$ years on a 2014 computer. 
+%  \item  It is not always possible since this sum typically involves $K^n$ terms : $2^{100}\approx10^{30}$, the computation will take $10^{10}$ years on a 2014 computer. 
   \item Brute force algorithm is not the way
   \end{itemize}
 \end{frame}
@@ -118,9 +120,9 @@ The complete likelihood is
 \begin{align*}
     \log P(\Ybf, \Zbf; \thetabf, \pibf) &=\log P(\Zbf; \pibf) + \log P(\Ybf\vert \Zbf; \thetabf)\\
       & =  \sum_i \sum_k Z_{ik} \log \pi_k + \sum_i \sum_k Z_{ik} \log
-    f_{\theta_k}(Y_i) \\
+    f_{\gamma_k}(Y_i) \\
     & =  \sum_i \sum_k Z_{ik} [\log \pi_k + \log
-      f_{\theta_k}(Y_i)].
+      f_{\gamma_k}(Y_i)].
 \end{align*}
   
 Now, the sum contains $nK$ ($200$ if $n=100$ and $K=2$) terms.  It is much easier.
@@ -132,10 +134,29 @@ Now, the sum contains $nK$ ($200$ if $n=100$ and $K=2$) terms.  It is much easie
 \bigskip
 
 \textcolor{red}{Idea:} Replace $Z_i$, by our best guess, that is~:
-$$
-\tau_{ik}:=\Esp(Z_i = k | Y_i)=P(Z_i = k | Y_i)
-$$  
+ $$
+ \tau_{ik}:=\Esp(Z_i = k | Y_i)=P(Z_i = k | Y_i)
+ $$  
 \end{frame}
+
+\begin{frame}{Idea of EM algorithm}
+ Quantity to be maximized :
+\only<1-2>{ $$ \sum_i \sum_k\only<1>{ Z_{ik}}\only<2>{\textcolor{red}{\tau_{ik}} } [\log \pi_k + \log
+       f_{\gamma_k}(Y_i)].
+ $$}
+ \only<3->{ $$ Q(\thetabf, \thetabf_0) = \sum_i \sum_k
+ \textcolor{red}{\tau_{ik}^{(0)}}  [\log \pi_k + \log
+       f_{\gamma_k}(Y_i)]$$}
+       
+ \only<2->{where $\tau_{ik}$ is a good approximation of $Z_{ik}$.}
+ \bigskip
+ 
+ \only<3->{ If $\thetabf_0$ is known, a good approximation is $\tau_{ik}^{(0)}=\Esp_{\thetabf_0}\left\lbrace Z_{ik}\vert \Ybf\right\rbrace = \P_{\thetabf_0}\left\lbrace Z_{i}=k\vert \Ybf\right\rbrace $,
+ }
+ 
+ \only<4->{Idea : iterative algorithm, for a value of $\thetabf^{(l)}$, compute $\tau_{ik}^{(l)}$, and then update $\thetabf^{(l)}$ to $\thetabf^{(l+1)}$. }
+\end{frame}
+
 
 \begin{frame}{More generally - EM algorithm}
 \begin{columns}
@@ -147,7 +168,7 @@ $$
 {\small
 \begin{align*}
 P(\Ybf, \Zbf;\thetabf) & = P(\Ybf\vert \Zbf; \thetabf) P(\Zbf; \thetabf),\\
-& = \textcolor{orange}{P(\Zbf\vert \Ybf; \thetabf) P(\Ybf; \thetabf).}
+& = {P(\Zbf\vert \Ybf; \thetabf) P(\Ybf; \thetabf).}
 \end{align*}
 Therefore,
 \begin{align*}
@@ -156,8 +177,8 @@ Therefore,
 \end{align*}
 For a given $\thetabf_0$, we may compute $P_{\thetabf_0}=P(\Zbf\vert \thetabf_0, \Ybf)$ and
 \begin{align*}
-\log P(\Ybf; \thetabf) &= \Esp_{\thetabf_0}(\log P(\Ybf, \Zbf;\thetabf)) - \Esp_{\thetabf_0}(\log P(\Zbf\vert \Ybf; \thetabf))\\
-  & = Q(\thetabf, \thetabf_0) - H(\thetabf, \thetabf_0)
+\log P(\Ybf; \thetabf) &= \textcolor{orange}{\Esp_{\thetabf_0}(\log P(\Ybf, \Zbf;\thetabf))} - \Esp_{\thetabf_0}(\log P(\Zbf\vert \Ybf; \thetabf))\\
+  & = \textcolor{orange}{Q(\thetabf, \thetabf_0)} - H(\thetabf, \thetabf_0)
   \end{align*}}
 \end{column}
 \end{columns}
@@ -192,26 +213,26 @@ $\thetabf^{k+1}=argmax\, Q(\thetabf,\thetabf^{k})$
 \end{frame}
 
 \begin{frame}{EM algorithm for independent mixture model}
-\begin{align*}
-  Q(\thetabf,\thetabf^{(\ell)}) & = \Esp_{\thetabf^{(\ell)}}(\log P(\Ybf, \Zbf;\thetabf))\\
-  &= \Esp_{\thetabf^{(\ell)}} \left\{\sum_i \sum_k Z_{ik} [\log \pi_k + \log
-       f_{\theta_k^{(\ell)}}(Y_i)] \right\}\\
-  &= \sum_i \sum_k \Esp_{\thetabf^{(\ell)}} (Z_i = k | Y_i) \log\left[\pi_k f_{\theta_k^{(\ell)}}(Y_i)\right]
-  \end{align*}
    Recall that $\tau_{ik}^{(\ell)}:=P_{\thetabf^{(\ell)}}(Z_i = k | Y_i )$
    $$Q(\thetabf;\thetabf^{(\ell)})
-     =\sum_i \sum_k \tau_{ik}^{(\ell)} \log \pi_k +  \sum_i \sum_k \tau_{ik}^{(\ell)}\log f_{\theta_k^{(\ell)}}(Y_i)$$
+     =\sum_i \sum_k \tau_{ik}^{(\ell)} \log \pi_k +  \sum_i \sum_k \tau_{ik}^{(\ell)}\log f_{\gamma_k^{(\ell)}}(Y_i)$$
      $\rightarrow$ Need to estimate $\tau_{ik}^{(\ell)}$
 \end{frame}
 
 \begin{frame}{EM algorithm for independent mixture model}
     \begin{itemize}
-    \item Initialisation of $\thetabf^{(0)}=(\pi_1, ..., \pi_K, \theta_1, ..., \theta_K)^{(0)}$.
+    \item Initialisation of $\thetabf^{(0)}=(\pi_1, ..., \pi_K, \gamma_1, ..., \gamma_K)^{(0)}$.
   \pause
   \item Alternate  
       \begin{description}
-      \item[E-step] Calculation of $\tau^{(\ell)}_{ik}=P(Z_i = k | y_i, \thetabf^{(\ell-1)}) = \frac{\pi^{(\ell-1)}_k f_{\theta^{(\ell-1)}_k}(y_i)}{\sum_{k'} \pi^{(\ell-1)}_{k'}f_{\theta^{(\ell-1)}_{k'}}(x_i)}$
-
+      \item[E-step] Calculation of 
+      \begin{eqnarray*}
+      \tau^{(\ell)}_{ik}& = & P(Z_i = k | y_i, \thetabf^{(\ell-1)}) = \frac{\P(Z_i = k,   y_i; \thetabf^{(\ell-1)})}{\P(y_i, \thetabf^{(\ell-1)})}\\ 
+      \pause
+      &=&\frac{\P( y_i\vert Z_i = k ; \thetabf^{(\ell-1)}) \P( Z_i = k;  \thetabf^{(\ell-1)})}{\P(y_i; \thetabf^{(\ell-1)})}\\
+      & = & \frac{\pi^{(\ell-1)}_k f_{\theta^{(\ell-1)}_k}(y_i)}{\sum_{k'} \pi^{(\ell-1)}_{k'}f_{\theta^{(\ell-1)}_{k'}}(y_i)}
+      \end{eqnarray*}
+\pause
       \item[M-step] Maximization of
         $$
         (\pibf, \gammabf) \longmapsto \sum_i \sum_k \tau_{ik}^{(\ell)} [\log \pi_k +
@@ -221,16 +242,12 @@ $\thetabf^{k+1}=argmax\, Q(\thetabf,\thetabf^{k})$
     \end{itemize}
 \end{frame}
 
-\begin{frame}{In our situation}
+\begin{frame}{In the example}
 \begin{itemize}  
 \item $Z \in \{1,2\}$: $P(Z=1)=\pi_1$ and $P(Z=2)=1-\pi_1$  
 \item For $k=1$ or $2$, $(X|Z=k) \sim \Ncal(\mu_k, \sigma_k^2)$ 
-\item the parameter vector is $(\pi, \mu_1, \mu_2, \sigma_2^2, \sigma_2^2)$
-\item[] Assume that $n$ observations $y_1, y_2, ..., y_n$ are available
-\item The parameter estimators  at step $(\ell+1)$ of the EM algorithm 
-are given by:
+\item The parameter vector is $\thetabf=(\pi, \mu_1, \mu_2, \sigma_2^2, \sigma_2^2)$
 \end{itemize}
-\bigskip
    \begin{eqnarray*}
      \widehat{\pi}_1^{(\ell+1)} & = & \frac1{n} \sum_{i=1}^n \tau_{i1} ^{(\ell)}, \\
      \widehat{\mu}_k^{(\ell+1)} & = & \frac1{\sum_{i=1}^n  \tau_{ik} ^{(\ell)}} \sum_{i=1}^n \tau_{ik}^{(\ell)} y_i \\ 
@@ -252,6 +269,12 @@ are given by:
 \end{columns}
 \end{frame}
 
-\subsubsection*{Assumptions}
-\subsection{Example}
-\subsection{Theoretical aspects}
+\begin{frame}[fragile]{Do it yourself}
+\end{frame}
+
+\begin{frame}{Reconstruction of hidden state $\Zbf$}
+Since $\pi_{ik}=\P(Z_i=k)$, and  $\hat{\pi}_{ik}$ is an estimation of $\pi_{ik}$,
+
+$$\widehat{Z_i}=\argmax{k=1, K} =\widehat{\pi}_{ik}$$
+\end{frame}
+

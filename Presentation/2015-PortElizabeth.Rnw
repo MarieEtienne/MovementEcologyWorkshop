@@ -39,8 +39,13 @@
 \definecolor{greenB}{rgb}{0.3, 0.87, 0.}
 \definecolor{darkred}{rgb}{0.65,0.15,0.25}
 \definecolor{darkblue}{rgb}{0.08,0.11,0.81}
-%\definecolor{orange}{rgb}{0.60,0.2,0.2}
+\definecolor{lightblue}{rgb}{0.4,0.51,0.8}
+\definecolor{darkorange}{rgb}{1,0.54,0}
 \newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\hid}[1]{\textcolor{darkblue}{#1}}
+\newcommand{\Ehid}[1]{\textcolor{lightblue}{#1}}
+\newcommand{\obsy}[1]{\textcolor{red}{#1}}
+\newcommand{\Eobsy}[1]{\textcolor{darkorange}{#1}}
 \newcommand{\emphase}[1]{\textcolor{darkred}{#1}}
 \newcommand{\emphaseBis}[1]{\textcolor{darkblue}{#1}}
 \newcommand{\paragraph}[1]{\emphase{#1}}
@@ -114,7 +119,7 @@
 \newcommand{\Pibf}{\mbox{\mathversion{bold}{$\Pi$}}}
 \newcommand{\Sigmabf}{\mbox{\mathversion{bold}{$\Sigma$}}}
 \newcommand{\gammabf}{\mbox{\mathversion{bold}{$\gamma$}}}
-\newcommand{\mubf}{\mbox{\mathversion{bold}{$\mu$}}}
+  \newcommand{\mubf}{\mbox{\mathversion{bold}{$\mu$}}}
 \newcommand{\nubf}{\mbox{\mathversion{bold}{$\nu$}}}
 \newcommand{\Thetabf}{\mbox{\boldsymbol{\Theta}}}
 \newcommand{\thetabf}{\mbox{\mathversion{bold}{$\theta$}}}
@@ -136,7 +141,7 @@
 \graphicspath{{figure/}{..//figure/}}
 %--------------------------------------------------------------------
 
-\title{Identifying patterns in trajectories}
+\title{Model based detection of homogeneous portions in trajectories}
 
 \author[MP Etienne]{Marie-Pierre Etienne }
 
@@ -201,18 +206,42 @@ library('cghseg') ## segemntation and classification
 @
 % %--------------------------------------------------------------------
 % %--------------------------------------------------------------------
-\section{Etat J'erre Study}
+\section{Late thoughts}
+\begin{frame}{And more ...}
+\begin{itemize}
+\item It is possible to include dependency in $\Ybf$.
+\item Markovian property could be removed (SHMM)
+\item Presented methods may be used on several signals (ex $Speed$ and $angle$)
+\item Work in progress for continuous time Markov model and dependent observations.
+\end{itemize}
+\blue{But}
 
-\subsection{What is Etat J'erre Group}
-\subsection{Data and methods}
-\subsection{Conclusion}
+\end{frame}
 
+\begin{frame}{Limitations}
+Trajectories are in continuous space and continuous time.
+\begin{itemize}
+\item Mostly, discrete time : effects of the sampling step and assumption of regularity.
+\item Segmentation methods consider a signal in time,
+\item Spatial information is lost.
+\item Those methods are useful to identify different regimes of movement. This difference may be due to behaviour or the environment or interaction. 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+Many thanks to Emilie Lebarbier, Marie-Laure Martin-Magniette, Stéphane Robin for some contents of the slides.
+
+
+\vspace{1cm}
+Many thanks to Andrea and Linda for the invitation and organisation.
+
+\end{frame}
 \appendix
-\section{Probability Distribution for angles}
-
-\frame{\frametitle{Circular Distribution}
-If $Z\sim WC(\mu,\gamma)$, $$f_{WC}(\theta;\mu,\gamma)=\sum_{n=-\infty}^\infty \frac{\gamma}{\pi(\gamma^2+(\theta-\mu+2\pi n)^2)}$$
-}
+% \section{Probability Distribution for angles}
+% 
+% \frame{\frametitle{Circular Distribution}
+% If $Z\sim WC(\mu,\gamma)$, $$f_{WC}(\theta;\mu,\gamma)=\sum_{n=-\infty}^\infty \frac{\gamma}{\pi(\gamma^2+(\theta-\mu+2\pi n)^2)}$$
+% }
 
 \end{document}
 % %--------------------------------------------------------------------

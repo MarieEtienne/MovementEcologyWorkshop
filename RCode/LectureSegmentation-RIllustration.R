@@ -16,6 +16,7 @@ mu <-rnorm(Nchange+1, mean=5, sd=2)
 sigma <- 1/rgamma(Nchange+1, shape = 20,rate = 10)                                  
 signal <- rnorm(N, mean=mu[l1], sd=sigma[l1])
 plot(signal)
+lines(1:length(signal), mu[l1],'s', col=2, lwd=2)
 Profil.seg <- signal
 
 l1

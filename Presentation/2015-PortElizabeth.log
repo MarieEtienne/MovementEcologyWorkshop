@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.11)  1 FEB 2015 13:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.11)  3 FEB 2015 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1017,22 +1017,22 @@ tim
 (./2015-PortElizabeth.aux)
 \openout1 = `2015-PortElizabeth.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 209.
-LaTeX Font Info:    ... okay on input line 209.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 214.
+LaTeX Font Info:    ... okay on input line 214.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1083,7 +1083,7 @@ LaTeX Font Info:    ... okay on input line 209.
 \everyMPtoPDFconversion=\toks44
 ) ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 209.
+Package hyperref Info: Link coloring OFF on input line 214.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1093,56 +1093,56 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count165
 )
-LaTeX Info: Redefining \ref on input line 209.
-LaTeX Info: Redefining \pageref on input line 209.
-LaTeX Info: Redefining \nameref on input line 209.
+LaTeX Info: Redefining \ref on input line 214.
+LaTeX Info: Redefining \pageref on input line 214.
+LaTeX Info: Redefining \nameref on input line 214.
 
 (./2015-PortElizabeth.out) (./2015-PortElizabeth.out)
 \@outlinefile=\write5
 \openout5 = `2015-PortElizabeth.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 209.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 214.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 209.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 214.
 \symnumbers=\mathgroup7
 \sympureletters=\mathgroup8
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 209.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 209.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 214.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 209.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 209.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 209.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/bx/n on input line 214.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 209.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 209.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 209.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 214.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 209.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 209.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 209.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 214.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 209.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 209.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 214.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 209.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 214.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 209.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 209.
+(Font)                  OT1/cmss/bx/n --> OT1/cmr/bx/n on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 209.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/bx/n on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 209.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/bx/n on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 209.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/bx/it on input line 214.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 209.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/bx/n on input line 214.
 
 (/usr/share/texmf/tex/latex/beamer/base/translator/dicts/translator-basic-dicti
 onary/translator-basic-dictionary-English.dict
@@ -1168,73 +1168,95 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 209.
+LaTeX Info: Redefining \includegraphics on input line 214.
  (./2015-PortElizabeth.nav)
-LaTeX Font Info:    Try loading font information for U+msa on input line 218.
+Overfull \hbox (45.71375pt too wide) in paragraph at lines 214--214
+ [][][][]  
+ []
 
+LaTeX Font Info:    Try loading font information for U+msa on input line 223.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 218.
+LaTeX Font Info:    Try loading font information for U+msb on input line 223.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 218.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 223.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
-<..//figure/logagrotech_ABL_RVB.jpg, id=108, 284.5029pt x 56.8524pt>
+<..//figure/logagrotech_ABL_RVB.jpg, id=36, 284.5029pt x 56.8524pt>
 File: ..//figure/logagrotech_ABL_RVB.jpg Graphic file (type jpg)
 
 <use ..//figure/logagrotech_ABL_RVB.jpg>
 Package pdftex.def Info: ..//figure/logagrotech_ABL_RVB.jpg used on input line 
-218.
+223.
 (pdftex.def)             Requested size: 142.38567pt x 28.45274pt.
 
-<..//figure/logotype-INRA-RVB.jpg, id=109, 3521.155pt x 1443.3925pt>
+<..//figure/logotype-INRA-RVB.jpg, id=37, 3521.155pt x 1443.3925pt>
 File: ..//figure/logotype-INRA-RVB.jpg Graphic file (type jpg)
 
 <use ..//figure/logotype-INRA-RVB.jpg>
-Package pdftex.def Info: ..//figure/logotype-INRA-RVB.jpg used on input line 21
-8.
+Package pdftex.def Info: ..//figure/logotype-INRA-RVB.jpg used on input line 22
+3.
 (pdftex.def)             Requested size: 69.3634pt x 28.45274pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 218.
+(Font)              size <5> substituted on input line 223.
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <..//figure/logagrotech_ABL
 _RVB.jpg> <..//figure/logotype-INRA-RVB.jpg>] (./2015-PortElizabeth.toc)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
 [2
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
 
  (./2015-PortElizabeth.vrb
-<figure/pathPractical2-1.pdf, id=142, 505.89pt x 505.89pt>
+<figure/pathPractical2-1.pdf, id=71, 505.89pt x 505.89pt>
 File: figure/pathPractical2-1.pdf Graphic file (type pdf)
 
 <use figure/pathPractical2-1.pdf>
 Package pdftex.def Info: figure/pathPractical2-1.pdf used on input line 18.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 )
-Overfull \vbox (1.07759pt too high) detected at line 252
+Overfull \vbox (1.07759pt too high) detected at line 257
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [3
 
  <./figure/pathPractical2-1.pdf>] (./2015-PortElizabeth.vrb
-<figure/pathPractical3-1.pdf, id=156, 505.89pt x 505.89pt>
+<figure/pathPractical3-1.pdf, id=86, 505.89pt x 505.89pt>
 File: figure/pathPractical3-1.pdf Graphic file (type pdf)
 
 <use figure/pathPractical3-1.pdf>
 Package pdftex.def Info: figure/pathPractical3-1.pdf used on input line 19.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
 )
-Overfull \vbox (1.07759pt too high) detected at line 252
+Overfull \vbox (1.07759pt too high) detected at line 257
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [4
@@ -1243,118 +1265,286 @@ Overfull \vbox (1.07759pt too high) detected at line 252
 \openout4 = `2015-PortElizabeth.vrb'.
 
  (./2015-PortElizabeth.vrb
-<figure/pathPractical4-1.pdf, id=170, 505.89pt x 505.89pt>
+<figure/pathPractical4-1.pdf, id=100, 505.89pt x 505.89pt>
 File: figure/pathPractical4-1.pdf Graphic file (type pdf)
 
 <use figure/pathPractical4-1.pdf>
 Package pdftex.def Info: figure/pathPractical4-1.pdf used on input line 3.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-) [5
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
- <./figure/pathPractical4-1.pdf>]
-(./2015-PortElizabeth.vrb
-<figure/pathPractical4-3.pdf, id=184, 505.89pt x 505.89pt>
+[5
+
+ <./figure/pathPractical4-1.pdf>] (./2015-PortElizabeth.vrb
+<figure/pathPractical4-3.pdf, id=115, 505.89pt x 505.89pt>
 File: figure/pathPractical4-3.pdf Graphic file (type pdf)
 
 <use figure/pathPractical4-3.pdf>
 Package pdftex.def Info: figure/pathPractical4-3.pdf used on input line 4.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-) [6
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
- <./figure/pathPractical4-3.pdf>]
-(./2015-PortElizabeth.vrb
-<figure/pathPractical4-6.pdf, id=198, 505.89pt x 505.89pt>
+[6
+
+ <./figure/pathPractical4-3.pdf>] (./2015-PortElizabeth.vrb
+<figure/pathPractical4-6.pdf, id=129, 505.89pt x 505.89pt>
 File: figure/pathPractical4-6.pdf Graphic file (type pdf)
 
 <use figure/pathPractical4-6.pdf>
 Package pdftex.def Info: figure/pathPractical4-6.pdf used on input line 5.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-) [7
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
- <./figure/pathPractical4-6.pdf>]
-(./2015-PortElizabeth.vrb
-<figure/pathPractical4-10.pdf, id=213, 505.89pt x 505.89pt>
+[7
+
+ <./figure/pathPractical4-6.pdf>] (./2015-PortElizabeth.vrb
+<figure/pathPractical4-10.pdf, id=144, 505.89pt x 505.89pt>
 File: figure/pathPractical4-10.pdf Graphic file (type pdf)
 
 <use figure/pathPractical4-10.pdf>
 Package pdftex.def Info: figure/pathPractical4-10.pdf used on input line 6.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-) [8
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
- <./figure/pathPractical4-10.pdf>]
-(./2015-PortElizabeth.vrb
-<figure/pathPractical4-15.pdf, id=227, 505.89pt x 505.89pt>
+[8
+
+ <./figure/pathPractical4-10.pdf>] (./2015-PortElizabeth.vrb
+<figure/pathPractical4-15.pdf, id=158, 505.89pt x 505.89pt>
 File: figure/pathPractical4-15.pdf Graphic file (type pdf)
 
 <use figure/pathPractical4-15.pdf>
 Package pdftex.def Info: figure/pathPractical4-15.pdf used on input line 7.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-) [9
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
- <./figure/pathPractical4-15.pdf>]
-(./2015-PortElizabeth.vrb
-<figure/pathPractical5-1.pdf, id=241, 505.89pt x 505.89pt>
+[9
+
+ <./figure/pathPractical4-15.pdf>] (./2015-PortElizabeth.vrb
+<figure/pathPractical5-1.pdf, id=172, 505.89pt x 505.89pt>
 File: figure/pathPractical5-1.pdf Graphic file (type pdf)
 
 <use figure/pathPractical5-1.pdf>
 Package pdftex.def Info: figure/pathPractical5-1.pdf used on input line 9.
 (pdftex.def)             Requested size: 202.3524pt x 202.3524pt.
-) [10
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[10
 
  <./figure/pathPractical5-1.pdf>]
 
 LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
-(Font)              using `U/stmry/m/n' instead on input line 305.
+(Font)              using `U/stmry/m/n' instead on input line 310.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 305.
+(Font)              using `OT1/cmss/bx/n' instead on input line 310.
 
-<..//figure/Speed1.pdf, id=255, 456.36497pt x 281.0345pt>
+<..//figure/Speed1.pdf, id=186, 456.36497pt x 281.0345pt>
 File: ..//figure/Speed1.pdf Graphic file (type pdf)
 
 <use ..//figure/Speed1.pdf>
-Package pdftex.def Info: ..//figure/Speed1.pdf used on input line 305.
+Package pdftex.def Info: ..//figure/Speed1.pdf used on input line 310.
 (pdftex.def)             Requested size: 136.91054pt x 84.31099pt.
- [11
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[11
 
  <..//figure/Speed1.pdf>]
-<..//figure/Speed2.pdf, id=290, 456.36497pt x 281.0345pt>
+<..//figure/Speed2.pdf, id=221, 456.36497pt x 281.0345pt>
 File: ..//figure/Speed2.pdf Graphic file (type pdf)
 
 <use ..//figure/Speed2.pdf>
-Package pdftex.def Info: ..//figure/Speed2.pdf used on input line 305.
+Package pdftex.def Info: ..//figure/Speed2.pdf used on input line 310.
 (pdftex.def)             Requested size: 136.91054pt x 84.31099pt.
- [12
 
- <..//figure/Speed2.pdf>] [13
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [14
+[12
 
-] [15
+ <..//figure/Speed2.pdf>]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[13
 
 ]
-<..//figure/Dag1.pdf, id=338, 202.81096pt x 139.58221pt>
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[14
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[15
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[16
+
+] <..//figure/Normal1.pdf, id=279, 505.89pt x 505.89pt>
+File: ..//figure/Normal1.pdf Graphic file (type pdf)
+
+<use ..//figure/Normal1.pdf>
+Package pdftex.def Info: ..//figure/Normal1.pdf used on input line 352.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+
+Overfull \vbox (16.63086pt too high) detected at line 352
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[17
+
+ <..//figure/Normal1.pdf>]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[18
+
+] <..//figure/Normal2.pdf, id=301, 505.89pt x 505.89pt>
+File: ..//figure/Normal2.pdf Graphic file (type pdf)
+
+<use ..//figure/Normal2.pdf>
+Package pdftex.def Info: ..//figure/Normal2.pdf used on input line 352.
+(pdftex.def)             Requested size: 101.1762pt x 101.1762pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[19
+
+ <..//figure/Normal2.pdf>]
+<..//figure/Normal3.pdf, id=317, 505.89pt x 505.89pt>
+File: ..//figure/Normal3.pdf Graphic file (type pdf)
+
+<use ..//figure/Normal3.pdf>
+Package pdftex.def Info: ..//figure/Normal3.pdf used on input line 352.
+(pdftex.def)             Requested size: 101.1762pt x 101.1762pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[20
+
+ <..//figure/Normal3.pdf>]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[21
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[22
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[23
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[24
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[25
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[26
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[27
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[28
+
+] <..//figure/Dag1.pdf, id=399, 202.81096pt x 139.58221pt>
 File: ..//figure/Dag1.pdf Graphic file (type pdf)
 
 <use ..//figure/Dag1.pdf>
-Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 361.
+Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 428.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 
-<..//figure/Dag2.pdf, id=339, 202.81096pt x 139.58221pt>
+<..//figure/Dag2.pdf, id=400, 202.81096pt x 139.58221pt>
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
 
 <use ..//figure/Dag2.pdf>
-Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 361.
+Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 428.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 
-<..//figure/Dag3.pdf, id=340, 255.00595pt x 139.58224pt>
+<..//figure/Dag3.pdf, id=401, 202.81096pt x 139.58221pt>
 File: ..//figure/Dag3.pdf Graphic file (type pdf)
 
 <use ..//figure/Dag3.pdf>
-Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 361.
-(pdftex.def)             Requested size: 102.00056pt x 55.8319pt.
- [16
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 428.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[29
 
  <..//figure/Dag1.pdf> <..//figure/Dag2.pdf
 
@@ -1367,221 +1557,181 @@ ltiple pdfs with page group included in a single page
 >]
 File: ..//figure/Dag1.pdf Graphic file (type pdf)
  <use ..//figure/Dag1.pdf>
-Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 361.
+Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 428.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
  <use ..//figure/Dag2.pdf>
-Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 361.
+Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 428.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 File: ..//figure/Dag3.pdf Graphic file (type pdf)
 
 <use ..//figure/Dag3.pdf>
-Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 361.
-(pdftex.def)             Requested size: 102.00056pt x 55.8319pt.
- [17
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 428.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[30
 
 ]
 File: ..//figure/Dag1.pdf Graphic file (type pdf)
  <use ..//figure/Dag1.pdf>
-Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 361.
-(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
-File: ..//figure/Dag2.pdf Graphic file (type pdf)
-
-<use ..//figure/Dag2.pdf>
-Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 361.
-(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
-File: ..//figure/Dag3.pdf Graphic file (type pdf)
- <use ..//figure/Dag3.pdf>
-Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 361.
-(pdftex.def)             Requested size: 102.00056pt x 55.8319pt.
- [18
-
-]
-File: ..//figure/Dag1.pdf Graphic file (type pdf)
-
-<use ..//figure/Dag1.pdf>
-Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 361.
+Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 428.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
  <use ..//figure/Dag2.pdf>
-Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 361.
+Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 428.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 File: ..//figure/Dag3.pdf Graphic file (type pdf)
- <use ..//figure/Dag3.pdf>
-Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 361.
-(pdftex.def)             Requested size: 102.00056pt x 55.8319pt.
 
-[19
+<use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 428.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 
-] (./2015-PortElizabeth.toc)
-Overfull \vbox (61.12114pt too high) detected at line 373
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
-[20
+[31
 
-] <rawSignal.pdf, id=437, 505.89pt x 505.89pt>
+]
+File: ..//figure/Dag1.pdf Graphic file (type pdf)
+ <use ..//figure/Dag1.pdf>
+Package pdftex.def Info: ..//figure/Dag1.pdf used on input line 428.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+File: ..//figure/Dag2.pdf Graphic file (type pdf)
+ <use ..//figure/Dag2.pdf>
+Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 428.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+
+<use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 428.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[32
+
+] (./2015-PortElizabeth.toc)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[33
+
+] <rawSignal.pdf, id=471, 505.89pt x 505.89pt>
 File: rawSignal.pdf Graphic file (type pdf)
  <use rawSignal.pdf>
-Package pdftex.def Info: rawSignal.pdf used on input line 389.
+Package pdftex.def Info: rawSignal.pdf used on input line 456.
 (pdftex.def)             Requested size: 149.65309pt x 149.64955pt.
 
-Overfull \hbox (183.14766pt too wide) in paragraph at lines 389--389
+Overfull \hbox (183.14766pt too wide) in paragraph at lines 456--456
 [][]| 
  []
 
 
-Underfull \hbox (badness 2846) in paragraph at lines 389--389
+Underfull \hbox (badness 2846) in paragraph at lines 456--456
 []\OT1/cmss/m/it/10.95 Goal :  \OT1/cmss/m/n/10.95 Iden-ti-fy-ing ho-
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 389--389
+Overfull \hbox (12.0pt too wide) in paragraph at lines 456--456
 [][]| 
  []
 
-[21
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[34
 
  <./rawSignal.pdf>]
-<..//figure/segmentedSignal.pdf, id=452, 505.89pt x 505.89pt>
+<..//figure/segmentedSignal.pdf, id=486, 505.89pt x 505.89pt>
 File: ..//figure/segmentedSignal.pdf Graphic file (type pdf)
 
 <use ..//figure/segmentedSignal.pdf>
-Package pdftex.def Info: ..//figure/segmentedSignal.pdf used on input line 389.
+Package pdftex.def Info: ..//figure/segmentedSignal.pdf used on input line 456.
 
 (pdftex.def)             Requested size: 149.65309pt x 149.64955pt.
 
-Overfull \hbox (183.14766pt too wide) in paragraph at lines 389--389
+Overfull \hbox (183.14766pt too wide) in paragraph at lines 456--456
 [][]| 
  []
 
 
-Underfull \hbox (badness 2846) in paragraph at lines 389--389
+Underfull \hbox (badness 2846) in paragraph at lines 456--456
 []\OT1/cmss/m/it/10.95 Goal :  \OT1/cmss/m/n/10.95 Iden-ti-fy-ing ho-
  []
 
 
-Overfull \hbox (12.0pt too wide) in paragraph at lines 389--389
+Overfull \hbox (12.0pt too wide) in paragraph at lines 456--456
 [][]| 
  []
 
-[22
 
- <..//figure/segmentedSignal.pdf>] [23
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [24
+[35
 
-] [25
+ <..//figure/segmentedSignal.pdf>]
+<figure/segCode1-1.pdf, id=501, 722.7pt x 289.08pt>
+File: figure/segCode1-1.pdf Graphic file (type pdf)
+
+<use figure/segCode1-1.pdf>
+Package pdftex.def Info: figure/segCode1-1.pdf used on input line 495.
+(pdftex.def)             Requested size: 216.81166pt x 86.72466pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[36
+
+ <./figure/segCode1-1.pdf>]
+File: figure/segCode1-1.pdf Graphic file (type pdf)
+ <use figure/segCode1-1.pdf>
+Package pdftex.def Info: figure/segCode1-1.pdf used on input line 495.
+(pdftex.def)             Requested size: 216.81166pt x 86.72466pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[37
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
+File: figure/segCode1-1.pdf Graphic file (type pdf)
+ <use figure/segCode1-1.pdf>
+Package pdftex.def Info: figure/segCode1-1.pdf used on input line 495.
+(pdftex.def)             Requested size: 216.81166pt x 86.72466pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
-<..//figure/LikelihoodProfile.pdf, id=495, 535.4276pt x 259.0231pt>
-File: ..//figure/LikelihoodProfile.pdf Graphic file (type pdf)
-
-<use ..//figure/LikelihoodProfile.pdf>
-Package pdftex.def Info: ..//figure/LikelihoodProfile.pdf used on input line 45
-2.
-(pdftex.def)             Requested size: 160.62952pt x 77.70752pt.
-
-Overfull \hbox (23.71349pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-[26
-
- <..//figure/LikelihoodProfile.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ..//figure/LikelihoodProfile.pdf): PDF 
-inclusion: multiple pdfs with page group included in a single page
->]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-File: ..//figure/LikelihoodProfile.pdf Graphic file (type pdf)
-<use ..//figure/LikelihoodProfile.pdf>
-Package pdftex.def Info: ..//figure/LikelihoodProfile.pdf used on input line 45
-2.
-(pdftex.def)             Requested size: 160.62952pt x 77.70752pt.
-
-Overfull \hbox (23.71349pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-[27
+[38
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
-File: ..//figure/LikelihoodProfile.pdf Graphic file (type pdf)
-<use ..//figure/LikelihoodProfile.pdf>
-Package pdftex.def Info: ..//figure/LikelihoodProfile.pdf used on input line 45
-2.
-(pdftex.def)             Requested size: 160.62952pt x 77.70752pt.
-
-Overfull \hbox (23.71349pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-[28
+[39
 
 ]
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
-File: ..//figure/LikelihoodProfile.pdf Graphic file (type pdf)
-<use ..//figure/LikelihoodProfile.pdf>
-Package pdftex.def Info: ..//figure/LikelihoodProfile.pdf used on input line 45
-2.
-(pdftex.def)             Requested size: 160.62952pt x 77.70752pt.
-
-Overfull \hbox (23.71349pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-
-Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
-[][]| 
- []
-
-[29
-
-] [30
-
-]
-\openout4 = `2015-PortElizabeth.vrb'.
-
- (./2015-PortElizabeth.vrb) [31
-
-] (./2015-PortElizabeth.vrb) [32
-
-]
-(./2015-PortElizabeth.vrb) [33
-
-] (./2015-PortElizabeth.vrb) [34
-
-]
-(./2015-PortElizabeth.vrb) [35
+[40
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -1590,152 +1740,61 @@ Overfull \hbox (12.0pt too wide) in paragraph at lines 452--452
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 9.
 
-<figure/segCode2-1.pdf, id=590, 505.89pt x 505.89pt>
-File: figure/segCode2-1.pdf Graphic file (type pdf)
-
-<use figure/segCode2-1.pdf>
-Package pdftex.def Info: figure/segCode2-1.pdf used on input line 27.
-(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
-
-Overfull \hbox (5.9165pt too wide) in paragraph at lines 26--28
-[][]  
- []
-
-) [36
-
- <./figure/segCode2-1.pdf>]
-\openout4 = `2015-PortElizabeth.vrb'.
-
- (./2015-PortElizabeth.vrb
-Underfull \hbox (badness 10000) in paragraph at lines 11--11
-[][]\OT1/cmtt/m/n/6 calling[][](CGHo)[][]<-[] []FALSE[] []\OT1/cmtt/m/it/6 ## n
-o classification[]
- []
-
-
-Overfull \hbox (22.46126pt too wide) in paragraph at lines 12--12
+Overfull \hbox (22.46126pt too wide) in paragraph at lines 19--19
 [][]\OT1/cmtt/m/n/6 segSignal[]   []<-[] []uniseg[][]([][].Object[][]=signalCGH
 ,[][]CGHo[][]=CGHo)[][] 
  []
 
 
-Overfull \hbox (3.33598pt too wide) in paragraph at lines 16--16
+Overfull \hbox (3.33598pt too wide) in paragraph at lines 31--31
 []      []\OT1/cmtt/m/n/6 segSignalProf,[] []type[][]=[][]"s"[][],[] []col[][]=
 [][]2[][],[] []lwd[][]=[][]2[][])[][] 
  []
 
-<figure/segCode3-1.pdf, id=605, 505.89pt x 505.89pt>
-File: figure/segCode3-1.pdf Graphic file (type pdf)
-
-<use figure/segCode3-1.pdf>
-Package pdftex.def Info: figure/segCode3-1.pdf used on input line 22.
-(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
-
-Overfull \hbox (5.9165pt too wide) in paragraph at lines 21--23
-[][]  
- []
-
-) [37
-
- <./figure/segCode3-1.pdf>]
-\openout4 = `2015-PortElizabeth.vrb'.
-
- (./2015-PortElizabeth.vrb
-Overfull \hbox (3.33598pt too wide) in paragraph at lines 10--10
-[][]\OT1/cmtt/m/n/6 legend[][]([][]"bottomleft"[][],[][]pch[][]=[][]c[][]([][]2
-[][],[] []0[][]),[] []col[][]=[][]c[][]([][]4[][],[][]2[][]),[][] 
- []
-
-
-Overfull \hbox (16.08617pt too wide) in paragraph at lines 12--12
-[]       []\OT1/cmtt/m/n/6 pt.lwd[] []=[] []c[][]([][]1.5[][],[][]1.5[][]),[] [
-]pt.cex[] []=[] []c[][]([][]1.5[][],[][]1.5[][]))[][] 
- []
-
-<figure/Practical1-1.pdf, id=622, 505.89pt x 505.89pt>
-File: figure/Practical1-1.pdf Graphic file (type pdf)
-
-<use figure/Practical1-1.pdf>
-Package pdftex.def Info: figure/Practical1-1.pdf used on input line 18.
-(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
-
-Overfull \hbox (5.9165pt too wide) in paragraph at lines 17--19
-[][]  
- []
-
-) [38
-
- <./figure/Practical1-1.pdf>]
-<..//figure/FigSegClas-1.pdf, id=636, 478.66003pt x 391.98158pt>
-File: ..//figure/FigSegClas-1.pdf Graphic file (type pdf)
-
-<use ..//figure/FigSegClas-1.pdf>
-Package pdftex.def Info: ..//figure/FigSegClas-1.pdf used on input line 628.
-(pdftex.def)             Requested size: 143.5991pt x 117.59537pt.
-
-<..//figure/FigSegClas-2.pdf, id=637, 478.66003pt x 397.67216pt>
-File: ..//figure/FigSegClas-2.pdf Graphic file (type pdf)
-
-<use ..//figure/FigSegClas-2.pdf>
-Package pdftex.def Info: ..//figure/FigSegClas-2.pdf used on input line 628.
-(pdftex.def)             Requested size: 143.5991pt x 119.30257pt.
- [39
-
- <..//figure/FigSegClas-1.pdf> <..//figure/FigSegClas-2.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ..//figure/FigSegClas-2.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
->] [40
-
-] [41
-
-] [42
-
-]
-\openout4 = `2015-PortElizabeth.vrb'.
-
- (./2015-PortElizabeth.vrb
-Overfull \hbox (22.46126pt too wide) in paragraph at lines 11--11
-[][]\OT1/cmtt/m/n/6 segSignal[]   []<-[] []uniseg[][]([][].Object[][]=signalCGH
-,[][]CGHo[][]=CGHo)[][] 
- []
-
-
-Overfull \hbox (3.33598pt too wide) in paragraph at lines 15--15
-[]      []\OT1/cmtt/m/n/6 segSignalProf,[] []type[][]=[][]"s"[][],[] []col[][]=
-[][]2[][],[] []lwd[][]=[][]2[][])[][] 
- []
-
-<figure/segCode4-1.pdf, id=758, 505.89pt x 505.89pt>
+<figure/segCode4-1.pdf, id=551, 505.89pt x 505.89pt>
 File: figure/segCode4-1.pdf Graphic file (type pdf)
 
 <use figure/segCode4-1.pdf>
-Package pdftex.def Info: figure/segCode4-1.pdf used on input line 21.
+Package pdftex.def Info: figure/segCode4-1.pdf used on input line 39.
 (pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
 
-Overfull \hbox (5.9165pt too wide) in paragraph at lines 20--22
+Overfull \hbox (5.9165pt too wide) in paragraph at lines 38--40
 [][]  
  []
 
-) [43
+)
+Overfull \vbox (54.996pt too high) detected at line 761
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[41
 
  <./figure/segCode4-1.pdf>]
 \openout4 = `2015-PortElizabeth.vrb'.
 
- (./2015-PortElizabeth.vrb) [44
-
-]
-(./2015-PortElizabeth.toc)
-Overfull \vbox (61.12114pt too high) detected at line 727
+ (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
-[45
+[42
+
+] (./2015-PortElizabeth.toc)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[43
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
 
  (./2015-PortElizabeth.vrb
-<figure/mixCode1-1.pdf, id=809, 505.89pt x 505.89pt>
+<figure/mixCode1-1.pdf, id=590, 505.89pt x 505.89pt>
 File: figure/mixCode1-1.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-1.pdf>
@@ -1746,17 +1805,22 @@ Overfull \hbox (14.85213pt too wide) in paragraph at lines 22--26
 [][] 
  []
 
-) [46
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[44
 
  <./figure/mixCode1-1.pdf>] (./2015-PortElizabeth.vrb
-<figure/mixCode1-5.pdf, id=822, 505.89pt x 505.89pt>
+<figure/mixCode1-5.pdf, id=605, 505.89pt x 505.89pt>
 File: figure/mixCode1-5.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-5.pdf>
 Package pdftex.def Info: figure/mixCode1-5.pdf used on input line 5.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
-<figure/mixCode1-2.pdf, id=823, 505.89pt x 505.89pt>
+<figure/mixCode1-2.pdf, id=606, 505.89pt x 505.89pt>
 File: figure/mixCode1-2.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-2.pdf>
@@ -1767,10 +1831,15 @@ Overfull \hbox (14.85213pt too wide) in paragraph at lines 23--26
 [][] 
  []
 
-) [47
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[45
 
  <./figure/mixCode1-5.pdf> <./figure/mixCode1-2.pdf>]
-(./2015-PortElizabeth.vrb <figure/mixCode1-3.pdf, id=843, 505.89pt x 505.89pt>
+(./2015-PortElizabeth.vrb <figure/mixCode1-3.pdf, id=626, 505.89pt x 505.89pt>
 File: figure/mixCode1-3.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-3.pdf>
@@ -1781,10 +1850,15 @@ Overfull \hbox (14.85213pt too wide) in paragraph at lines 24--26
 [][]  
  []
 
-) [48
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[46
 
  <./figure/mixCode1-3.pdf>] (./2015-PortElizabeth.vrb
-<figure/mixCode1-4.pdf, id=857, 505.89pt x 505.89pt>
+<figure/mixCode1-4.pdf, id=640, 505.89pt x 505.89pt>
 File: figure/mixCode1-4.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-4.pdf>
@@ -1795,7 +1869,12 @@ Overfull \hbox (14.85213pt too wide) in paragraph at lines 25--26
 [][]  
  []
 
-) [49
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[47
 
  <./figure/mixCode1-4.pdf>] (./2015-PortElizabeth.vrb
 File: figure/mixCode1-4.pdf Graphic file (type pdf)
@@ -1808,7 +1887,12 @@ Overfull \hbox (14.85213pt too wide) in paragraph at lines 25--26
 [][]  
  []
 
-) [50
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[48
 
 ] (./2015-PortElizabeth.vrb
 File: figure/mixCode1-4.pdf Graphic file (type pdf)
@@ -1820,7 +1904,12 @@ Overfull \hbox (14.85213pt too wide) in paragraph at lines 25--26
 [][]  
  []
 
-) [51
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[49
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -1828,33 +1917,45 @@ Overfull \hbox (14.85213pt too wide) in paragraph at lines 25--26
  (./2015-PortElizabeth.vrb
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
  <use ..//figure/Dag2.pdf>
-Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 11.
+Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 13.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
-) [52
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-]
-(./2015-PortElizabeth.vrb
+[50
+
+] (./2015-PortElizabeth.vrb
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
  <use ..//figure/Dag2.pdf>
-Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 11.
+Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 13.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
-) [53
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-]
-(./2015-PortElizabeth.vrb
+[51
+
+] (./2015-PortElizabeth.vrb
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
  <use ..//figure/Dag2.pdf>
-Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 11.
+Package pdftex.def Info: ..//figure/Dag2.pdf used on input line 13.
 (pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
-) [54
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[52
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
 
-
-(./2015-PortElizabeth.vrb
+ (./2015-PortElizabeth.vrb
 Overfull \hbox (5.34546pt too wide) in paragraph at lines 15--15
-[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []400[][]; mu[] []<-[] []c[]
+[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []100[][]; mu[] []<-[] []c[]
 []([][]3[][],[] []7[][]); sigma[] []<-[] []c[][]([][]1[][],[][]1.5[][])[][] 
  []
 
@@ -1864,11 +1965,16 @@ Overfull \hbox (21.28319pt too wide) in paragraph at lines 16--16
  N,[] []replace[][]=T,[] []prob[][]=[][]c[][]([][]0.3[][],[] []0.7[][]))[][] 
  []
 
-) [55
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[53
 
 ] (./2015-PortElizabeth.vrb
 Overfull \hbox (5.34546pt too wide) in paragraph at lines 15--15
-[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []400[][]; mu[] []<-[] []c[]
+[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []100[][]; mu[] []<-[] []c[]
 []([][]3[][],[] []7[][]); sigma[] []<-[] []c[][]([][]1[][],[][]1.5[][])[][] 
  []
 
@@ -1878,11 +1984,16 @@ Overfull \hbox (21.28319pt too wide) in paragraph at lines 16--16
  N,[] []replace[][]=T,[] []prob[][]=[][]c[][]([][]0.3[][],[] []0.7[][]))[][] 
  []
 
-) [56
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[54
 
 ] (./2015-PortElizabeth.vrb
 Overfull \hbox (5.34546pt too wide) in paragraph at lines 15--15
-[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []400[][]; mu[] []<-[] []c[]
+[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []100[][]; mu[] []<-[] []c[]
 []([][]3[][],[] []7[][]); sigma[] []<-[] []c[][]([][]1[][],[][]1.5[][])[][] 
  []
 
@@ -1892,7 +2003,7 @@ Overfull \hbox (21.28319pt too wide) in paragraph at lines 16--16
  N,[] []replace[][]=T,[] []prob[][]=[][]c[][]([][]0.3[][],[] []0.7[][]))[][] 
  []
 
-<figure/mixCode2-1.pdf, id=931, 505.89pt x 505.89pt>
+<figure/mixCode2-1.pdf, id=712, 505.89pt x 505.89pt>
 File: figure/mixCode2-1.pdf Graphic file (type pdf)
 
 <use figure/mixCode2-1.pdf>
@@ -1903,11 +2014,16 @@ Overfull \hbox (16.68709pt too wide) in paragraph at lines 24--27
 [][]  
  []
 
-) [57
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[55
 
  <./figure/mixCode2-1.pdf>] (./2015-PortElizabeth.vrb
 Overfull \hbox (5.34546pt too wide) in paragraph at lines 15--15
-[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []400[][]; mu[] []<-[] []c[]
+[][]\OT1/cmtt/m/n/6 K[] []<-[] []2[][]; N[] []<-[] []100[][]; mu[] []<-[] []c[]
 []([][]3[][],[] []7[][]); sigma[] []<-[] []c[][]([][]1[][],[][]1.5[][])[][] 
  []
 
@@ -1917,60 +2033,171 @@ Overfull \hbox (21.28319pt too wide) in paragraph at lines 16--16
  N,[] []replace[][]=T,[] []prob[][]=[][]c[][]([][]0.3[][],[] []0.7[][]))[][] 
  []
 
-<figure/mixCode2-2.pdf, id=945, 505.89pt x 505.89pt>
+<figure/mixCode2-2.pdf, id=727, 505.89pt x 505.89pt>
 File: figure/mixCode2-2.pdf Graphic file (type pdf)
 
 <use figure/mixCode2-2.pdf>
 Package pdftex.def Info: figure/mixCode2-2.pdf used on input line 26.
 (pdftex.def)             Requested size: 126.47218pt x 126.47218pt.
-) [58
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[56
 
  <./figure/mixCode2-2.pdf>]
 \openout4 = `2015-PortElizabeth.vrb'.
 
+ (./2015-PortElizabeth.vrb)
+Overfull \vbox (2.81436pt too high) detected at line 866
+ []
 
-(./2015-PortElizabeth.vrb)
-Overfull \vbox (2.81436pt too high) detected at line 823
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[57
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[58
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [59
 
-] [60
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [61
-
-] [62
-
-] [63
+[60
 
 ]
-<..//figure/ModHier.pdf, id=1000, 115.10907pt x 259.69096pt>
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[61
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[62
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[63
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[64
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[65
+
+] <..//figure/ModHier.pdf, id=816, 115.10907pt x 259.69096pt>
 File: ..//figure/ModHier.pdf Graphic file (type pdf)
 
 <use ..//figure/ModHier.pdf>
-Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 898.
+Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 960.
 (pdftex.def)             Requested size: 57.55438pt x 129.84515pt.
- [64
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[66
 
  <..//figure/ModHier.pdf>]
 File: ..//figure/ModHier.pdf Graphic file (type pdf)
-
-<use ..//figure/ModHier.pdf>
-Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 926.
+ <use ..//figure/ModHier.pdf>
+Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 988.
 (pdftex.def)             Requested size: 57.55438pt x 129.84515pt.
- [65
 
-] [66
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [67
-
-] [68
+[67
 
 ]
-Overfull \vbox (5.74704pt too high) detected at line 975
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[68
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1018
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [69
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1018
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[70
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1018
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[71
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1018
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[72
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[73
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -1995,54 +2222,437 @@ Overfull \hbox (67.91829pt too wide) in paragraph at lines 11--11
  []
 
 )
-Overfull \vbox (5615.496pt too high) detected at line 1824
+Overfull \vbox (1415.496pt too high) detected at line 1282
  []
 
-[70
 
-] (./2015-PortElizabeth.toc)
-Overfull \vbox (61.12114pt too high) detected at line 1831
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
-[71
-
-] [72
+[74
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
 
- (./2015-PortElizabeth.vrb
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 19.
-
-
-(/usr/share/R/share/texmf/tex/latex/omscmtt.fd
-File: omscmtt.fd 
-)
-LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 19.
-) [73
-
-]
-\openout4 = `2015-PortElizabeth.vrb'.
-
- (./2015-PortElizabeth.vrb) [74
-
-] (./2015-PortElizabeth.toc)
-Overfull \vbox (61.12114pt too high) detected at line 1890
+ (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
  []
 
 [75
 
 ]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 1897.
+[76
 
-(./2015-PortElizabeth.toc) [76
+] (./2015-PortElizabeth.toc)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
-] [77
+[77
 
 ]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[78
+
+]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb
+Overfull \hbox (26.4802pt too wide) in paragraph at lines 16--16
+[][]\OT1/cmtt/m/n/6 PI[] []<-[] []matrix[][]([][]c[][](pi11,[] []1[][]-[][]pi11
+,[] []1[][]-[][]pi22, pi22),[] []ncol[][]=[][]2[][],[] []byrow[] []= T)[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 22.
+
+(/usr/share/R/share/texmf/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
+
+<figure/hmmCode1-1.pdf, id=944, 505.89pt x 505.89pt>
+File: figure/hmmCode1-1.pdf Graphic file (type pdf)
+
+<use figure/hmmCode1-1.pdf>
+Package pdftex.def Info: figure/hmmCode1-1.pdf used on input line 32.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+
+Overfull \hbox (14.85213pt too wide) in paragraph at lines 31--33
+[][]  
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[79
+
+ <./figure/hmmCode1-1.pdf>]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+
+<use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 10.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[80
+
+] (./2015-PortElizabeth.vrb
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 10.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[81
+
+] (./2015-PortElizabeth.vrb
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 10.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[82
+
+]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[83
+
+] (./2015-PortElizabeth.vrb
+<figure/hmmCode2-1.pdf, id=992, 505.89pt x 505.89pt>
+File: figure/hmmCode2-1.pdf Graphic file (type pdf)
+
+<use figure/hmmCode2-1.pdf>
+Package pdftex.def Info: figure/hmmCode2-1.pdf used on input line 18.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+
+Overfull \hbox (14.85213pt too wide) in paragraph at lines 17--20
+[][]  
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[84
+
+ <./figure/hmmCode2-1.pdf>] (./2015-PortElizabeth.vrb
+<figure/hmmCode2-2.pdf, id=1006, 505.89pt x 505.89pt>
+File: figure/hmmCode2-2.pdf Graphic file (type pdf)
+
+<use figure/hmmCode2-2.pdf>
+Package pdftex.def Info: figure/hmmCode2-2.pdf used on input line 19.
+(pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
+
+Overfull \hbox (14.85213pt too wide) in paragraph at lines 17--20
+[]  
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[85
+
+ <./figure/hmmCode2-2.pdf>]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb
+Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
+[]                      []\OT1/cmtt/m/n/6 p[][]<-[] []seq[][]([][]1[][]/[][]N,[
+] []1[][],[] []length.out[] []=[] []6[][])))[][] 
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[86
+
+] (./2015-PortElizabeth.vrb
+Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
+[]                      []\OT1/cmtt/m/n/6 p[][]<-[] []seq[][]([][]1[][]/[][]N,[
+] []1[][],[] []length.out[] []=[] []6[][])))[][] 
+ []
+
+<figure/hmmCode3-2.pdf, id=1030, 433.62pt x 289.08pt>
+File: figure/hmmCode3-2.pdf Graphic file (type pdf)
+
+<use figure/hmmCode3-2.pdf>
+Package pdftex.def Info: figure/hmmCode3-2.pdf used on input line 39.
+(pdftex.def)             Requested size: 108.40472pt x 72.26982pt.
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[87
+
+ <./figure/hmmCode3-2.pdf>] (./2015-PortElizabeth.vrb
+Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
+[]                      []\OT1/cmtt/m/n/6 p[][]<-[] []seq[][]([][]1[][]/[][]N,[
+] []1[][],[] []length.out[] []=[] []6[][])))[][] 
+ []
+
+File: figure/hmmCode3-2.pdf Graphic file (type pdf)
+<use figure/hmmCode3-2.pdf>
+Package pdftex.def Info: figure/hmmCode3-2.pdf used on input line 39.
+(pdftex.def)             Requested size: 108.40472pt x 72.26982pt.
+
+<figure/hmmCode3-3.pdf, id=1045, 433.62pt x 289.08pt>
+File: figure/hmmCode3-3.pdf Graphic file (type pdf)
+
+<use figure/hmmCode3-3.pdf>
+Package pdftex.def Info: figure/hmmCode3-3.pdf used on input line 40.
+(pdftex.def)             Requested size: 108.40472pt x 72.26982pt.
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[88
+
+ <./figure/hmmCode3-3.pdf>] (./2015-PortElizabeth.vrb
+Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
+[]                      []\OT1/cmtt/m/n/6 p[][]<-[] []seq[][]([][]1[][]/[][]N,[
+] []1[][],[] []length.out[] []=[] []6[][])))[][] 
+ []
+
+File: figure/hmmCode3-2.pdf Graphic file (type pdf)
+<use figure/hmmCode3-2.pdf>
+Package pdftex.def Info: figure/hmmCode3-2.pdf used on input line 39.
+(pdftex.def)             Requested size: 108.40472pt x 72.26982pt.
+File: figure/hmmCode3-3.pdf Graphic file (type pdf)
+ <use figure/hmmCode3-3.pdf>
+Package pdftex.def Info: figure/hmmCode3-3.pdf used on input line 40.
+(pdftex.def)             Requested size: 108.40472pt x 72.26982pt.
+)
+Overfull \vbox (4.46484pt too high) detected at line 1429
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[89
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[90
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[91
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[92
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[93
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[94
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[95
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[96
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[97
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[98
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[99
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[100
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[101
+
+]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[102
+
+]
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1575.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[103
+
+]
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1575.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[104
+
+]
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1575.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[105
+
+] (./2015-PortElizabeth.toc)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[106
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[107
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[108
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[109
+
+]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\translate ' on input line 1615.
+
 \tf@nav=\write6
 \openout6 = `2015-PortElizabeth.nav'.
 
@@ -2052,14 +2662,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \tf@snm=\write8
 \openout8 = `2015-PortElizabeth.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1903.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1903.
- (./2015-PortElizabeth.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1903.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1903.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1616.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1616.
+(./2015-PortElizabeth.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1616.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1616.
 
 Package rerunfilecheck Info: File `2015-PortElizabeth.out' has not changed.
-(rerunfilecheck)             Checksum: F03F4700E3544108897972F73C301689;3232.
+(rerunfilecheck)             Checksum: 8D3D4F8B06996580E6BC922D48E9701C;689.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2068,39 +2678,38 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1903.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1616.
  ) 
 Here is how much of TeX's memory you used:
- 21710 strings out of 494446
- 373101 string characters out of 6165533
- 586108 words of memory out of 5000000
- 24197 multiletter control sequences out of 15000+600000
+ 21686 strings out of 494446
+ 371381 string characters out of 6165533
+ 483733 words of memory out of 5000000
+ 24116 multiletter control sequences out of 15000+600000
  23617 words of font info for 88 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
- 49i,22n,65p,472b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,21n,64p,472b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 2015-PortElizabeth.pdf (77 pages, 7004106 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssb
+x10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on 2015-PortElizabeth.pdf (109 pages, 6754554 bytes).
 PDF statistics:
- 1278 PDF objects out of 1440 (max. 8388607)
- 187 named destinations out of 1000 (max. 500000)
- 435 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1350 PDF objects out of 1440 (max. 8388607)
+ 237 named destinations out of 1000 (max. 500000)
+ 294 words of extra memory for PDF output out of 10000 (max. 10000000)
 

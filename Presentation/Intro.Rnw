@@ -1,5 +1,5 @@
 
-\subsection{Motivation}
+\subsection*{Motivation}
 \begin{frame}[fragile]{Detection of homogenous region in trajectories}
 <<echo=FALSE, cache=FALSE>>=
   read_chunk("../RCode/SimulationPath.R")
@@ -30,7 +30,7 @@
 
 
 
-\subsection{Trajectories, a certain aspect of the movement}
+\subsection*{Trajectories, a certain aspect of the movement}
 \begin{frame}[fragile]{Effect of sampling step}
 <<pathPractical4, echo=FALSE, fig.show='hide', results='hide', cache=TRUE>>=
   @
@@ -84,7 +84,7 @@ $(t_1, \ldots, t_N)$ denotes the time acquisition and $( (x_1,y_1),  \ldots, (x_
 \end{frame}
 
 
-\begin{frame}{Trajectories data}
+\begin{frame}{From Trajectories data to signal - Loosing information on spatial location}
 \paragraph{How trajectories data migh be considered?}
 \begin{itemize}
 \item A sequence of (time, position)
@@ -105,6 +105,67 @@ $(t_1, \ldots, t_N)$ denotes the time acquisition and $( (x_1,y_1),  \ldots, (x_
   \item Results will be closely dependent of the sampling step.
   \end{itemize}
 \end{frame}
+
+\subsection*{Statistical concepts}
+\begin{frame}{Model and parameters}
+\paragraph{The model} is a tentative to represent the main characteristics of potential data. \\
+
+\only<2>{
+If we observe the size of people $Y$ and assume $Y\sim\Ncal(\mu, \sigma)$
+\includegraphics[scale=0.3]{Normal1.pdf}}
+\only<3>{
+If  people are sampled at random (with no relationship)
+$$Y_i\overset{\blue{i.i.d}}{\sim}\Ncal(\mu, \sigma)$$
+}
+\onslide<4->{
+$$Y_i\overset{\blue{i.i.d}}{\sim}\Ncal(\mu, \sigma)$$
+\paragraph{The parameters} rule the behaviour of the model.\\
+\only<4>{\includegraphics[scale=0.2]{Normal2.pdf}}
+\only<5>{\includegraphics[scale=0.2]{Normal3.pdf}}
+}
+\end{frame}
+
+\begin{frame}{Estimation}
+\paragraph{Simulation context:} with a given model $M$, and given parameters $\thetabf$, you can produce fake data. \\
+From ($M, \thetabf$) to $\Ybf$.
+\pause
+
+\paragraph{Estimation context:} with a given model $M$, and some data $\Ybf$, you want to determine a good value for $\thetabf$. \\
+From ($M, \Ybf$) to $\thetabf$.
+
+\pause
+\paragraph{What is a good value for $\thetabf$?} with a given model $M$, and some data $\Ybf$, you want to give a score to each possible value of $\thetabf$. 
+\pause
+
+\paragraph{The likelihood as a measure of the quality of $\thetabf$:} with a given model $M$, and some data $\Ybf$, for each value of $\thetabf$ you can compute the probability 
+$$\P(\Ybf; \thetabf)$$
+
+\end{frame}
+
+
+\begin{frame}{Statistics and Hidden variables}
+A model ($M, \thetabf$) produce $\Ybf$ and $\Zbf$.
+\pause
+
+The only observed data are $\Ybf$ while  $\Zbf$ are hidden variables.
+\pause
+
+
+Questions are 
+\begin{itemize}
+\item \blue{Parameters:} Is it still possible to estimate $\thetabf$ ?
+\item \blue{Information on $\Zbf$:} is it possible to "reconstruct" the unobserved data $\Zbf$ ?
+\end{itemize}
+
+\pause
+
+Bayes formula is the key :
+
+$$\P(\Ybf, \Zbf)=\P(\Ybf \vert \Zbf)\P(\Zbf)=\P(\Zbf\vert \Ybf) \P(\Ybf)$$
+
+\end{frame}
+
+
 
 \subsection*{Convention}
 
@@ -127,6 +188,7 @@ $(t_1, \ldots, t_N)$ denotes the time acquisition and $( (x_1,y_1),  \ldots, (x_
 \end{column}
 \pause
 
+
 \begin{column}{0.3\textwidth}
 \centering{Mixture}\\ \smallskip
 \includegraphics[scale=0.4]{Dag2.pdf}
@@ -138,6 +200,7 @@ $(t_1, \ldots, t_N)$ denotes the time acquisition and $( (x_1,y_1),  \ldots, (x_
 \end{column}
 \end{columns}
 \end{frame}
+
 %#show plan at the beginning of each secion except the first one
 \AtBeginSection[]
 {

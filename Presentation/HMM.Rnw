@@ -1,6 +1,6 @@
-\subsection{Model}
+\subsection*{Model}
 \begin{frame}{Markov chain model}
-\paragraph{Modelling dependence between time step :}
+\paragraph{Modelling the dependence in state sequence:}
 If an animal is feeding at time $i$, he has more chance to be feeding at time $i+1$ than if he was travelling at time $i$.
 $$P(Z_{i+1}=1 \vert Z_{i}=1) \ne P(Z_{i+1}=1 \vert Z_{i}=2)$$
 
@@ -9,7 +9,7 @@ $\Zbf$ is a Markov chain if
 $$P(Z_{i+1} \vert Z_{1:i}) =  P(Z_{i+1} \vert Z_{i})$$
 
 
-$\Zbf$ is completely defined by the distribution $\mu_1=P(Z_1)$ and the transition matrix
+$\Zbf$ is completely defined by the distribution $\nu_1=P(Z_1)$ and the transition matrix
 $$\Pi =\left[\begin{matrix}
 \pi_{11} & 1-\pi_{11}\\
 1-\pi_{22} & 1-\pi_{22}
@@ -20,8 +20,15 @@ $$\Pi =\left[\begin{matrix}
 <<echo=FALSE, results='hide'>>=
 read_chunk("../RCode/LectureHMM-RIllustration.R")
 @
+\begin{columns}
+\begin{column}{0.5\textwidth}
 <<hmmCode1, results='hide', fig.show='hide'>>=
 @
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[scale=0.3]{hmmCode1-1.pdf}
+\end{column}
+\end{columns}
 \end{frame}
 
 \begin{frame}[fragile]{Hidden Markov Chain model}
@@ -29,20 +36,178 @@ read_chunk("../RCode/LectureHMM-RIllustration.R")
 For a given number of states $K$, 
 \begin{itemize}
 \item
- \blue{Hidden State $\Zbf$ Modelling}: $\Zbf$ is assumed to follow a Markov Chain model with unknown initial distribution $\mubf$ and transition matrix  $\Pibf$.
- \item \blue{Modelling observations $\Ybf$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\theta_k}().$
+ \blue{Hidden States $\Zbf$ model}: $\Zbf$ is assumed to follow a Markov Chain model with unknown initial distribution $\nubf$ and transition matrix  $\Pibf$.
+ \item \blue{Observations $\Ybf$ model}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\gamma_k}().$
 \end{itemize}
- \onslide<2->{\centering{\blue{Model parameters are $\mubf$, $\Pibf$ and $\thetabf$}}\par}
+ \onslide<2->{\centering{\blue{Model parameters are $\thetabf=(\nubf,  \Pibf, \gammabf)$ }}\par}
  \onslide<3->{\centering{\includegraphics[scale=0.4]{Dag3.pdf}}}
 \end{frame}
 
 \begin{frame}[fragile]{Hidden Markov Chain simulation}
-<<echo=FALSE, results='hide'>>=
-read_chunk("../RCode/LectureHMM-RIllustration.R")
+\begin{columns}
+\begin{column}{0.5\textwidth}
+<<hmmCode2, results='hide', fig.show='hide'>>=
 @
-<<hmmCode1, results='hide', fig.show='hide'>>=
-@
+\end{column}
+\begin{column}{0.4\textwidth}
+\only<2>{\includegraphics[scale=0.3]{hmmCode2-1.pdf}}
+\only<3->{\includegraphics[scale=0.3]{hmmCode2-2.pdf}}
+\end{column}
+\end{columns}
 \end{frame}
 
-\subsection{Example}
-\subsection{Theoretical aspects}
+\begin{frame}[fragile]{Sojourn time properties}
+
+
+ {\small
+  $T_i$, the sojourn time in State i follows a geometric distribution
+ $$\P(T_i=l)=(\Pi_{ii})^{l-1}(1-\Pi_{ii})$$
+ }
+
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+<<hmmCode3,echo=-c(1:8), results='hide', fig.show='hide', fig.width=6, fig.height=4>>=
+@
+\end{column}
+\begin{column}{0.4\textwidth}
+\only<2->{\includegraphics[scale=0.25]{hmmCode3-2.pdf}}\\
+\only<3->{\includegraphics[scale=0.25]{hmmCode3-3.pdf}}
+\only<4->{ see Semi Hidden Markov Model for removing this assumption}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection*{Parameter estimation}
+%%-----------------------------------------------------------------%%
+%%-----------------------------------------------------------------%%
+
+
+\begin{frame}{Statistical inference of incomplete data models} 
+ \paragraph{Maximum likelihood estimate:} We are looking for
+  $$
+  (\widehat{\gammabf},\widehat{\Pibf}, \widehat{\nubf}) = \arg\max_{\thetabf, \Pibf, {\nubf}} \log P(\Ybf; \thetabf, \Pibf, \nubf)
+$$
+\only<1>{
+    \begin{eqnarray*}
+     \log P(\Xbf, \Zbf; \thetabf) & = & \hid{\sum_k Z_{1k} \log \nu_k }\\
+     & &\hid{+ \sum_{i > 1} \sum_{k, \ell}
+       Z_{i-1,k}Z_{i,\ell} \log \pi_{k\ell}} \\
+     & & + \obsy{\sum_i \sum_k Z_{ik} \log f(X_i ; \gamma_k)} 
+  \end{eqnarray*}
+}
+\only<2>{
+  \begin{eqnarray*}
+    \Esp\left( \log P(\Xbf, \Zbf)\vert Y_{1:N}\right)  & = & \Ehid{\sum_k\Esp\left( Z_{1k} \vert Y_{1:N}\right) \log \nu_k }\\
+     & &\Ehid{+ \sum_{i > 1} \sum_{k, \ell}
+      \Esp\left( Z_{i-1,k}Z_{i,\ell}\vert Y_{1:N}\right) \log \pi_{k\ell}} \\
+     & & + \Eobsy{\sum_i \sum_k \Esp\left(Z_{ik}\vert Y_{1:N}\right) \log f(X_i ; \gamma_k)} 
+  \end{eqnarray*}
+}
+\only<3>{
+  \begin{eqnarray*}
+   \Esp\left(  \log P(\Xbf, \Zbf) \vert Y_{1:N}\right) & = & \Ehid{\sum_k\P\left( Z_{1}=k \vert Y_{1:N}\right) \log \nu_k }\\
+     & &\Ehid{+ \sum_{i > 1} \sum_{k, \ell}
+      \P\left( Z_{i-1}=k, Z_{i}=l\vert Y_{1:N}\right) \log \pi_{k\ell}} \\
+    & & + \Eobsy{\sum_i \sum_k \P \left( Z_{i}=k\vert Y_{1:N}\right) 
+    \log f(X_i ; \gamma_k)}
+  \end{eqnarray*}
+}
+\end{frame}
+
+ 
+\frame{ \frametitle{EM Algorithm (Baum Welch)}
+  \begin{itemize}
+  \item Initialisation of $\thetabf^{(0)}=(\Pi, \gamma_1, ..., \gamma_K)^{(0)}$.
+  \item While the convergence is not reached 
+  \end{itemize}   
+ \begin{description}
+    \item[E-step] Calculation of 
+     \only<1>{ \begin{eqnarray*}
+        \tau^{(\ell)}_{ik}&=&P(Z_i = k | Y_{1:n}, \thetabf^{(\ell-1)})\\
+        \eta_{ikh}^{(\ell)} &=& \Esp[Z_{i-1,k}Z_{ih}| Y_{1:n}, \thetabf^{(\ell-1)}]\\
+      \end{eqnarray*}  }
+     \only<2>{ Smart algorithm Forward-Backward algorithm  }
+      
+    \item[M-step] Maximization in $\thetabf=(\pibf, \gammabf)$ of
+    \end{description} 
+ $$
+ \sum_k \tau^{(\ell)}_{1k}\log \nu_k
+ + \sum_{i > 1} \sum_{k, h} \eta_{ikh}^{(\ell)} \log \pi_{kh}
+ + \sum_i \sum_k \tau^{(\ell)}_{ik} \log f(x_i; \gamma_k) 
+ $$
+ }
+\begin{frame}{Reconstruction of hidden state $\Zbf$}
+\paragraph{Most credible value for $Z_i$:}
+We are interested in 
+$$\argmax_{k}\P(Z_i= k \vert Y_{1:n})=\argmax_k \tau_{ik}.$$
+\pause
+  \paragraph{Most credible sequence for $\Zbf$}
+We are interested in 
+$$\argmax_{k_1, \ldots k_n}\P(Z_1= k_1, \ldots Z_n=k_n \vert Y_{1:n})= ???$$
+\pause
+But force brut algorithm is not possible 
+$$\longrightarrow \mbox{a smart algorithm : Viterbi algorithm}$$
+\end{frame}
+
+
+\begin{frame}{Viterbi algorithm}
+\onslide<1->{\only<1>{
+\paragraph{Key quantity:} The probability of the best hidden path from time 1 to $i$ who finished in $k$} 
+\only<2->{
+\paragraph{Key quantity:}
+$$\delta_i(k)=\max_{k_1, \ldots k_{i-1}}\P(Y_{1:i}, Z_1=k_1, \ldots , Z_{i-1}=k_{i-1}, Z_i=k )$$ 
+} 
+}
+
+\onslide<3->{
+  \begin{itemize}
+    \item \emph{Initialisation}
+    \begin{eqnarray*}
+      \delta_1(k) & = &\P(Z_1=k, Y_1) = \P(Z_1=k)
+      \P(Y_1\vert Z_1=k)  = \nu(k) f_{\gamma_k}(y_1)\\
+      \psi_1(k)& = &0
+    \end{eqnarray*}
+    \end{itemize}
+}
+\onslide<4->{
+  \begin{itemize}
+  \item \emph{Recurrence, for $i=1, \ldots n-1$}
+  \begin{eqnarray*}
+  \delta_{i+1}(k) & =& \max_{k_1,\ldots, k_i}
+  \P(Y_{1:i}, Z_1=k_1, \ldots , Z_{i-1}=k_{i-1}, Z_i=k_i, Z_{i+1}=k )\\
+  & =& \max_{k_i} \left\lbrace \delta_{i}(k_i) \P(Y_i\vert Z_{i}=k_i)\P(Z_{i+1}\vert   Z_{i}=k_i)\right\rbrace \\
+\psi_{i+1}(k) & =&\argmax_{j}\left\lbrace \delta_i{j} \Pi_{jk}\right\rbrace
+\end{eqnarray*}
+\end{itemize}
+}
+\end{frame}
+
+\begin{frame}[fragile]{Estimation of HMM with R}
+<<hmmCode4, echo=-c(1:10), results='hide', fig.show='hide'>>=
+@
+
+\end{frame}
+
+
+\begin{frame}{State Space model}
+This is the trendy name for HMM, with potentially continuous value for $\Zbf$.
+
+\pause
+\begin{itemize}
+\item $\Zbf$ is a sequence of hidden states and the observations $\Ybf$ are ruled by this sequence.
+\begin{columns}
+ \begin{column}{0.3\textwidth}
+{\centering{\includegraphics[scale=0.4]{Dag3.pdf}}}
+\end{column}
+\begin{column}{0.7\textwidth}
+$\Zbf$ could be thougth as the actual locations and $\Ybf$ the observed locations.
+\end{column}
+\end{columns}
+
+\pause
+\item 
+Estimation tools are EM algorithm or Bayesian framework (with monte carlo based estimation technics)
+\end{itemize}
+\end{frame}
+
