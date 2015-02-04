@@ -1,6 +1,6 @@
 
 \subsection*{Motivation}
-\begin{frame}[fragile]{Detection of homogenous region in trajectories}
+\begin{frame}[fragile]{Detection of homogenous regions in trajectories}
 <<echo=FALSE, cache=FALSE>>=
   read_chunk("../RCode/SimulationPath.R")
 @
@@ -8,9 +8,9 @@
 \begin{columns}
 \begin{column}{0.4\textwidth}
 \begin{itemize}
-\item Different behaviour
-\item Link with different activities
-\item Link with different environmental condition
+\item Different behaviours.
+\item Link with different activities.
+\item Link with different environmental conditions.
 \end{itemize}
 
 \end{column}

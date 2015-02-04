@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.11)  3 FEB 2015 21:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.10.11)  4 FEB 2015 06:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1734,36 +1734,20 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
 [40
 
 ]
-\openout4 = `2015-PortElizabeth.vrb'.
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
- (./2015-PortElizabeth.vrb
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 9.
+[41
 
-Overfull \hbox (22.46126pt too wide) in paragraph at lines 19--19
-[][]\OT1/cmtt/m/n/6 segSignal[]   []<-[] []uniseg[][]([][].Object[][]=signalCGH
-,[][]CGHo[][]=CGHo)[][] 
+]
+Overfull \hbox (43.80011pt too wide) in paragraph at lines 523--523
+[] 
  []
 
 
-Overfull \hbox (3.33598pt too wide) in paragraph at lines 31--31
-[]      []\OT1/cmtt/m/n/6 segSignalProf,[] []type[][]=[][]"s"[][],[] []col[][]=
-[][]2[][],[] []lwd[][]=[][]2[][])[][] 
- []
-
-<figure/segCode4-1.pdf, id=551, 505.89pt x 505.89pt>
-File: figure/segCode4-1.pdf Graphic file (type pdf)
-
-<use figure/segCode4-1.pdf>
-Package pdftex.def Info: figure/segCode4-1.pdf used on input line 39.
-(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
-
-Overfull \hbox (5.9165pt too wide) in paragraph at lines 38--40
-[][]  
- []
-
-)
-Overfull \vbox (54.996pt too high) detected at line 761
+Overfull \hbox (43.80011pt too wide) in paragraph at lines 523--523
+[]  
  []
 
 
@@ -1771,7 +1755,242 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[41
+[42
+
+] <..//figure/LikelihoodProfile.pdf, id=569, 535.4276pt x 259.0231pt>
+File: ..//figure/LikelihoodProfile.pdf Graphic file (type pdf)
+
+<use ..//figure/LikelihoodProfile.pdf>
+Package pdftex.def Info: ..//figure/LikelihoodProfile.pdf used on input line 52
+3.
+(pdftex.def)             Requested size: 160.62952pt x 77.70752pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[43
+
+ <..//figure/LikelihoodProfile.pdf>]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[44
+
+]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[45
+
+] (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[46
+
+] (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[47
+
+] (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[48
+
+]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <6> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 8.
+
+<figure/segCode2-1.pdf, id=629, 505.89pt x 505.89pt>
+File: figure/segCode2-1.pdf Graphic file (type pdf)
+
+<use figure/segCode2-1.pdf>
+Package pdftex.def Info: figure/segCode2-1.pdf used on input line 26.
+(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
+
+Overfull \hbox (5.9165pt too wide) in paragraph at lines 25--27
+[][]  
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[49
+
+ <./figure/segCode2-1.pdf>]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+[][]\OT1/cmtt/m/n/6 calling[][](CGHo)[][]<-[] []FALSE[] []\OT1/cmtt/m/it/6 ## n
+o classification[]
+ []
+
+
+Overfull \hbox (22.46126pt too wide) in paragraph at lines 12--12
+[][]\OT1/cmtt/m/n/6 segSignal[]   []<-[] []uniseg[][]([][].Object[][]=signalCGH
+,[][]CGHo[][]=CGHo)[][] 
+ []
+
+
+Overfull \hbox (3.33598pt too wide) in paragraph at lines 16--16
+[]      []\OT1/cmtt/m/n/6 segSignalProf,[] []type[][]=[][]"s"[][],[] []col[][]=
+[][]2[][],[] []lwd[][]=[][]2[][])[][] 
+ []
+
+<figure/segCode3-1.pdf, id=647, 505.89pt x 505.89pt>
+File: figure/segCode3-1.pdf Graphic file (type pdf)
+
+<use figure/segCode3-1.pdf>
+Package pdftex.def Info: figure/segCode3-1.pdf used on input line 22.
+(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
+
+Overfull \hbox (5.9165pt too wide) in paragraph at lines 21--23
+[][]  
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[50
+
+ <./figure/segCode3-1.pdf>]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb
+Overfull \hbox (3.33598pt too wide) in paragraph at lines 10--10
+[][]\OT1/cmtt/m/n/6 legend[][]([][]"bottomleft"[][],[][]pch[][]=[][]c[][]([][]2
+[][],[] []0[][]),[] []col[][]=[][]c[][]([][]4[][],[][]2[][]),[][] 
+ []
+
+
+Overfull \hbox (16.08617pt too wide) in paragraph at lines 12--12
+[]       []\OT1/cmtt/m/n/6 pt.lwd[] []=[] []c[][]([][]1.5[][],[][]1.5[][]),[] [
+]pt.cex[] []=[] []c[][]([][]1.5[][],[][]1.5[][]))[][] 
+ []
+
+<figure/Practical1-1.pdf, id=663, 505.89pt x 505.89pt>
+File: figure/Practical1-1.pdf Graphic file (type pdf)
+
+<use figure/Practical1-1.pdf>
+Package pdftex.def Info: figure/Practical1-1.pdf used on input line 18.
+(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
+
+Overfull \hbox (5.9165pt too wide) in paragraph at lines 17--19
+[][]  
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[51
+
+ <./figure/Practical1-1.pdf>]
+<..//figure/FigSegClas-1.pdf, id=677, 478.66003pt x 391.98158pt>
+File: ..//figure/FigSegClas-1.pdf Graphic file (type pdf)
+
+<use ..//figure/FigSegClas-1.pdf>
+Package pdftex.def Info: ..//figure/FigSegClas-1.pdf used on input line 686.
+(pdftex.def)             Requested size: 143.5991pt x 117.59537pt.
+
+<..//figure/FigSegClas-2.pdf, id=678, 478.66003pt x 397.67216pt>
+File: ..//figure/FigSegClas-2.pdf Graphic file (type pdf)
+
+<use ..//figure/FigSegClas-2.pdf>
+Package pdftex.def Info: ..//figure/FigSegClas-2.pdf used on input line 686.
+(pdftex.def)             Requested size: 143.5991pt x 119.30257pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[52
+
+ <..//figure/FigSegClas-1.pdf> <..//figure/FigSegClas-2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ..//figure/FigSegClas-2.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[53
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[54
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[55
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[56
+
+]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb
+Overfull \hbox (22.46126pt too wide) in paragraph at lines 11--11
+[][]\OT1/cmtt/m/n/6 segSignal[]   []<-[] []uniseg[][]([][].Object[][]=signalCGH
+,[][]CGHo[][]=CGHo)[][] 
+ []
+
+
+Overfull \hbox (3.33598pt too wide) in paragraph at lines 15--15
+[]      []\OT1/cmtt/m/n/6 segSignalProf,[] []type[][]=[][]"s"[][],[] []col[][]=
+[][]2[][],[] []lwd[][]=[][]2[][])[][] 
+ []
+
+<figure/segCode4-1.pdf, id=810, 505.89pt x 505.89pt>
+File: figure/segCode4-1.pdf Graphic file (type pdf)
+
+<use figure/segCode4-1.pdf>
+Package pdftex.def Info: figure/segCode4-1.pdf used on input line 21.
+(pdftex.def)             Requested size: 177.06415pt x 177.06415pt.
+
+Overfull \hbox (5.9165pt too wide) in paragraph at lines 20--22
+[][]  
+ []
+
+)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[57
 
  <./figure/segCode4-1.pdf>]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -1781,20 +2000,20 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[42
+[58
 
 ] (./2015-PortElizabeth.toc)
 Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[43
+[59
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
 
  (./2015-PortElizabeth.vrb
-<figure/mixCode1-1.pdf, id=590, 505.89pt x 505.89pt>
+<figure/mixCode1-1.pdf, id=846, 505.89pt x 505.89pt>
 File: figure/mixCode1-1.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-1.pdf>
@@ -1810,17 +2029,17 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[44
+[60
 
  <./figure/mixCode1-1.pdf>] (./2015-PortElizabeth.vrb
-<figure/mixCode1-5.pdf, id=605, 505.89pt x 505.89pt>
+<figure/mixCode1-5.pdf, id=861, 505.89pt x 505.89pt>
 File: figure/mixCode1-5.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-5.pdf>
 Package pdftex.def Info: figure/mixCode1-5.pdf used on input line 5.
 (pdftex.def)             Requested size: 151.76816pt x 151.76816pt.
 
-<figure/mixCode1-2.pdf, id=606, 505.89pt x 505.89pt>
+<figure/mixCode1-2.pdf, id=862, 505.89pt x 505.89pt>
 File: figure/mixCode1-2.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-2.pdf>
@@ -1836,10 +2055,10 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[45
+[61
 
  <./figure/mixCode1-5.pdf> <./figure/mixCode1-2.pdf>]
-(./2015-PortElizabeth.vrb <figure/mixCode1-3.pdf, id=626, 505.89pt x 505.89pt>
+(./2015-PortElizabeth.vrb <figure/mixCode1-3.pdf, id=883, 505.89pt x 505.89pt>
 File: figure/mixCode1-3.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-3.pdf>
@@ -1855,10 +2074,10 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[46
+[62
 
  <./figure/mixCode1-3.pdf>] (./2015-PortElizabeth.vrb
-<figure/mixCode1-4.pdf, id=640, 505.89pt x 505.89pt>
+<figure/mixCode1-4.pdf, id=897, 505.89pt x 505.89pt>
 File: figure/mixCode1-4.pdf Graphic file (type pdf)
 
 <use figure/mixCode1-4.pdf>
@@ -1874,7 +2093,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[47
+[63
 
  <./figure/mixCode1-4.pdf>] (./2015-PortElizabeth.vrb
 File: figure/mixCode1-4.pdf Graphic file (type pdf)
@@ -1892,7 +2111,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[48
+[64
 
 ] (./2015-PortElizabeth.vrb
 File: figure/mixCode1-4.pdf Graphic file (type pdf)
@@ -1909,7 +2128,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[49
+[65
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -1924,7 +2143,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[50
+[66
 
 ] (./2015-PortElizabeth.vrb
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
@@ -1936,7 +2155,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[51
+[67
 
 ] (./2015-PortElizabeth.vrb
 File: ..//figure/Dag2.pdf Graphic file (type pdf)
@@ -1948,7 +2167,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[52
+[68
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -1970,7 +2189,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[53
+[69
 
 ] (./2015-PortElizabeth.vrb
 Overfull \hbox (5.34546pt too wide) in paragraph at lines 15--15
@@ -1989,7 +2208,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[54
+[70
 
 ] (./2015-PortElizabeth.vrb
 Overfull \hbox (5.34546pt too wide) in paragraph at lines 15--15
@@ -2003,7 +2222,7 @@ Overfull \hbox (21.28319pt too wide) in paragraph at lines 16--16
  N,[] []replace[][]=T,[] []prob[][]=[][]c[][]([][]0.3[][],[] []0.7[][]))[][] 
  []
 
-<figure/mixCode2-1.pdf, id=712, 505.89pt x 505.89pt>
+<figure/mixCode2-1.pdf, id=969, 505.89pt x 505.89pt>
 File: figure/mixCode2-1.pdf Graphic file (type pdf)
 
 <use figure/mixCode2-1.pdf>
@@ -2019,7 +2238,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[55
+[71
 
  <./figure/mixCode2-1.pdf>] (./2015-PortElizabeth.vrb
 Overfull \hbox (5.34546pt too wide) in paragraph at lines 15--15
@@ -2033,7 +2252,7 @@ Overfull \hbox (21.28319pt too wide) in paragraph at lines 16--16
  N,[] []replace[][]=T,[] []prob[][]=[][]c[][]([][]0.3[][],[] []0.7[][]))[][] 
  []
 
-<figure/mixCode2-2.pdf, id=727, 505.89pt x 505.89pt>
+<figure/mixCode2-2.pdf, id=983, 505.89pt x 505.89pt>
 File: figure/mixCode2-2.pdf Graphic file (type pdf)
 
 <use figure/mixCode2-2.pdf>
@@ -2044,160 +2263,160 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[56
+[72
 
  <./figure/mixCode2-2.pdf>]
 \openout4 = `2015-PortElizabeth.vrb'.
 
  (./2015-PortElizabeth.vrb)
-Overfull \vbox (2.81436pt too high) detected at line 866
+Overfull \vbox (2.81436pt too high) detected at line 888
  []
 
 
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[57
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[58
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[59
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[60
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[61
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[62
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[63
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[64
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[65
-
-] <..//figure/ModHier.pdf, id=816, 115.10907pt x 259.69096pt>
-File: ..//figure/ModHier.pdf Graphic file (type pdf)
-
-<use ..//figure/ModHier.pdf>
-Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 960.
-(pdftex.def)             Requested size: 57.55438pt x 129.84515pt.
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[66
-
- <..//figure/ModHier.pdf>]
-File: ..//figure/ModHier.pdf Graphic file (type pdf)
- <use ..//figure/ModHier.pdf>
-Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 988.
-(pdftex.def)             Requested size: 57.55438pt x 129.84515pt.
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[67
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[68
-
-]
-Overfull \vbox (2.22365pt too high) detected at line 1018
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[69
-
-]
-Overfull \vbox (2.22365pt too high) detected at line 1018
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[70
-
-]
-Overfull \vbox (2.22365pt too high) detected at line 1018
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[71
-
-]
-Overfull \vbox (2.22365pt too high) detected at line 1018
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[72
-
-]
 Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
 [73
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[74
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[75
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[76
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[77
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[78
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[79
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[80
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[81
+
+] <..//figure/ModHier.pdf, id=1073, 115.10907pt x 259.69096pt>
+File: ..//figure/ModHier.pdf Graphic file (type pdf)
+
+<use ..//figure/ModHier.pdf>
+Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 982.
+(pdftex.def)             Requested size: 57.55438pt x 129.84515pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[82
+
+ <..//figure/ModHier.pdf>]
+File: ..//figure/ModHier.pdf Graphic file (type pdf)
+ <use ..//figure/ModHier.pdf>
+Package pdftex.def Info: ..//figure/ModHier.pdf used on input line 1010.
+(pdftex.def)             Requested size: 57.55438pt x 129.84515pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[83
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[84
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1040
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[85
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1040
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[86
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1040
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[87
+
+]
+Overfull \vbox (2.22365pt too high) detected at line 1040
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[88
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[89
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -2222,7 +2441,7 @@ Overfull \hbox (67.91829pt too wide) in paragraph at lines 11--11
  []
 
 )
-Overfull \vbox (1415.496pt too high) detected at line 1282
+Overfull \vbox (1415.496pt too high) detected at line 1304
  []
 
 
@@ -2230,7 +2449,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[74
+[90
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -2240,28 +2459,28 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[75
+[91
 
 ]
 Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[76
+[92
 
 ] (./2015-PortElizabeth.toc)
 Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[77
+[93
 
 ]
 Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[78
+[94
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -2280,7 +2499,7 @@ File: omscmtt.fd
 LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <6> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
 
-<figure/hmmCode1-1.pdf, id=944, 505.89pt x 505.89pt>
+<figure/hmmCode1-1.pdf, id=1201, 505.89pt x 505.89pt>
 File: figure/hmmCode1-1.pdf Graphic file (type pdf)
 
 <use figure/hmmCode1-1.pdf>
@@ -2296,7 +2515,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[79
+[95
 
  <./figure/hmmCode1-1.pdf>]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -2312,7 +2531,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[80
+[96
 
 ] (./2015-PortElizabeth.vrb
 File: ..//figure/Dag3.pdf Graphic file (type pdf)
@@ -2324,7 +2543,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[81
+[97
 
 ] (./2015-PortElizabeth.vrb
 File: ..//figure/Dag3.pdf Graphic file (type pdf)
@@ -2336,7 +2555,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[82
+[98
 
 ]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -2346,10 +2565,10 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[83
+[99
 
 ] (./2015-PortElizabeth.vrb
-<figure/hmmCode2-1.pdf, id=992, 505.89pt x 505.89pt>
+<figure/hmmCode2-1.pdf, id=1249, 505.89pt x 505.89pt>
 File: figure/hmmCode2-1.pdf Graphic file (type pdf)
 
 <use figure/hmmCode2-1.pdf>
@@ -2365,10 +2584,10 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[84
+[100
 
  <./figure/hmmCode2-1.pdf>] (./2015-PortElizabeth.vrb
-<figure/hmmCode2-2.pdf, id=1006, 505.89pt x 505.89pt>
+<figure/hmmCode2-2.pdf, id=1263, 505.89pt x 505.89pt>
 File: figure/hmmCode2-2.pdf Graphic file (type pdf)
 
 <use figure/hmmCode2-2.pdf>
@@ -2384,7 +2603,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[85
+[101
 
  <./figure/hmmCode2-2.pdf>]
 \openout4 = `2015-PortElizabeth.vrb'.
@@ -2400,7 +2619,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[86
+[102
 
 ] (./2015-PortElizabeth.vrb
 Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
@@ -2408,7 +2627,7 @@ Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
 ] []1[][],[] []length.out[] []=[] []6[][])))[][] 
  []
 
-<figure/hmmCode3-2.pdf, id=1030, 433.62pt x 289.08pt>
+<figure/hmmCode3-2.pdf, id=1285, 433.62pt x 289.08pt>
 File: figure/hmmCode3-2.pdf Graphic file (type pdf)
 
 <use figure/hmmCode3-2.pdf>
@@ -2419,7 +2638,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[87
+[103
 
  <./figure/hmmCode3-2.pdf>] (./2015-PortElizabeth.vrb
 Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
@@ -2432,7 +2651,7 @@ File: figure/hmmCode3-2.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/hmmCode3-2.pdf used on input line 39.
 (pdftex.def)             Requested size: 108.40472pt x 72.26982pt.
 
-<figure/hmmCode3-3.pdf, id=1045, 433.62pt x 289.08pt>
+<figure/hmmCode3-3.pdf, id=1301, 433.62pt x 289.08pt>
 File: figure/hmmCode3-3.pdf Graphic file (type pdf)
 
 <use figure/hmmCode3-3.pdf>
@@ -2443,7 +2662,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
 
-[88
+[104
 
  <./figure/hmmCode3-3.pdf>] (./2015-PortElizabeth.vrb
 Overfull \hbox (4.16737pt too wide) in paragraph at lines 20--20
@@ -2460,159 +2679,9 @@ File: figure/hmmCode3-3.pdf Graphic file (type pdf)
 Package pdftex.def Info: figure/hmmCode3-3.pdf used on input line 40.
 (pdftex.def)             Requested size: 108.40472pt x 72.26982pt.
 )
-Overfull \vbox (4.46484pt too high) detected at line 1429
+Overfull \vbox (4.46484pt too high) detected at line 1451
  []
 
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[89
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[90
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[91
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[92
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[93
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[94
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[95
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[96
-
-]
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[97
-
-]
-Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
- [][][] []
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[98
-
-]
-Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
- [][][] []
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[99
-
-]
-Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
- [][][] []
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[100
-
-]
-Overfull \hbox (9.99132pt too wide) in alignment at lines 1534--1534
- [][][] []
- []
-
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[101
-
-]
-\openout4 = `2015-PortElizabeth.vrb'.
-
- (./2015-PortElizabeth.vrb)
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[102
-
-]
-File: ..//figure/Dag3.pdf Graphic file (type pdf)
- <use ..//figure/Dag3.pdf>
-Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1575.
-(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[103
-
-]
-File: ..//figure/Dag3.pdf Graphic file (type pdf)
- <use ..//figure/Dag3.pdf>
-Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1575.
-(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
-
-Overfull \hbox (45.71375pt too wide) has occurred while \output is active
- [][][][]  
- []
-
-[104
-
-]
-File: ..//figure/Dag3.pdf Graphic file (type pdf)
- <use ..//figure/Dag3.pdf>
-Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1575.
-(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
 
 Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
@@ -2620,7 +2689,7 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
 
 [105
 
-] (./2015-PortElizabeth.toc)
+]
 Overfull \hbox (45.71375pt too wide) has occurred while \output is active
  [][][][]  
  []
@@ -2649,9 +2718,159 @@ Overfull \hbox (45.71375pt too wide) has occurred while \output is active
 [109
 
 ]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[110
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[111
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[112
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[113
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1556--1556
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[114
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1556--1556
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[115
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1556--1556
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[116
+
+]
+Overfull \hbox (9.99132pt too wide) in alignment at lines 1556--1556
+ [][][] []
+ []
+
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[117
+
+]
+\openout4 = `2015-PortElizabeth.vrb'.
+
+ (./2015-PortElizabeth.vrb)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[118
+
+]
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1597.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[119
+
+]
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1597.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[120
+
+]
+File: ..//figure/Dag3.pdf Graphic file (type pdf)
+ <use ..//figure/Dag3.pdf>
+Package pdftex.def Info: ..//figure/Dag3.pdf used on input line 1597.
+(pdftex.def)             Requested size: 81.12294pt x 55.83188pt.
+
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[121
+
+] (./2015-PortElizabeth.toc)
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[122
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[123
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[124
+
+]
+Overfull \hbox (45.71375pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[125
+
+]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\translate ' on input line 1615.
+(hyperref)                removing `\translate ' on input line 1637.
 
 \tf@nav=\write6
 \openout6 = `2015-PortElizabeth.nav'.
@@ -2662,11 +2881,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \tf@snm=\write8
 \openout8 = `2015-PortElizabeth.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1616.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1616.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1638.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1638.
 (./2015-PortElizabeth.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1616.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1616.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1638.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1638.
 
 Package rerunfilecheck Info: File `2015-PortElizabeth.out' has not changed.
 (rerunfilecheck)             Checksum: 8D3D4F8B06996580E6BC922D48E9701C;689.
@@ -2678,13 +2897,13 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1616.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1638.
  ) 
 Here is how much of TeX's memory you used:
- 21686 strings out of 494446
- 371381 string characters out of 6165533
- 483733 words of memory out of 5000000
- 24116 multiletter control sequences out of 15000+600000
+ 21826 strings out of 494446
+ 374197 string characters out of 6165533
+ 484948 words of memory out of 5000000
+ 24199 multiletter control sequences out of 15000+600000
  23617 words of font info for 88 fonts, out of 8000000 for 9000
  350 hyphenation exceptions out of 8191
  49i,21n,64p,472b,804s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2707,9 +2926,9 @@ ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 2015-PortElizabeth.pdf (109 pages, 6754554 bytes).
+Output written on 2015-PortElizabeth.pdf (125 pages, 6880947 bytes).
 PDF statistics:
- 1350 PDF objects out of 1440 (max. 8388607)
- 237 named destinations out of 1000 (max. 500000)
- 294 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1612 PDF objects out of 1728 (max. 8388607)
+ 274 named destinations out of 1000 (max. 500000)
+ 330 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -7,20 +7,12 @@
       \end{tabular}
     &  
       \begin{tabular}{p{0.4\textwidth}}
-        \onslide<1>{ \emph{Goal : } Identifying homogenous region and abrupt changes in the signal.\\}
+        \onslide<1>{ \emph{Goal : } Identifying homogenous regions and abrupt changes in the signal.\\}
         \onslide<2>{ These \textcolor{red}{regions} may be interpreted afterwards.\\}
     \end{tabular}
   \end{tabular}
   }
 
-%   \frame{\frametitle{Change point detection context}
-% 
-%   Two possible statistical point of view : 
-%   \begin{itemize}
-%   \item Bayesian approach : the output is the posterior probability for each point to be a change point.
-%   \item \emph{Frequentist} approach : the output is the best segmentation (according to a given critrion)
-%   \end{itemize}
-%   }
 
 \subsection*{Model}
 \begin{frame}{Underlying model}
@@ -44,7 +36,7 @@
              \mbox{ if $t$ in portion $I_k$,  for  $k=1,\ldots,K$. }
            \end{equation*}
        } }
-      \end{itemize}
+       \end{itemize}
 
   
 
@@ -66,23 +58,25 @@
    \begin{itemize}
    \item Unknown parameters : $\mubf=(\mu_1, \ldots, \mu_{\textcolor{red}{K}})$, $\sigma$, and $\Tbf=(T_1, \ldots, T_{\textcolor{red}{K}})$,\\
      but  also \textcolor{red}{K} itself.
-\pause
+   \onslide<3->{
    \item Estimation Procedure
-    \only<3->{ \begin{itemize}}
+   \only<3->{
+    \begin{itemize}}
     \only<3>{
        \item For  given $K$ and $\Tbf$,   $\thetabf$ is estimated using maximum likelihood.}
        \only<4>{\item For  given $K$, compute the maximum likelihood for any possible position for $\Tbf$, 
        \textcolor{red}{But, } $$\left( \begin{array}{c} n-1 \\ K-1 \end{array}\right)$$ possible choices for the $K-1$ positions, that is $10^{30}$ for $K=10$, $n=200$,  ( $\approx 10^{11}$ years on a 2014 computer).
        \pause
-  \centerline{$\Rightarrow$ Practically impossible even for small $K$ and $n$}\\
-    Dynamic programming
+  \centerline{$\Rightarrow$ Practically impossible even for small $K$ and $n$}
+  \centerline{\textcolor{red}{Dynamic programming}}
        }
   \only<5>{
   \item Estimating $K$. 
      Likelihood increases with the number of segment $K$, use a penalized likelihood criterion and
     \includegraphics[scale=0.3]{LikelihoodProfile}
   }
-  \only<3->{ \end{itemize}}
+  \only<3->{\end{itemize}}
+   }
 \end{itemize} 
 }
 
@@ -120,43 +114,40 @@ I_k};
 \end{column}
 \end{columns}
 }
-
+% 
 \begin{frame}[fragile]{Finding the K-1 change points}
-% \only<1-3>{
-% \paragraph{Considering all possible segmentations, } the best segmentation minimizes 
-% $$
-% J_k(1, n) = \sum_{k=1}^K \sum_{t \in I_k} (Y_t - \widehat{\mu}_k)^2.
-% $$
-% \pause
-% \paragraph{Dynamic programming,} with complexity ($\mathcal{O}(n^2)$).
-% 
-% 
+ \only<1-3>{
+ \paragraph{Considering all possible segmentations, } the best segmentation minimizes 
+ $$
+ J_k(1, n) = \sum_{k=1}^K \sum_{t \in I_k} (Y_t - \widehat{\mu}_k)^2.
+ $$
+ \pause
+ \paragraph{Dynamic programming,} with complexity ($\mathcal{O}(n^2)$).
+ } 
+ 
 % %possible only because the quantity of interest is the sum over all segments 
 % 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \only<4>{\centerline{\sl Sub-paths of the optimal path are themselves
-% optimal,} 
-% Bellmann optimality 
+ \only<4>{\centerline{\sl Sub-paths of the optimal path are themselves
+ optimal,} 
+ Bellmann optimality 
+ $$ $$
+ \begin{description}
 % 
-% \vspace{3.8cm}
-% $$ $$ }
-% \only<5>{
-% \begin{description}
-% 
-% \item[Initialisation:] Compute for $0 \leq i < j \leq n$, cost of portion $I_{ij}$~:
-%  $$
-%  J_1(i, j) = \sum_{t=i+1}^j (Y_t - \widehat{\mu})^2
-%  $$
-% \item[Etape $k$:] Compute for $2 \leq k \leq K$, $J_k(i, j)$ the cost of the best segmentation in $k$ segments between $i$ and $j$.
-%   $$
-%   J_k(i, j) = \min_{i < h <j} \left[J_{k-1}(i, h) + J_1(h+1,  j)\right].
-%   $$
-% \end{description}
-% }
+ \item[Initialisation:] Compute for $0 \leq i < j \leq n$, cost of portion $I_{ij}$~:
+  $$
+  J_1(i, j) = \sum_{t=i+1}^j (Y_t - \widehat{\mu})^2
+  $$
+ \item[Etape $k$:] Compute for $2 \leq k \leq K$, $J_k(i, j)$ the cost of the best segmentation in $k$ segments between $i$ and $j$.
+   $$
+   J_k(i, j) = \min_{i < h <j} \left[J_{k-1}(i, h) + J_1(h+1,  j)\right].
+   $$
+ \end{description}
+ }
 \end{frame}
 
-
+% 
 \subsection*{Example}
 \subsection*{ Toy Example}
    \begin{frame}[fragile]{How to perform this segmentation approach ?}
@@ -217,7 +208,7 @@ I_k};
 \end{frame}
 % 
 
- 
+%  
  \begin{frame}[fragile]{Do it yourself}
 
 \begin{columns}
@@ -246,82 +237,84 @@ I_k};
 \end{columns}
 \end{frame}
 
-\subsection*{ClusteringSegmentation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{When Segmentation is not sufficient}
-$$
-\begin{tabular}{cc}
-  Pure segmentation & Segmentation + classification \\
-  \includegraphics[scale=0.3]{FigSegClas-1.pdf} &
-  \includegraphics[scale=0.3]{FigSegClas-2.pdf} 
-  \end{tabular}
-$$
-\end{frame}
-\begin{frame}{Segmentation-Clustering}
- \begin{itemize}
- \item Assuming a \textcolor{blue}{secondary underlying
-     structure} of the segments into $P$ groups with weights
-   $\pi_1,...,\pi_P (\sum_p \pi_p=1)$.
- \item Let's define \emphase{hidden variables $Z_{kp}$}, indicators of the
-   \emphase{group to which segment $k$ belongs}.
- \item $\pi_p$ denotes the \emphase{proportion} of group $p$.
- \item The \emphase{distribution of the signal} given the group of the
-     segment is
-  \begin{align*}
-   t \in I_k, k \in p &\qquad \Rightarrow \qquad Y_t \sim
-   \Ncal(m_{\emphase{p}}, \sigma^2)\\
-   Y^k|Z_{kp}=1 &\sim \Ncal( m_p, \sigma^2 ).
-   \end{align*}
- %\item It is a model of \textblue{segmentation/clustering}.
- \item The \emphase{parameters of this model} are
-   \begin{eqnarray*}
-   \mbox{the breakpoint positions:} \quad T&=&(t_1, ..., t_{K-1}),\\
-     \mbox{the mixture characteristics:} \quad \Theta&=&(\pi_1,\hdots,\pi_P;\mu_1,\hdots,\mu_P,\sigma).
-   \end{eqnarray*}
-\end{itemize}
-\end{frame} 
-
-
-\begin{frame}{Hybrid algorithm}
-\only<1>{
-\paragraph{2 levels of statistical units} 
- \begin{itemize}
- \item  The inference of the \emphase{breakpoints $T$}
-   is made at the \emphase{position level $t$};
- \item  The inference of the \emphase{groups (status)
-     ($\Theta, \tau_{kp}$)} is made at the \emphase{segment level $k$}.
- \end{itemize}
-} 
-\only<2>{
- \paragraph{Alternate parameters estimation with $K$ and $P$ known}
- \begin{enumerate}
- \item  When $T$ is fixed, the
-   \textcolor{blue}{Expectation-Maximisation (EM)} algorithm estimates
-   $\Theta$;
-   $$
-   \hat{\Theta}^{(h+1)}=\underset{\Theta}{\arg\max} \left\{\log
-     \Lcal_{KP}\left(\Theta,T^{(h)}\right) \right\}. 
-  $$
-   $$
-   \log \Lcal_{KP}( \hat{\Theta}^{(h+1)}; \hat{T}^{(h)})
-   \geq \log \Lcal_{KP}(\hat{\Theta}^{(h)};
-  \hat{T}^{(h)})
-  $$
- \item  When $\Theta$ is fixed, \textcolor{blue}{dynamic
-     programming} estimates $T$;
-    $$
-   \hat{T}^{(h+1)}=\underset{T}{\arg\max} \left\{\log
-     \Lcal_{KP}\left(\hat{\Theta}^{(h+1)},T\right) \right\}. 
-  $$
-   $$
-   \log \Lcal_{KP}(\hat{\Theta}^{(h+1)}; \hat{T}^{(h+1)})
-   \geq \log \Lcal_{KP}(\hat{\Theta}^{(h+1)};
-   \hat{T}^{(h)})
-   $$
-   \end{enumerate} 
-}
-\end{frame}
- 
+% \subsection*{Clustering Segmentation}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}{When Segmentation is not sufficient - clustering segmentation model}
+% $$
+% \begin{tabular}{cc}
+%   Pure segmentation & Segmentation + classification \\
+%   \includegraphics[scale=0.3]{FigSegClas-1.pdf} &
+%   \includegraphics[scale=0.3]{FigSegClas-2.pdf} 
+%   \end{tabular}
+% $$
+% \end{frame}
+% \begin{frame}{Segmentation-Clustering}
+%  \begin{itemize}
+%  \item Assuming a \textcolor{blue}{secondary underlying
+%      structure} of the segments into $P$ groups with weights
+%    $\pi_1,...,\pi_P (\sum_p \pi_p=1)$.
+%    \pause
+%  \item Let's define \emphase{hidden variables $Z_{kp}$}, indicators of the
+%    \emphase{group to which segment $k$ belongs}.
+%    \pause
+%  \item $\pi_p$ denotes the \emphase{proportion} of group $p$.
+%  \pause
+%  \item The \emphase{distribution of the signal} given the group of the
+%      segment is
+%   \begin{align*}
+%    t \in I_k, k \in p &\qquad \Rightarrow \qquad Y_t \sim
+%    \Ncal(m_{\emphase{p}}, \sigma^2)\\
+%    Y^k|Z_{kp}=1 &\sim \Ncal( m_p, \sigma^2 ).
+%    \end{align*}
+%  %\item It is a model of \textblue{segmentation/clustering}.
+%  \pause
+%  \item \centering{\blue{Model parameters $\thetabf =(\pibf, \gammabf)$}and 
+%  {the breakpoint positions:} \quad \Tbf=(t_1, ..., t_{K-1})}\\
+% \end{itemize}
+% \end{frame} 
+% 
+% 
+% \begin{frame}{Hybrid algorithm}
+% \only<1>{
+% \paragraph{2 levels of statistical units} 
+%  \begin{itemize}
+%  \item  The inference of the \emphase{breakpoints $T$}
+%    is made at the \emphase{position level $t$};
+%  \item  The inference of the \emphase{groups (status)
+%      ($\Theta, \tau_{kp}$)} is made at the \emphase{segment level $k$}.
+%  \end{itemize}
+% } 
+% \only<2>{
+%   \paragraph{Alternate parameters estimation with $K$ and $P$ known}
+%  \begin{enumerate}
+%  \item  When $\Tbf$ is fixed, the
+%    \textcolor{blue}{Expectation-Maximisation (EM)} algorithm estimates
+%    $\thetabf$;
+%    $$
+%     \hat{\thetabf}^{(h+1)}=\underset{\thetabf}{\arg\max} \left\{\log
+%       \Lcal_{KP}\left(\thetabf,T^{(h)}\right) \right\}. 
+%    $$
+%     $$
+%     \log \Lcal_{KP}( \hat{\thetabf}^{(h+1)}; \hat{\Tbf}^{(h)})
+%     \geq \log \Lcal_{KP}(\hat{\thetabf}^{(h)};
+%    \hat{\Tbf}^{(h)})
+%    $$
+%   \item  When $\thetabf$ is fixed, \textcolor{blue}{dynamic
+%       programming} estimates $\Tbf$;
+%      $$
+%     \hat{\Tbf}^{(h+1)}=\underset{\Tbf}{\argmax}
+%     \left\lbrace\log
+%       \Lcal_{KP}\left(\hat{\thetabf}^{(h+1)},\Tbf\right) \right\rbrace. 
+%    $$
+%    $$
+%    \log \Lcal_{KP}(\hat{\thetabf}^{(h+1)}; \hat{\Tbf}^{(h+1)})
+%    \geq \log \Lcal_{KP}(\hat{\thetabf}^{(h+1)};
+%    \hat{\Tbf}^{(h)})
+%    $$
+%     \end{enumerate} 
+% }
+% \end{frame}
+%  
 
 \subsection*{Example}
 \subsection*{Toy Example}
