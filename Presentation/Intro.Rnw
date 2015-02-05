@@ -171,11 +171,11 @@ $$\P(\Ybf, \Zbf)=\P(\Ybf \vert \Zbf)\P(\Zbf)=\P(\Zbf\vert \Ybf) \P(\Ybf)$$
 
 
 \begin{frame}{Convention}
-\paragraph{Notation:}
+\paragraph{Notations:}
 {\small
 \begin{itemize}
 \item $\Ybf = (Y_1, \ldots, Y_n) = $ observed data (typically Speed)
- \item $\Zbf $ unobserved data (typically State, for mixture  and Hidden Markov model)
+ \item $\Zbf= (Z_1, \ldots, Z_n) $ unobserved data (typically State, for mixture  and Hidden Markov model)
  \item \thetabf = the unknown parameters of $\Ybf$ and $\Zbf$.
 \end{itemize}
 }

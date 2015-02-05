@@ -397,11 +397,11 @@ $$\P(\Ybf, \Zbf)=\P(\Ybf \vert \Zbf)\P(\Zbf)=\P(\Zbf\vert \Ybf) \P(\Ybf)$$
 
 
 \begin{frame}{Convention}
-\paragraph{Notation:}
+\paragraph{Notations:}
 {\small
 \begin{itemize}
 \item $\Ybf = (Y_1, \ldots, Y_n) = $ observed data (typically Speed)
- \item $\Zbf $ unobserved data (typically State, for mixture  and Hidden Markov model)
+ \item $\Zbf= (Z_1, \ldots, Z_n) $ unobserved data (typically State, for mixture  and Hidden Markov model)
  \item \thetabf = the unknown parameters of $\Ybf$ and $\Zbf$.
 \end{itemize}
 }
@@ -442,14 +442,14 @@ $$\P(\Ybf, \Zbf)=\P(\Ybf \vert \Zbf)\P(\Zbf)=\P(\Zbf\vert \Ybf) \P(\Ybf)$$
 
 \subsection*{Goal}
   \frame{\frametitle{Change point detection context}
-    \begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
+    \begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
     \begin{tabular}{p{\textwidth}}
         \includegraphics<1>[height=.6\textheight]{rawSignal}
         \includegraphics<2>[height=.6\textheight]{segmentedSignal}
       \end{tabular}
     &  
-      \begin{tabular}{p{0.4\textwidth}}
-        \onslide<1>{ \emph{Goal : } Identifying homogenous regions and abrupt changes in the signal.\\}
+      \begin{tabular}{p{0.55\textwidth}}
+        \onslide<1>{ \blue{Goal: } Identifying homogenous regions and abrupt changes in the signal.\\}
         \onslide<2>{ These \textcolor{red}{regions} may be interpreted afterwards.\\}
     \end{tabular}
   \end{tabular}
@@ -720,7 +720,7 @@ $$
  \item  The inference of the \emphase{breakpoints $T$}
    is made at the \emphase{position level $t$};
  \item  The inference of the \emphase{groups (status)
-     ($\Theta, \tau_{kp}$)} is made at the \emphase{segment level $k$}.
+     ($\gammabf, \tau_{kp}$)} is made at the \emphase{segment level $k$}.
  \end{itemize}
 } 
 \only<2>{
@@ -787,531 +787,9 @@ $$
 \end{frame}
 % %--------------------------------------------------------------------
 % %--------------------------------------------------------------------
-\section{Mixture Model}
-
-\subsection*{Model}
-
-\begin{frame}[fragile]{Problem presentation}
-
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\only<2>{\includegraphics[scale=0.3]{mixCode1-5.pdf}}
-\only<3->{\paragraph{Basic idea :}\\
- "Expert" threshold $s$ \\  
- $$ State_i=1 \quad \mbox{if} Y_i<s$$
- $$ State_i=2 \quad \mbox{if} Y_i\geq  s $$
-}
-\only<5->{\paragraph{Improvement:}\\
- \textcolor{blue}{Estimating} the threshold s and  reconstruction of the hidden state (colour)\\
- Compute the \textcolor{blue}{probability to belong} to State 1 or 2.\\
-}
- \only<6->{
- \bigskip
-   \centering{$\Longrightarrow$ \textcolor{red}{Mixture Model}}
- }
- \end{column}
- \begin{column}{0.4\textwidth}
-
- \only<1>{\includegraphics[scale=0.3]{mixCode1-1.pdf}}
- \only<2>{\includegraphics[scale=0.3]{mixCode1-2.pdf}}
- \only<3>{\includegraphics[scale=0.3]{mixCode1-3.pdf}}
- \only<4->{\includegraphics[scale=0.3]{mixCode1-4.pdf}}
-\end{column}
-\end{columns}
-\end{frame}
-
-%%-----------------------------------------------------------------%%
-%%-----------------------------------------------------------------%%
-
-\begin{frame}[fragile]{Proposed model}
-\paragraph{Model}
-For a given number of states $K$, 
-
-\begin{itemize}
-\item
-%  \blue{Modelling $Z$}: $\pi_k=\P(Z_i=k), \quad k=1,\ldots, K, \quad \sum_k \pi_k=1$\par
-%  $Z_i \overset{i.i.d}{\sim} \Mcal(1, \pibf), \quad P(Z_{ik}=1)=\pi_k$
-%  \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\gamma_k}().$
-\end{itemize}
-
- \onslide<2->{\centering{\blue{Model parameters $\thetabf =(\pibf, \gammabf)$}}\par}
- \onslide<3->{\centering{\includegraphics[scale=0.4]{Dag2.pdf}}}
-\end{frame}
-
-\begin{frame}[fragile]{Proposed model}
-\paragraph{Model}
-For a given number of states $K$, 
-\begin{itemize}
-\item
- \blue{Modelling $Z$}: $\pi_k=\P(Z_i=k), \quad k=1,\ldots, K, \quad \sum_k \pi_k=1$\par
- $Z_i \overset{i.i.d}{\sim} \Mcal(1, \pibf)$
- \item \blue{Modelling $Y$}: The $Y_i's$ are assumed to be independent  conditionnaly to $\Zbf$ : $(Y_i\vert Z_i = k) \overset{i.i.d}{\sim} f_{\gamma_k}().$
-\end{itemize}
-\begin{columns}
-  \begin{column}{0.45\textwidth}
-\begin{knitrout}\tiny
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlstd{K} \hlkwb{<-} \hlnum{2}\hlstd{; N} \hlkwb{<-} \hlnum{100}\hlstd{; mu} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{3}\hlstd{,} \hlnum{7}\hlstd{); sigma} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{1.5}\hlstd{)}
-\hlstd{Z} \hlkwb{<-} \hlkwd{sample}\hlstd{(}\hlnum{1}\hlopt{:}\hlnum{2}\hlstd{,} \hlkwc{size} \hlstd{= N,} \hlkwc{replace}\hlstd{=T,} \hlkwc{prob}\hlstd{=}\hlkwd{c}\hlstd{(}\hlnum{0.3}\hlstd{,} \hlnum{0.7}\hlstd{))}
-\hlkwd{plot}\hlstd{(Z,} \hlkwc{col}\hlstd{=Z}\hlopt{+}\hlnum{1}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{15}\hlstd{,} \hlkwc{cex}\hlstd{=}\hlnum{0.8}\hlstd{)}
-\hlstd{Y.mixture} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(N,} \hlkwc{mean}\hlstd{=mu[Z],} \hlkwc{sd}\hlstd{=sigma[Z])}
-\hlkwd{plot}\hlstd{(Y.mixture,} \hlkwc{col}\hlstd{=Z}\hlopt{+}\hlnum{1}\hlstd{,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
- \end{column}
-  \begin{column}{0.45\textwidth}
-    \only<3>{\includegraphics[height=3cm, width=6cm]{mixCode2-1.pdf}}
-    \only<4->{\includegraphics[scale=0.25]{mixCode2-2.pdf}}
-  \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Model Properties}
-\begin{itemize}
-\item Couples $\{(Y_i, Z_i)\}$ are i.i.d.
-\item \blue{Label switching}:\\ the model is invariant for any permutation of the labels $\{1,
-  \dots, K\}$ $\Rightarrow$ the mixture model has \emphase{$K!$
-    equivalent definitions}.
-\item\blue{Distribution of a $Y_i$:}\\
-$$P(Y_i)=\sum_{k=1}^K P(Y_i, Z_i=k)=\textcolor{blue}{P(Z_i=k)} \textcolor{magenta}{P(Y_i | Z_i=k)} $$
-\item\blue{Distribution of $\Ybf$:}\\
-{\small
-\begin{eqnarray*}
-P(\Ybf ; \thetabf, \pibf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k)  
-&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{P(Z_i=k)} \textcolor{magenta}{P(Y_i | Z_i=k)} \\ 
-&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{\pi_k} \textcolor{magenta}{f_{\gamma_k}(Y_i)} 
-\end{eqnarray*}
-}
-\end{itemize}
-\end{frame}
-
-\subsection*{Parameter estimation}
-%%-----------------------------------------------------------------%%
-%%-----------------------------------------------------------------%%
-
-
-\begin{frame}{Statistical inference of incomplete data models} 
- \paragraph{Maximum likelihood estimate:} We are looking for
-  $$
-  (\widehat{\thetabf},\widehat{\pibf}) = \arg\max_{\thetabf, \pibf} \log P(\Ybf; \thetabf, \pibf)
-  $$
-  \begin{itemize}
-  \item Likelihood of the observed data (or observed likelihood):
-    $$
-    \log P(\Ybf; \thetabf, \pibf)=
-    \sum_{i=1}^n \log \left[\sum_{k=1}^K \pi_k f_{ \gamma_k}(Y_i)\right]
-    $$
-  \item No analytical estimators. 
-%  \item  It is not always possible since this sum typically involves $K^n$ terms : $2^{100}\approx10^{30}$, the computation will take $10^{10}$ years on a 2014 computer. 
-  \item Brute force algorithm is not the way
-  \end{itemize}
-\end{frame}
-%%-----------------------------------------------------------------%%
-%%-----------------------------------------------------------------%%
-
-
-\begin{frame}{And what if $\Zbf$ were observed  ?}
-The complete likelihood is 
-\begin{align*}
-    \log P(\Ybf, \Zbf; \thetabf, \pibf) &=\log P(\Zbf; \pibf) + \log P(\Ybf\vert \Zbf; \thetabf)\\
-      & =  \sum_i \sum_k Z_{ik} \log \pi_k + \sum_i \sum_k Z_{ik} \log
-    f_{\gamma_k}(Y_i) \\
-    & =  \sum_i \sum_k Z_{ik} [\log \pi_k + \log
-      f_{\gamma_k}(Y_i)].
-\end{align*}
-  
-Now, the sum contains $nK$ ($200$ if $n=100$ and $K=2$) terms.  It is much easier.
-\pause
-
-\centering{\textcolor{red}{Unfortunately $\Zbf$ are unknown.} }
-\pause
-
-\bigskip
-
-\textcolor{red}{Idea:} Replace $Z_i$, by our best guess, that is~:
- $$
- \tau_{ik}:=\Esp(Z_i = k | Y_i)=P(Z_i = k | Y_i)
- $$  
-\end{frame}
-
-\begin{frame}{Idea of EM algorithm}
- Quantity to be maximized :
-\only<1-2>{ $$ \sum_i \sum_k\only<1>{ Z_{ik}}\only<2>{\textcolor{red}{\tau_{ik}} } [\log \pi_k + \log
-       f_{\gamma_k}(Y_i)].
- $$}
- \only<3->{ $$ Q(\thetabf, \thetabf_0) = \sum_i \sum_k
- \textcolor{red}{\tau_{ik}^{(0)}}  [\log \pi_k + \log
-       f_{\gamma_k}(Y_i)]$$}
-       
- \only<2->{where $\tau_{ik}$ is a good approximation of $Z_{ik}$.}
- \bigskip
- 
- \only<3->{ If $\thetabf_0$ is known, a good approximation is $\tau_{ik}^{(0)}=\Esp_{\thetabf_0}\left\lbrace Z_{ik}\vert \Ybf\right\rbrace = \P_{\thetabf_0}\left\lbrace Z_{i}=k\vert \Ybf\right\rbrace $,
- }
- 
- \only<4->{Idea : iterative algorithm, for a value of $\thetabf^{(l)}$, compute $\tau_{ik}^{(l)}$, and then update $\thetabf^{(l)}$ to $\thetabf^{(l+1)}$. }
-\end{frame}
-
-
-\begin{frame}{More generally - EM algorithm}
-\begin{columns}
-\begin{column}{0.2\textwidth}
-\includegraphics[scale=0.5]{ModHier.pdf}
-\end{column}
-\begin{column}{0.8\textwidth}
-\paragraph{Bayes Formula}
-{\small
-\begin{align*}
-P(\Ybf, \Zbf;\thetabf) & = P(\Ybf\vert \Zbf; \thetabf) P(\Zbf; \thetabf),\\
-& = {P(\Zbf\vert \Ybf; \thetabf) P(\Ybf; \thetabf).}
-\end{align*}
-Therefore,
-\begin{align*}
-\log P(\Ybf; \thetabf) & = \log \left \lbrace P(\Ybf, \Zbf;\thetabf) / P(\Zbf\vert \Ybf; \thetabf) \right\rbrace\\
-& = \log P(\Ybf, \Zbf;\thetabf) - \log P(\Zbf\vert \Ybf; \thetabf) \\
-\end{align*}
-For a given $\thetabf_0$, we may compute $P_{\thetabf_0}=P(\Zbf\vert \thetabf_0, \Ybf)$ and
-\begin{align*}
-\log P(\Ybf; \thetabf) &= \textcolor{orange}{\Esp_{\thetabf_0}(\log P(\Ybf, \Zbf;\thetabf))} - \Esp_{\thetabf_0}(\log P(\Zbf\vert \Ybf; \thetabf))\\
-  & = \textcolor{orange}{Q(\thetabf, \thetabf_0)} - H(\thetabf, \thetabf_0)
-  \end{align*}}
-\end{column}
-\end{columns}
-\end{frame}
-
-
-\begin{frame}{More generally - EM algorithm}
-\begin{columns}
-\begin{column}{0.2\textwidth}
-\includegraphics[scale=0.5]{ModHier.pdf}
-\end{column}
-\begin{column}{0.8\textwidth}
-{\small
-Since 
-$$\log P(\Ybf; \thetabf)  = Q(\thetabf, \thetabf_0) - H(\thetabf, \thetabf_0),$$
-and $H(\thetabf, \thetabf_0)$ achieves its maximum in $\thetabf_0$,
-\begin{align*}
-\log P(\Ybf; \thetabf)- \log P(\Ybf; \thetabf_0)  = & \textcolor{orange}{(Q(\thetabf, \thetabf_0) - Q(\thetabf, \thetabf_0))} +\cr
-&\textcolor{green}{(H(\thetabf_0, \thetabf_0)-H(\thetabf, \thetabf_0))}.
-\end{align*}
-}
-
-\paragraph{Expectation - Maximization algorithm}
-\begin{enumerate}
-\item Phase E : \\
-Calculate  $Q(\thetabf,\thetabf^{k})$ for every $\thetabf$.
-\item Phase M :\\ Define  
-$\thetabf^{k+1}=argmax\, Q(\thetabf,\thetabf^{k})$
-\end{enumerate}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}{EM algorithm for independent mixture model}
-   Recall that $\tau_{ik}^{(\ell)}:=P_{\thetabf^{(\ell)}}(Z_i = k | Y_i )$
-   $$Q(\thetabf;\thetabf^{(\ell)})
-     =\sum_i \sum_k \tau_{ik}^{(\ell)} \log \pi_k +  \sum_i \sum_k \tau_{ik}^{(\ell)}\log f_{\gamma_k^{(\ell)}}(Y_i)$$
-     $\rightarrow$ Need to estimate $\tau_{ik}^{(\ell)}$
-\end{frame}
-
-\begin{frame}{EM algorithm for independent mixture model}
-    \begin{itemize}
-    \item Initialisation of $\thetabf^{(0)}=(\pi_1, ..., \pi_K, \gamma_1, ..., \gamma_K)^{(0)}$.
-  \pause
-  \item Alternate  
-      \begin{description}
-      \item[E-step] Calculation of 
-      \begin{eqnarray*}
-      \tau^{(\ell)}_{ik}& = & P(Z_i = k | y_i, \thetabf^{(\ell-1)}) = \frac{\P(Z_i = k,   y_i; \thetabf^{(\ell-1)})}{\P(y_i, \thetabf^{(\ell-1)})}\\ 
-      \pause
-      &=&\frac{\P( y_i\vert Z_i = k ; \thetabf^{(\ell-1)}) \P( Z_i = k;  \thetabf^{(\ell-1)})}{\P(y_i; \thetabf^{(\ell-1)})}\\
-      & = & \frac{\pi^{(\ell-1)}_k f_{\theta^{(\ell-1)}_k}(y_i)}{\sum_{k'} \pi^{(\ell-1)}_{k'}f_{\theta^{(\ell-1)}_{k'}}(y_i)}
-      \end{eqnarray*}
-\pause
-      \item[M-step] Maximization of
-        $$
-        (\pibf, \gammabf) \longmapsto \sum_i \sum_k \tau_{ik}^{(\ell)} [\log \pi_k +
-          \log f(x_i; \gamma_k)]
-        $$
-      \end{description} 
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{In the example}
-\begin{itemize}  
-\item $Z \in \{1,2\}$: $P(Z=1)=\pi_1$ and $P(Z=2)=1-\pi_1$  
-\item For $k=1$ or $2$, $(X|Z=k) \sim \Ncal(\mu_k, \sigma_k^2)$ 
-\item The parameter vector is $\thetabf=(\pi, \mu_1, \mu_2, \sigma_2^2, \sigma_2^2)$
-\end{itemize}
-   \begin{eqnarray*}
-     \widehat{\pi}_1^{(\ell+1)} & = & \frac1{n} \sum_{i=1}^n \tau_{i1} ^{(\ell)}, \\
-     \widehat{\mu}_k^{(\ell+1)} & = & \frac1{\sum_{i=1}^n  \tau_{ik} ^{(\ell)}} \sum_{i=1}^n \tau_{ik}^{(\ell)} y_i \\ 
-     \widehat{\sigma}^2_{k^{(\ell+1)}} & = &  \frac1{\sum_{i=1}^n  \tau_{ik} ^{(\ell)}} \sum_{i=1}^n \tau_{ik}^{(\ell)} (y_i - \widehat{\mu}_k^{(\ell)})^2
-  \end{eqnarray*}
-   $\rightarrow$ They are a \emphase{weighted version} of the usual maximum
-   likelihood estimates. 
-\end{frame}
-
-
-\begin{frame}[fragile]{Back on earth - Practically speaking}
-\begin{columns}
-\begin{column}{0.5\textwidth}
-\begin{knitrout}\tiny
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{alltt}
-\hlcom{#library('mclust')}
-\hlkwd{library}\hlstd{(}\hlstr{'mixtools'}\hlstd{)}
-\hlstd{Y.clustering} \hlkwb{<-} \hlkwd{normalmixEM} \hlstd{(Y.mixture,} \hlkwc{lambda} \hlstd{=} \hlkwa{NULL}\hlstd{,} \hlkwc{mu} \hlstd{=} \hlkwa{NULL}\hlstd{,} \hlkwc{sigma} \hlstd{=} \hlkwa{NULL}\hlstd{,} \hlkwc{k} \hlstd{=} \hlnum{2}\hlstd{,}
-                             \hlkwc{mean.constr} \hlstd{=} \hlkwa{NULL}\hlstd{,} \hlkwc{sd.constr} \hlstd{=} \hlkwa{NULL}\hlstd{,}
-                             \hlkwc{epsilon} \hlstd{=} \hlnum{1e-07}\hlstd{,} \hlkwc{maxit} \hlstd{=} \hlnum{1000}\hlstd{,} \hlkwc{maxrestarts}\hlstd{=}\hlnum{20}\hlstd{)}
-\end{alltt}
-\begin{verbatim}
-number of iterations= 94 
-\end{verbatim}
-\begin{alltt}
-\hlkwd{summary}\hlstd{(Y.clustering)}
-\end{alltt}
-\begin{verbatim}
-summary of normalmixEM object:
-         comp 1
-lambda 0.644837
-mu     7.366618
-sigma  1.374730
-         comp 2
-lambda 0.355163
-mu     3.072069
-sigma  1.142811
-loglik at estimate:  -220.6712 
-\end{verbatim}
-\begin{alltt}
-\hlstd{Y.clustering}\hlopt{$}\hlstd{posterior}
-\end{alltt}
-\begin{verbatim}
-             comp.1
-  [1,] 0.9969687292
-  [2,] 0.9851514346
-  [3,] 0.9997121657
-  [4,] 0.0161326028
-  [5,] 0.9999512614
-  [6,] 0.9999999696
-  [7,] 0.0005076365
-  [8,] 0.9579043973
-  [9,] 0.9998855989
- [10,] 0.9951533652
- [11,] 0.2786839900
- [12,] 0.0059443996
- [13,] 0.9999836329
- [14,] 0.0368165290
- [15,] 0.9971375143
- [16,] 0.0028544586
- [17,] 0.9755156762
- [18,] 0.0005989360
- [19,] 0.9999835040
- [20,] 0.9975125295
- [21,] 0.9999999764
- [22,] 0.9547557394
- [23,] 0.8695335538
- [24,] 0.9994090331
- [25,] 0.1078727174
- [26,] 0.0019725859
- [27,] 0.9999756303
- [28,] 0.9825448057
- [29,] 0.9999955154
- [30,] 0.9949524424
- [31,] 0.9977340618
- [32,] 0.3844070691
- [33,] 0.6358648909
- [34,] 0.9986272956
- [35,] 0.0014388339
- [36,] 0.9979728669
- [37,] 0.9999999235
- [38,] 0.0001195139
- [39,] 0.9995721112
- [40,] 0.9992528007
- [41,] 0.3606308191
- [42,] 0.1978326093
- [43,] 0.0021924454
- [44,] 0.9952801499
- [45,] 0.4327334801
- [46,] 0.1348679072
- [47,] 0.9999986008
- [48,] 0.9999995851
- [49,] 0.9999915740
- [50,] 0.9990837930
- [51,] 0.9863232129
- [52,] 0.9644804877
- [53,] 0.0178305291
- [54,] 0.0017412448
- [55,] 0.0023401499
- [56,] 0.0040029722
- [57,] 0.9998614798
- [58,] 0.9999949343
- [59,] 0.0002400381
- [60,] 0.9999888883
- [61,] 0.0021417526
- [62,] 0.0058570692
- [63,] 0.5585159804
- [64,] 0.9998211910
- [65,] 0.9245787218
- [66,] 0.9968166992
- [67,] 0.9901165941
- [68,] 0.9990678607
- [69,] 0.0004634915
- [70,] 0.9999950954
- [71,] 0.0044672843
- [72,] 0.9999985457
- [73,] 0.3302920680
- [74,] 0.8554304063
- [75,] 0.0015771278
- [76,] 0.0457297999
- [77,] 0.9999955288
- [78,] 0.9995411383
- [79,] 0.0092178203
- [80,] 0.9973761089
- [81,] 0.0231626465
- [82,] 0.9998876875
- [83,] 0.9963539491
- [84,] 0.4130461972
- [85,] 0.9999990052
- [86,] 0.0048366542
- [87,] 0.7363720205
- [88,] 0.9999988876
- [89,] 0.0245643657
- [90,] 0.0229954032
- [91,] 0.2286765833
- [92,] 0.9999230264
- [93,] 0.9999533083
- [94,] 0.0814809684
- [95,] 0.9999999203
- [96,] 0.9998685558
- [97,] 0.9991783228
- [98,] 0.9987997820
- [99,] 0.9998938166
-[100,] 0.9616710098
-             comp.2
-  [1,] 3.031271e-03
-  [2,] 1.484857e-02
-  [3,] 2.878343e-04
-  [4,] 9.838674e-01
-  [5,] 4.873864e-05
-  [6,] 3.042552e-08
-  [7,] 9.994924e-01
-  [8,] 4.209560e-02
-  [9,] 1.144011e-04
- [10,] 4.846635e-03
- [11,] 7.213160e-01
- [12,] 9.940556e-01
- [13,] 1.636709e-05
- [14,] 9.631835e-01
- [15,] 2.862486e-03
- [16,] 9.971455e-01
- [17,] 2.448432e-02
- [18,] 9.994011e-01
- [19,] 1.649601e-05
- [20,] 2.487470e-03
- [21,] 2.360440e-08
- [22,] 4.524426e-02
- [23,] 1.304664e-01
- [24,] 5.909669e-04
- [25,] 8.921273e-01
- [26,] 9.980274e-01
- [27,] 2.436966e-05
- [28,] 1.745519e-02
- [29,] 4.484646e-06
- [30,] 5.047558e-03
- [31,] 2.265938e-03
- [32,] 6.155929e-01
- [33,] 3.641351e-01
- [34,] 1.372704e-03
- [35,] 9.985612e-01
- [36,] 2.027133e-03
- [37,] 7.654293e-08
- [38,] 9.998805e-01
- [39,] 4.278888e-04
- [40,] 7.471993e-04
- [41,] 6.393692e-01
- [42,] 8.021674e-01
- [43,] 9.978076e-01
- [44,] 4.719850e-03
- [45,] 5.672665e-01
- [46,] 8.651321e-01
- [47,] 1.399150e-06
- [48,] 4.149282e-07
- [49,] 8.426048e-06
- [50,] 9.162070e-04
- [51,] 1.367679e-02
- [52,] 3.551951e-02
- [53,] 9.821695e-01
- [54,] 9.982588e-01
- [55,] 9.976599e-01
- [56,] 9.959970e-01
- [57,] 1.385202e-04
- [58,] 5.065728e-06
- [59,] 9.997600e-01
- [60,] 1.111170e-05
- [61,] 9.978582e-01
- [62,] 9.941429e-01
- [63,] 4.414840e-01
- [64,] 1.788090e-04
- [65,] 7.542128e-02
- [66,] 3.183301e-03
- [67,] 9.883406e-03
- [68,] 9.321393e-04
- [69,] 9.995365e-01
- [70,] 4.904605e-06
- [71,] 9.955327e-01
- [72,] 1.454318e-06
- [73,] 6.697079e-01
- [74,] 1.445696e-01
- [75,] 9.984229e-01
- [76,] 9.542702e-01
- [77,] 4.471173e-06
- [78,] 4.588617e-04
- [79,] 9.907822e-01
- [80,] 2.623891e-03
- [81,] 9.768374e-01
- [82,] 1.123125e-04
- [83,] 3.646051e-03
- [84,] 5.869538e-01
- [85,] 9.947674e-07
- [86,] 9.951633e-01
- [87,] 2.636280e-01
- [88,] 1.112355e-06
- [89,] 9.754356e-01
- [90,] 9.770046e-01
- [91,] 7.713234e-01
- [92,] 7.697356e-05
- [93,] 4.669174e-05
- [94,] 9.185190e-01
- [95,] 7.972281e-08
- [96,] 1.314442e-04
- [97,] 8.216772e-04
- [98,] 1.200218e-03
- [99,] 1.061834e-04
-[100,] 3.832899e-02
-\end{verbatim}
-\begin{alltt}
-\hlstd{map} \hlkwb{<-}  \hlkwd{apply}\hlstd{(Y.clustering}\hlopt{$}\hlstd{posterior,}\hlnum{1}\hlstd{,which.max)}
-\end{alltt}
-\end{kframe}
-\end{knitrout}
-\end{column}
-\begin{column}{0.5\textwidth}
-\end{column}
-\end{columns}
-\end{frame}
-
-\begin{frame}[fragile]{Do it yourself}
-\end{frame}
-
-\begin{frame}{Reconstruction of hidden state $\Zbf$}
-Since $\pi_{ik}=\P(Z_i=k)$, and  $\hat{\pi}_{ik}$ is an estimation of $\pi_{ik}$,
-
-$$\widehat{Z_i}=\argmax{k=1, K} =\widehat{\pi}_{ik}$$
-\end{frame}
-
+% \section{Mixture Model}
+% <<childMixture, child='Mixture.Rnw'>>=
+% @
 % %--------------------------------------------------------------------
 % %--------------------------------------------------------------------
 \section{Hidden Markov Model}
@@ -1390,7 +868,7 @@ For a given number of states $K$,
 \begin{alltt}
 \hlcom{### observation simulation}
 \hlstd{mu} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{3}\hlstd{,} \hlnum{7}\hlstd{)}
-\hlstd{sigma} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{1}\hlstd{,}\hlnum{1.5}\hlstd{)}
+\hlstd{sigma} \hlkwb{<-} \hlkwd{c}\hlstd{(}\hlnum{2}\hlstd{,}\hlnum{3}\hlstd{)}
 \hlstd{Y.hmm} \hlkwb{<-} \hlkwd{rnorm}\hlstd{(N,} \hlkwc{mean}\hlstd{=mu[Z],} \hlkwc{sd}\hlstd{=sigma[Z])}
 \hlkwd{plot}\hlstd{(Y.hmm,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{)}
 \hlkwd{plot}\hlstd{(Y.hmm,} \hlkwc{pch}\hlstd{=}\hlnum{19}\hlstd{,} \hlkwc{col}\hlstd{=Z}\hlopt{+}\hlnum{1}\hlstd{)}
@@ -1458,19 +936,19 @@ For a given number of states $K$,
 \begin{frame}{Statistical inference of incomplete data models} 
  \paragraph{Maximum likelihood estimate:} We are looking for
   $$
-  (\widehat{\gammabf},\widehat{\Pibf}, \widehat{\nubf}) = \arg\max_{\thetabf, \Pibf, {\nubf}} \log P(\Ybf; \thetabf, \Pibf, \nubf)
+  (\widehat{\gammabf},\widehat{\Pibf}, \widehat{\nubf}) = \arg\max_{\gammabf, \Pibf, {\nubf}} \log P(\Ybf; \gammabf, \Pibf, \nubf)
 $$
 \only<1>{
     \begin{eqnarray*}
-     \log P(\Xbf, \Zbf; \thetabf) & = & \hid{\sum_k Z_{1k} \log \nu_k }\\
+     \log P(\Ybf, \Zbf; \thetabf) & = & \hid{\sum_k Z_{1k} \log \nu_k }\\
      & &\hid{+ \sum_{i > 1} \sum_{k, \ell}
        Z_{i-1,k}Z_{i,\ell} \log \pi_{k\ell}} \\
-     & & + \obsy{\sum_i \sum_k Z_{ik} \log f(X_i ; \gamma_k)} 
+     & & + \obsy{\sum_i \sum_k Z_{ik} \log f(y_i ; \gamma_k)} 
   \end{eqnarray*}
 }
 \only<2>{
   \begin{eqnarray*}
-    \Esp\left( \log P(\Xbf, \Zbf)\vert Y_{1:N}\right)  & = & \Ehid{\sum_k\Esp\left( Z_{1k} \vert Y_{1:N}\right) \log \nu_k }\\
+    \Esp\left( \log P(\Ybf, \Zbf)\vert Y_{1:N}\right)  & = & \Ehid{\sum_k\Esp\left( Z_{1k} \vert Y_{1:N}\right) \log \nu_k }\\
      & &\Ehid{+ \sum_{i > 1} \sum_{k, \ell}
       \Esp\left( Z_{i-1,k}Z_{i,\ell}\vert Y_{1:N}\right) \log \pi_{k\ell}} \\
      & & + \Eobsy{\sum_i \sum_k \Esp\left(Z_{ik}\vert Y_{1:N}\right) \log f(X_i ; \gamma_k)} 
@@ -1478,7 +956,7 @@ $$
 }
 \only<3>{
   \begin{eqnarray*}
-   \Esp\left(  \log P(\Xbf, \Zbf) \vert Y_{1:N}\right) & = & \Ehid{\sum_k\P\left( Z_{1}=k \vert Y_{1:N}\right) \log \nu_k }\\
+   \Esp\left(  \log P(\Ybf, \Zbf) \vert Y_{1:N}\right) & = & \Ehid{\sum_k\P\left( Z_{1}=k \vert Y_{1:N}\right) \log \nu_k }\\
      & &\Ehid{+ \sum_{i > 1} \sum_{k, \ell}
       \P\left( Z_{i-1}=k, Z_{i}=l\vert Y_{1:N}\right) \log \pi_{k\ell}} \\
     & & + \Eobsy{\sum_i \sum_k \P \left( Z_{i}=k\vert Y_{1:N}\right) 
@@ -1494,10 +972,11 @@ $$
   \item While the convergence is not reached 
   \end{itemize}   
  \begin{description}
-    \item[E-step] Calculation of 
-     \only<1>{ \begin{eqnarray*}
-        \tau^{(\ell)}_{ik}&=&P(Z_i = k | Y_{1:n}, \thetabf^{(\ell-1)})\\
-        \eta_{ikh}^{(\ell)} &=& \Esp[Z_{i-1,k}Z_{ih}| Y_{1:n}, \thetabf^{(\ell-1)}]\\
+    \item[E-step] 
+    \only<1>{Calculation of 
+      \begin{eqnarray*}
+        \tau^{(\ell)}_{ik}&=&P(Z_i = k | \Ybf, \thetabf^{(\ell-1)})\\
+        \eta_{ikh}^{(\ell)} &=& \Esp[Z_{i-1,k}Z_{ih}| \Ybf, \thetabf^{(\ell-1)}]\\
       \end{eqnarray*}  }
      \only<2>{ Smart algorithm Forward-Backward algorithm  }
       
@@ -1506,17 +985,17 @@ $$
  $$
  \sum_k \tau^{(\ell)}_{1k}\log \nu_k
  + \sum_{i > 1} \sum_{k, h} \eta_{ikh}^{(\ell)} \log \pi_{kh}
- + \sum_i \sum_k \tau^{(\ell)}_{ik} \log f(x_i; \gamma_k) 
+ + \sum_i \sum_k \tau^{(\ell)}_{ik} \log f(y_i; \gamma_k) 
  $$
  }
 \begin{frame}{Reconstruction of hidden state $\Zbf$}
 \paragraph{Most credible value for $Z_i$:}
 We are interested in 
-$$\argmax_{k}\P(Z_i= k \vert Y_{1:n})=\argmax_k \tau_{ik}.$$
+$$\argmax_{k}\P(Z_i= k \vert \Ybf)=\argmax_k \tau_{ik}.$$
 \pause
   \paragraph{Most credible sequence for $\Zbf$}
 We are interested in 
-$$\argmax_{k_1, \ldots k_n}\P(Z_1= k_1, \ldots Z_n=k_n \vert Y_{1:n})= ???$$
+$$\argmax_{k_1, \ldots k_n}\P(Z_1= k_1, \ldots Z_n=k_n \vert \Ybf)= ???$$
 \pause
 But force brut algorithm is not possible 
 $$\longrightarrow \mbox{a smart algorithm : Viterbi algorithm}$$

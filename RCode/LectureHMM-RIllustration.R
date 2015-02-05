@@ -24,7 +24,7 @@ points(1:N, Z, col=Z+1, pch=19)
 ## ---- hmmCode2
 ### observation simulation
 mu <- c(3, 7)
-sigma <- c(1,1.5)
+sigma <- c(2,3)
 Y.hmm <- rnorm(N, mean=mu[Z], sd=sigma[Z])
 plot(Y.hmm, pch=19)
 plot(Y.hmm, pch=19, col=Z+1)

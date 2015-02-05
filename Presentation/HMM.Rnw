@@ -86,19 +86,19 @@ For a given number of states $K$,
 \begin{frame}{Statistical inference of incomplete data models} 
  \paragraph{Maximum likelihood estimate:} We are looking for
   $$
-  (\widehat{\gammabf},\widehat{\Pibf}, \widehat{\nubf}) = \arg\max_{\thetabf, \Pibf, {\nubf}} \log P(\Ybf; \thetabf, \Pibf, \nubf)
+  (\widehat{\gammabf},\widehat{\Pibf}, \widehat{\nubf}) = \arg\max_{\gammabf, \Pibf, {\nubf}} \log P(\Ybf; \gammabf, \Pibf, \nubf)
 $$
 \only<1>{
     \begin{eqnarray*}
-     \log P(\Xbf, \Zbf; \thetabf) & = & \hid{\sum_k Z_{1k} \log \nu_k }\\
+     \log P(\Ybf, \Zbf; \thetabf) & = & \hid{\sum_k Z_{1k} \log \nu_k }\\
      & &\hid{+ \sum_{i > 1} \sum_{k, \ell}
        Z_{i-1,k}Z_{i,\ell} \log \pi_{k\ell}} \\
-     & & + \obsy{\sum_i \sum_k Z_{ik} \log f(X_i ; \gamma_k)} 
+     & & + \obsy{\sum_i \sum_k Z_{ik} \log f(y_i ; \gamma_k)} 
   \end{eqnarray*}
 }
 \only<2>{
   \begin{eqnarray*}
-    \Esp\left( \log P(\Xbf, \Zbf)\vert Y_{1:N}\right)  & = & \Ehid{\sum_k\Esp\left( Z_{1k} \vert Y_{1:N}\right) \log \nu_k }\\
+    \Esp\left( \log P(\Ybf, \Zbf)\vert Y_{1:N}\right)  & = & \Ehid{\sum_k\Esp\left( Z_{1k} \vert Y_{1:N}\right) \log \nu_k }\\
      & &\Ehid{+ \sum_{i > 1} \sum_{k, \ell}
       \Esp\left( Z_{i-1,k}Z_{i,\ell}\vert Y_{1:N}\right) \log \pi_{k\ell}} \\
      & & + \Eobsy{\sum_i \sum_k \Esp\left(Z_{ik}\vert Y_{1:N}\right) \log f(X_i ; \gamma_k)} 
@@ -106,7 +106,7 @@ $$
 }
 \only<3>{
   \begin{eqnarray*}
-   \Esp\left(  \log P(\Xbf, \Zbf) \vert Y_{1:N}\right) & = & \Ehid{\sum_k\P\left( Z_{1}=k \vert Y_{1:N}\right) \log \nu_k }\\
+   \Esp\left(  \log P(\Ybf, \Zbf) \vert Y_{1:N}\right) & = & \Ehid{\sum_k\P\left( Z_{1}=k \vert Y_{1:N}\right) \log \nu_k }\\
      & &\Ehid{+ \sum_{i > 1} \sum_{k, \ell}
       \P\left( Z_{i-1}=k, Z_{i}=l\vert Y_{1:N}\right) \log \pi_{k\ell}} \\
     & & + \Eobsy{\sum_i \sum_k \P \left( Z_{i}=k\vert Y_{1:N}\right) 
@@ -122,10 +122,11 @@ $$
   \item While the convergence is not reached 
   \end{itemize}   
  \begin{description}
-    \item[E-step] Calculation of 
-     \only<1>{ \begin{eqnarray*}
-        \tau^{(\ell)}_{ik}&=&P(Z_i = k | Y_{1:n}, \thetabf^{(\ell-1)})\\
-        \eta_{ikh}^{(\ell)} &=& \Esp[Z_{i-1,k}Z_{ih}| Y_{1:n}, \thetabf^{(\ell-1)}]\\
+    \item[E-step] 
+    \only<1>{Calculation of 
+      \begin{eqnarray*}
+        \tau^{(\ell)}_{ik}&=&P(Z_i = k | \Ybf, \thetabf^{(\ell-1)})\\
+        \eta_{ikh}^{(\ell)} &=& \Esp[Z_{i-1,k}Z_{ih}| \Ybf, \thetabf^{(\ell-1)}]\\
       \end{eqnarray*}  }
      \only<2>{ Smart algorithm Forward-Backward algorithm  }
       
@@ -134,17 +135,17 @@ $$
  $$
  \sum_k \tau^{(\ell)}_{1k}\log \nu_k
  + \sum_{i > 1} \sum_{k, h} \eta_{ikh}^{(\ell)} \log \pi_{kh}
- + \sum_i \sum_k \tau^{(\ell)}_{ik} \log f(x_i; \gamma_k) 
+ + \sum_i \sum_k \tau^{(\ell)}_{ik} \log f(y_i; \gamma_k) 
  $$
  }
 \begin{frame}{Reconstruction of hidden state $\Zbf$}
 \paragraph{Most credible value for $Z_i$:}
 We are interested in 
-$$\argmax_{k}\P(Z_i= k \vert Y_{1:n})=\argmax_k \tau_{ik}.$$
+$$\argmax_{k}\P(Z_i= k \vert \Ybf)=\argmax_k \tau_{ik}.$$
 \pause
   \paragraph{Most credible sequence for $\Zbf$}
 We are interested in 
-$$\argmax_{k_1, \ldots k_n}\P(Z_1= k_1, \ldots Z_n=k_n \vert Y_{1:n})= ???$$
+$$\argmax_{k_1, \ldots k_n}\P(Z_1= k_1, \ldots Z_n=k_n \vert \Ybf)= ???$$
 \pause
 But force brut algorithm is not possible 
 $$\longrightarrow \mbox{a smart algorithm : Viterbi algorithm}$$

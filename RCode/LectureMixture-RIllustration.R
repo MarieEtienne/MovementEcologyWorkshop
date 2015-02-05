@@ -7,6 +7,7 @@ N <- 200
 Z <- sample(1:2, size = N, replace=T, prob=c(0.3, 0.7))
 mu <- c(3, 7)
 sigma <- c(1,1.5)
+
 Y.mixture <- rnorm(N, mean=mu[Z], sd=sigma[Z])
 plot(Y.mixture, pch=19)
 plot(Y.mixture, pch=19, col=Z+1)
@@ -37,9 +38,7 @@ set.seed(25)
 ## ---- mixCode4
 #library('mclust')
 library('mixtools')
-Y.clustering <- normalmixEM (Y.mixture, lambda = NULL, mu = NULL, sigma = NULL, k = 2, 
-                             mean.constr = NULL, sd.constr = NULL,
-                             epsilon = 1e-07, maxit = 1000, maxrestarts=20)
+Y.clustering <- normalmixEM (Y.mixture, lambda = NULL, mu = NULL, sigma = c(1, 1.5), k = 2,  maxrestarts=20)
 
 
 summary(Y.clustering)
@@ -48,12 +47,12 @@ map <-  apply(Y.clustering$posterior,1,which.max)
 
 ## ---- mixCode5
 library('Rmixmod')
-Y.clustering.2 <- mixmodCluster(Y.mixture,nbCluster = 2)
+Y.clustering.2 <- mixmodCluster(Y.mixture,nbCluster = 2:6)
 hist(Y.clustering.2)
 summary(Y.clustering.2)
 pk <- Y.clustering.2[9][8]
 map <- apply(pk,1,which.max)
-
+plot(df, col=map+1)
 
 ## ---- mixCode6
 init = kmeans(Y.mixture, centers = 2)

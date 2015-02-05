@@ -196,9 +196,9 @@ library('cghseg') ## segemntation and classification
 @
 % %--------------------------------------------------------------------
 % %--------------------------------------------------------------------
-\section{Mixture Model}
-<<childMixture, child='Mixture.Rnw'>>=
-@
+% \section{Mixture Model}
+% <<childMixture, child='Mixture.Rnw'>>=
+% @
 % %--------------------------------------------------------------------
 % %--------------------------------------------------------------------
 \section{Hidden Markov Model}

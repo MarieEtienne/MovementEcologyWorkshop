@@ -1,6 +1,5 @@
 \beamer@endinputifotherversion {3.24pt}
 \beamer@sectionintoc {1}{Introduction and Notations}{3}{0}{1}
 \beamer@sectionintoc {2}{Change point model}{33}{0}{2}
-\beamer@sectionintoc {3}{Mixture Model}{59}{0}{3}
-\beamer@sectionintoc {4}{Hidden Markov Model}{93}{0}{4}
-\beamer@sectionintoc {5}{Late thoughts}{122}{0}{5}
+\beamer@sectionintoc {3}{Hidden Markov Model}{59}{0}{3}
+\beamer@sectionintoc {4}{Late thoughts}{88}{0}{4}

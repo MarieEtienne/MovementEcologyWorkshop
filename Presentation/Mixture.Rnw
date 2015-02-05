@@ -82,8 +82,8 @@ $$P(Y_i)=\sum_{k=1}^K P(Y_i, Z_i=k)=\textcolor{blue}{P(Z_i=k)} \textcolor{magent
 \item\blue{Distribution of $\Ybf$:}\\
 {\small
 \begin{eqnarray*}
-P(\Ybf ; \thetabf, \pibf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k)  
-&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{P(Z_i=k)} \textcolor{magenta}{P(Y_i | Z_i=k)} \\ 
+P(\Ybf ; \thetabf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k;\thetabf)  
+&=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{P(Z_i=k; \pibf)} \textcolor{magenta}{P(Y_i | Z_i=k; \gammabf)} \\ 
 &=& \prod_{i=1}^n \sum_{k=1}^K \textcolor{blue}{\pi_k} \textcolor{magenta}{f_{\gamma_k}(Y_i)} 
 \end{eqnarray*}
 }
@@ -98,12 +98,12 @@ P(\Ybf ; \thetabf, \pibf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k)
 \begin{frame}{Statistical inference of incomplete data models} 
  \paragraph{Maximum likelihood estimate:} We are looking for
   $$
-  (\widehat{\thetabf},\widehat{\pibf}) = \arg\max_{\thetabf, \pibf} \log P(\Ybf; \thetabf, \pibf)
+  (\widehat{\gammabf},\widehat{\pibf}) = \arg\max_{\gammabf, \pibf} \log P(\Ybf; \gammabf, \pibf)
   $$
   \begin{itemize}
   \item Likelihood of the observed data (or observed likelihood):
     $$
-    \log P(\Ybf; \thetabf, \pibf)=
+    \log P(\Ybf; \gammabf, \pibf)=
     \sum_{i=1}^n \log \left[\sum_{k=1}^K \pi_k f_{ \gamma_k}(Y_i)\right]
     $$
   \item No analytical estimators. 
@@ -118,7 +118,7 @@ P(\Ybf ; \thetabf, \pibf)= \prod_{i=1}^n \sum_{k=1}^K P(Y_i , Z_i=k)
 \begin{frame}{And what if $\Zbf$ were observed  ?}
 The complete likelihood is 
 \begin{align*}
-    \log P(\Ybf, \Zbf; \thetabf, \pibf) &=\log P(\Zbf; \pibf) + \log P(\Ybf\vert \Zbf; \thetabf)\\
+    \log P(\Ybf, \Zbf; \gammabf, \pibf) &=\log P(\Zbf; \pibf) + \log P(\Ybf\vert \Zbf; \gamambf)\\
       & =  \sum_i \sum_k Z_{ik} \log \pi_k + \sum_i \sum_k Z_{ik} \log
     f_{\gamma_k}(Y_i) \\
     & =  \sum_i \sum_k Z_{ik} [\log \pi_k + \log
@@ -135,7 +135,7 @@ Now, the sum contains $nK$ ($200$ if $n=100$ and $K=2$) terms.  It is much easie
 
 \textcolor{red}{Idea:} Replace $Z_i$, by our best guess, that is~:
  $$
- \tau_{ik}:=\Esp(Z_i = k | Y_i)=P(Z_i = k | Y_i)
+ \tau_{ik}:=\Esp(Z_{ik} = k | Y_i)=P(Z_i = k | Y_i)
  $$  
 \end{frame}
 
@@ -196,7 +196,7 @@ Since
 $$\log P(\Ybf; \thetabf)  = Q(\thetabf, \thetabf_0) - H(\thetabf, \thetabf_0),$$
 and $H(\thetabf, \thetabf_0)$ achieves its maximum in $\thetabf_0$,
 \begin{align*}
-\log P(\Ybf; \thetabf)- \log P(\Ybf; \thetabf_0)  = & \textcolor{orange}{(Q(\thetabf, \thetabf_0) - Q(\thetabf, \thetabf_0))} +\cr
+\log P(\Ybf; \thetabf)- \log P(\Ybf; \thetabf_0)  = & \textcolor{orange}{(Q(\thetabf, \thetabf_0) - Q(\thetabf_0, \thetabf_0))} +\cr
 &\textcolor{green}{(H(\thetabf_0, \thetabf_0)-H(\thetabf, \thetabf_0))}.
 \end{align*}
 }
@@ -213,7 +213,7 @@ $\thetabf^{k+1}=argmax\, Q(\thetabf,\thetabf^{k})$
 \end{frame}
 
 \begin{frame}{EM algorithm for independent mixture model}
-   Recall that $\tau_{ik}^{(\ell)}:=P_{\thetabf^{(\ell)}}(Z_i = k | Y_i )$
+   Recall that $\tau_{ik}^{(\ell)}:=P_{\thetabf^{(\ell)}}(Z_i = k | \Ybf)$
    $$Q(\thetabf;\thetabf^{(\ell)})
      =\sum_i \sum_k \tau_{ik}^{(\ell)} \log \pi_k +  \sum_i \sum_k \tau_{ik}^{(\ell)}\log f_{\gamma_k^{(\ell)}}(Y_i)$$
      $\rightarrow$ Need to estimate $\tau_{ik}^{(\ell)}$
@@ -230,13 +230,13 @@ $\thetabf^{k+1}=argmax\, Q(\thetabf,\thetabf^{k})$
       \tau^{(\ell)}_{ik}& = & P(Z_i = k | y_i, \thetabf^{(\ell-1)}) = \frac{\P(Z_i = k,   y_i; \thetabf^{(\ell-1)})}{\P(y_i, \thetabf^{(\ell-1)})}\\ 
       \pause
       &=&\frac{\P( y_i\vert Z_i = k ; \thetabf^{(\ell-1)}) \P( Z_i = k;  \thetabf^{(\ell-1)})}{\P(y_i; \thetabf^{(\ell-1)})}\\
-      & = & \frac{\pi^{(\ell-1)}_k f_{\theta^{(\ell-1)}_k}(y_i)}{\sum_{k'} \pi^{(\ell-1)}_{k'}f_{\theta^{(\ell-1)}_{k'}}(y_i)}
+      & = & \frac{\pi^{(\ell-1)}_k f_{\gamma^{(\ell-1)}_k}(y_i)}{\sum_{k'} \pi^{(\ell-1)}_{k'}f_{\gamma^{(\ell-1)}_{k'}}(y_i)}
       \end{eqnarray*}
 \pause
       \item[M-step] Maximization of
         $$
         (\pibf, \gammabf) \longmapsto \sum_i \sum_k \tau_{ik}^{(\ell)} [\log \pi_k +
-          \log f(x_i; \gamma_k)]
+          \log f_{\gammabf_k}(y_i)]
         $$
       \end{description} 
     \end{itemize}

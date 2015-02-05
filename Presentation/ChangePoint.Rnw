@@ -1,13 +1,13 @@
 \subsection*{Goal}
   \frame{\frametitle{Change point detection context}
-    \begin{tabular}{p{0.5\textwidth} p{0.4\textwidth}}
+    \begin{tabular}{p{0.4\textwidth} p{0.4\textwidth}}
     \begin{tabular}{p{\textwidth}}
         \includegraphics<1>[height=.6\textheight]{rawSignal}
         \includegraphics<2>[height=.6\textheight]{segmentedSignal}
       \end{tabular}
     &  
-      \begin{tabular}{p{0.4\textwidth}}
-        \onslide<1>{ \emph{Goal : } Identifying homogenous regions and abrupt changes in the signal.\\}
+      \begin{tabular}{p{0.55\textwidth}}
+        \onslide<1>{ \blue{Goal: } Identifying homogenous regions and abrupt changes in the signal.\\}
         \onslide<2>{ These \textcolor{red}{regions} may be interpreted afterwards.\\}
     \end{tabular}
   \end{tabular}
@@ -244,7 +244,7 @@ $$
  \item  The inference of the \emphase{breakpoints $T$}
    is made at the \emphase{position level $t$};
  \item  The inference of the \emphase{groups (status)
-     ($\Theta, \tau_{kp}$)} is made at the \emphase{segment level $k$}.
+     ($\gammabf, \tau_{kp}$)} is made at the \emphase{segment level $k$}.
  \end{itemize}
 } 
 \only<2>{
