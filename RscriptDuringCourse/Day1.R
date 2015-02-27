@@ -11,66 +11,27 @@ metaData$Species<- as.character(metaData$Species)
 metaData[2,] <- c(2, "BFAL")
 metaData[3,] <- c(3, "MacP")
 
-load(file="metaData.Rd")
-metaData
-
-
-plus <- function(a){
-  print(a)
-  print(b)
-  return(a+b)
-}
-
-#### WARNING change the function
-## function shown in course was not working properly
-extractData <- function(metaData, fields,values  )
-{
-  ## metaData is the table
-  individuals=list()
-  for( i in 1:length(fields))
-  {
-    individuals[[i]] <- 1*(metaData[fields[i]]==values[i])
-  }
-  individuals <- which(Reduce("*", individuals)==1)
-  return(metaData[individuals,])
-}
-
-extractData(metaData=metadata, fields=c('Species', 'Study_site'),values=c("Lion", "Nyathi"))
-
-
-m1 <- extractData(metaData, fields=c("Sex", "Species"), values=c("F", "BFAL"))
-m2 <- extractData(metaData, fields=c("Sex", "Species"), values=c("M", "BFAL"))
-rbind(m1,m2)
-
-traj1$datePOS <- as.POSIXct(strptime(traj1$dateTemps, format="%Y-%m-%d %H:%M:%S" ))
-
-
-
-
-
-library('adehabitatLT')
 setwd('/home/metienne/EnCours/2015-SA-MovementEcology/Data/Practicals')
-load('metadata')
-dataProv <- extractData(metadata, fields = "ID", values=18)
-gpsData <- read.table(dataProv$gpsfile, header = T, sep=",")
+
+gpsData <- read.table('BI_12_2010_gps_06_CAGA_018.csv', header = T, sep=",")
 gpsData$standardTime <- as.POSIXct( 
   strptime(
     paste(gpsData$Date, gpsData$Time, sep=" ")
     , 
     format="%Y/%m/%d %H:%M:%S"),  tz="GMT")
-write.table(gpsData, file=dataProv$gpsfile, row.names=F, sep=",")
 
-ex.coord <- list(gpsData$Longitude, gpsData$Latitude)
-l1 <- as.data.frame(project(ex.coord,"+proj=utm +zone=35 +south +ellps=WGS84"))
-l1$Time <- gpsData$standardTime
-coordinates(l1) <- c("x","y")
+xy <- project(list(x=gpsData$Longitude, y=gpsData$Latitude),"+proj=utm +zone=35 +south +ellps=WGS84")
+gpsData$x <- xy[[1]]
+gpsData$y <- xy[[2]]
+
+coordinates(gpsData) <- c("x","y")
 BNG <- CRS("+proj=utm +zone=35 +south +ellps=WGS84")
-proj4string(l1)<- BNG
+proj4string(gpsData)<- BNG
 p4s <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")
-l1.p4s <- spTransform(l1, CRS=p4s)
-writeOGR(l1.p4s, dsn="text.kml", layer="l1.p4s", driver="KML" )
+l1.p4s <- spTransform(gpsData, CRS=p4s)
+writeOGR(gpsData, dsn="text.kml", layer="p4s", driver="KML" )
 
-test <- SpatialPointsDataFrame(l1, proj4string=CRS("+proj=utm +zone=35 +south +ellps=WGS84"), bbox = NULL)
+test <- SpatialPointsDataFrame(coords = gpsData[,c("Longitude", "Latitude")],data = gpsData, proj4string=CRS("+proj=utm +zone=35 +south +ellps=WGS84"), bbox = NULL)
 test.ll <- spTransform(test,CRS("+proj=utm +zone=35 +south +ellps=WGS84") )
 writeOGR(test, driver="KML", dsn = "test.kml")
 coordinates(l1) <- c("x", "y")
@@ -102,3 +63,29 @@ proj4string(l1)<- BNG
 p4s <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")
 l1.p4s <- spTransform(l1, CRS=p4s)
 writeOGR(l1.p4s, dsn="text.kml", layer="l1.p4s", driver="KML")
+
+
+## KML for google earth
+traj2 <- traj1
+traj2<- traj2[, c("lon.dec", "lat.dec", "standardTime")]
+coordinates(traj1) <- c("lon.dec", "lat.dec")
+p4s <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84")
+coords <- SpatialPoints(traj2[,c("lon.dec", "lat.dec")], proj4string=p4s, bbox = NULL)
+traj2.sp <- SpatialPointsDataFrame(coords=coords, data=traj2, 
+                       proj4string = p4s)
+writeOGR(traj2.sp, dsn="text.kml", layer="traj2.sp", driver="KML")
+
+
+##### Two different scales on the same graph
+set.seed(101)
+x <- 1:10
+y <- rnorm(10)
+## second data set on a very different scale
+z <- runif(10, min=1000, max=10000) 
+par(mar = c(5, 4, 4, 4) + 0.3)  # Leave space for z axis
+plot(x, y) # first plot
+par(new = TRUE)
+plot(x, z, type = "l", axes = FALSE, bty = "n", xlab = "", ylab = "")
+axis(side=4, at = pretty(range(z)))
+mtext("z", side=4, line=3)
+
